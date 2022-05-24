@@ -56,6 +56,7 @@
             // 
             // combxLoginAs
             // 
+            this.combxLoginAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.combxLoginAs.FormattingEnabled = true;
             this.combxLoginAs.Items.AddRange(new object[] {
             "Admin",
@@ -68,9 +69,9 @@
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Maroon;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.BackColor = System.Drawing.SystemColors.Control;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.Color.Black;
             this.btnExit.Location = new System.Drawing.Point(210, 107);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(74, 31);
@@ -81,9 +82,9 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.Green;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.Black;
             this.btnLogin.Location = new System.Drawing.Point(115, 107);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(74, 31);
@@ -124,9 +125,9 @@
             // 
             // btnCreateAccount
             // 
-            this.btnCreateAccount.BackColor = System.Drawing.Color.Green;
-            this.btnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCreateAccount.ForeColor = System.Drawing.Color.White;
+            this.btnCreateAccount.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateAccount.ForeColor = System.Drawing.Color.Black;
             this.btnCreateAccount.Location = new System.Drawing.Point(12, 144);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(272, 31);
@@ -150,6 +151,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmSignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

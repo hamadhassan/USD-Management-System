@@ -30,7 +30,9 @@ namespace UniversityStudentDiaryManagementSystem
             bool checkCondition = crediational.checkUser(loginAs, username, password, CredentialDL.getCrediationalList());
             if (checkCondition)
             {
-                MessageBox.Show("Login Successfully", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmMain main = new frmMain();
+                main.Show();
+                this.Hide();
             }
             else
             {

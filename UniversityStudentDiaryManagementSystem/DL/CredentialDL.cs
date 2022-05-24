@@ -19,5 +19,31 @@ namespace UniversityStudentDiaryManagementSystem.DL
         {
             return crediantialsList;
         }
+        public static bool isUserNameExist(string username)
+        {
+            foreach (Credential c in crediantialsList)
+            {
+                if (c.Username == username)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public static bool updatePassword(string oldPassword, string newPassword)
+        {
+            int index = 0;
+            foreach (Credential c in crediantialsList)
+            {
+                if (c.Password == oldPassword)
+                {
+                    c.Password= newPassword;
+                    crediantialsList.Insert(index,c);
+                    index++;
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

@@ -11,3 +11,5 @@ D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\Un
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.exe
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.pdb
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmMain.resources
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmWallet.resources
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmUpdatePassword.resources

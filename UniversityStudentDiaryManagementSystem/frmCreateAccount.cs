@@ -27,15 +27,30 @@ namespace UniversityStudentDiaryManagementSystem
             string lastName = txtbxLastName.Text;
             string username = txtbxUsername.Text;
             string password = txtbxPassword.Text;
-            string role = txtbxRole.Text;
+            string role = combxRole.SelectedItem.ToString();
             Credential newUser = new Credential(firstName, lastName, username, password, role);
             CredentialDL.setIntoListCrediantialList(newUser);
             txtbxFirstName.Clear();
             txtbxLastName.Clear();
             txtbxPassword.Clear();
             txtbxUsername.Clear();
-            txtbxRole.Clear();
+            combxRole.Text= "Select one option";
             MessageBox.Show("Account Created", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combxRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

@@ -16,10 +16,33 @@ namespace UniversityStudentDiaryManagementSystem
         {
             InitializeComponent();
         }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void createAUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmCreateAccount frmCreateAccount = new frmCreateAccount();
+            frmCreateAccount.ShowDialog();
+        }
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUpdatePassword updatePassword = new frmUpdatePassword();
+            updatePassword.ShowDialog();
+        }
+
+        private void statusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmWallet wallet= new frmWallet();
+            wallet.ShowDialog();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmSignIn signIn = new frmSignIn();
+            signIn.Show();
+            this.Hide();
         }
     }
 }

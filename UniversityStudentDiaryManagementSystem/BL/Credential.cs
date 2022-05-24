@@ -13,6 +13,7 @@ namespace UniversityStudentDiaryManagementSystem.BL
         private string username;
         private string password;
         private string role;
+
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
         public string Username { get => username; set => username = value; }
@@ -38,12 +39,14 @@ namespace UniversityStudentDiaryManagementSystem.BL
         {
             foreach (Credential c in crediationalsList)
             {
-                if (c.username == username && c.password == password)
+                if (c.username == username && c.password == password && c.role == role)
                 {
                     return true;
                 }
             }
             return false;
         }
+       
+      
     }
 }
