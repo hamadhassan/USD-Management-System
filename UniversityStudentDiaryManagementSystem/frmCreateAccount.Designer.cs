@@ -52,6 +52,7 @@
             this.btnCreateAccount.TabIndex = 16;
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.UseVisualStyleBackColor = false;
+            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // txtbxRole
             // 

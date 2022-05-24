@@ -1,0 +1,12 @@
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\bin\Debug\UniversityStudentDiaryManagementSystem.exe.config
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\bin\Debug\UniversityStudentDiaryManagementSystem.exe
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\bin\Debug\UniversityStudentDiaryManagementSystem.pdb
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.csproj.AssemblyReference.cache
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.csproj.SuggestedBindingRedirects.cache
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmCreateAccount.resources
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmSignIn.resources
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.Properties.Resources.resources
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.csproj.GenerateResource.cache
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.csproj.CoreCompileInputs.cache
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.exe
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.pdb
