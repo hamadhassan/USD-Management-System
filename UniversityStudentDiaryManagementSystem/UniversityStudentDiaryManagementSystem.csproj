@@ -46,13 +46,73 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcdemicFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcdemicFee.Designer.cs">
+      <DependentUpon>frmAcdemicFee.cs</DependentUpon>
+    </Compile>
     <Compile Include="BL\Credential.cs" />
     <Compile Include="DL\CredentialDL.cs" />
+    <Compile Include="frmAchivements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAchivements.Designer.cs">
+      <DependentUpon>frmAchivements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcivities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcivities.Designer.cs">
+      <DependentUpon>frmAcivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBooks.Designer.cs">
+      <DependentUpon>frmBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCreateAccount.Designer.cs">
       <DependentUpon>frmCreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFunds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFunds.Designer.cs">
+      <DependentUpon>frmFunds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGoals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGoals.Designer.cs">
+      <DependentUpon>frmGoals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelpingMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelpingMaterial.Designer.cs">
+      <DependentUpon>frmHelpingMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHostelExpenditure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHostelExpenditure.Designer.cs">
+      <DependentUpon>frmHostelExpenditure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHostelFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHostelFee.Designer.cs">
+      <DependentUpon>frmHostelFee.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -60,11 +120,41 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMeal.Designer.cs">
+      <DependentUpon>frmMeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhone.Designer.cs">
+      <DependentUpon>frmPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSecret.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSecret.Designer.cs">
+      <DependentUpon>frmSecret.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSignIn.Designer.cs">
       <DependentUpon>frmSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransport.Designer.cs">
+      <DependentUpon>frmTransport.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUpdatePassword.cs">
       <SubType>Form</SubType>
@@ -80,14 +170,59 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcdemicFee.resx">
+      <DependentUpon>frmAcdemicFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAchivements.resx">
+      <DependentUpon>frmAchivements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcivities.resx">
+      <DependentUpon>frmAcivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBooks.resx">
+      <DependentUpon>frmBooks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCreateAccount.resx">
       <DependentUpon>frmCreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFunds.resx">
+      <DependentUpon>frmFunds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGoals.resx">
+      <DependentUpon>frmGoals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelpingMaterial.resx">
+      <DependentUpon>frmHelpingMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHostelExpenditure.resx">
+      <DependentUpon>frmHostelExpenditure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHostelFee.resx">
+      <DependentUpon>frmHostelFee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMeal.resx">
+      <DependentUpon>frmMeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhone.resx">
+      <DependentUpon>frmPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSecret.resx">
+      <DependentUpon>frmSecret.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransport.resx">
+      <DependentUpon>frmTransport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdatePassword.resx">
       <DependentUpon>frmUpdatePassword.cs</DependentUpon>
