@@ -26,6 +26,7 @@ namespace UniversityStudentDiaryManagementSystem
             string username = txtbxUsername.Text;
             string password = txtbxPassword.Text;
             Credential crediational = new Credential();
+            CredentialDL.setIntoListCrediantialList(crediational);
             bool checkCondition = crediational.checkUser(loginAs, username, password, CredentialDL.getCrediationalList());
             if (checkCondition)
             {
@@ -39,6 +40,7 @@ namespace UniversityStudentDiaryManagementSystem
             combxLoginAs.Text = "Select one option";
             txtbxUsername.Clear();
             txtbxPassword.Clear();
+
         }
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
