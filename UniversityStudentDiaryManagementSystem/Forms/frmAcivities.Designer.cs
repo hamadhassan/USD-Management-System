@@ -75,10 +75,11 @@
             this.btnSave.Location = new System.Drawing.Point(91, 156);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(88, 31);
-            this.btnSave.TabIndex = 11;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -88,7 +89,7 @@
             this.btnClose.Location = new System.Drawing.Point(185, 156);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(85, 31);
-            this.btnClose.TabIndex = 10;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -96,10 +97,11 @@
             // 
             // rctxtbxRemarks
             // 
+            this.rctxtbxRemarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rctxtbxRemarks.Location = new System.Drawing.Point(91, 95);
             this.rctxtbxRemarks.Name = "rctxtbxRemarks";
             this.rctxtbxRemarks.Size = new System.Drawing.Size(179, 55);
-            this.rctxtbxRemarks.TabIndex = 5;
+            this.rctxtbxRemarks.TabIndex = 2;
             this.rctxtbxRemarks.Text = "";
             // 
             // label3
@@ -116,7 +118,7 @@
             this.txtbxMinutes.Location = new System.Drawing.Point(91, 65);
             this.txtbxMinutes.Name = "txtbxMinutes";
             this.txtbxMinutes.Size = new System.Drawing.Size(179, 26);
-            this.txtbxMinutes.TabIndex = 4;
+            this.txtbxMinutes.TabIndex = 1;
             // 
             // label2
             // 
@@ -135,14 +137,15 @@
             this.cmbxType.Items.AddRange(new object[] {
             "Select option",
             "Sporties",
-            "Societies"});
+            "Social"});
             this.cmbxType.Location = new System.Drawing.Point(91, 34);
             this.cmbxType.Name = "cmbxType";
             this.cmbxType.Size = new System.Drawing.Size(179, 28);
-            this.cmbxType.TabIndex = 1;
+            this.cmbxType.TabIndex = 0;
             // 
             // frmAcivities
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(309, 224);

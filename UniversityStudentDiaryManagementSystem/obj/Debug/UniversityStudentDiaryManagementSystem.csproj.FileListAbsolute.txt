@@ -27,3 +27,4 @@ D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\Un
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmTransport.resources
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmReport.resources
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmFee.resources
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.Forms.frmChecking.resources

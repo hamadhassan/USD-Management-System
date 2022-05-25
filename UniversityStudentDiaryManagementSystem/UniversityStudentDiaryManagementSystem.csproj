@@ -46,179 +46,196 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAbout.cs">
+    <Compile Include="BL\Achivement.cs" />
+    <Compile Include="BL\Activities.cs" />
+    <Compile Include="BL\Book.cs" />
+    <Compile Include="BL\Fee.cs" />
+    <Compile Include="DL\AchivementDL.cs" />
+    <Compile Include="DL\ActivitiesDL.cs" />
+    <Compile Include="DL\BookDL.cs" />
+    <Compile Include="DL\FeeDL.cs" />
+    <Compile Include="Forms\frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAbout.Designer.cs">
+    <Compile Include="Forms\frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmFee.cs">
+    <Compile Include="Forms\frmChecking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFee.Designer.cs">
+    <Compile Include="Forms\frmChecking.Designer.cs">
+      <DependentUpon>frmChecking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFee.Designer.cs">
       <DependentUpon>frmFee.cs</DependentUpon>
     </Compile>
     <Compile Include="BL\Credential.cs" />
     <Compile Include="DL\CredentialDL.cs" />
-    <Compile Include="frmAchivements.cs">
+    <Compile Include="Forms\frmAchivements.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAchivements.Designer.cs">
+    <Compile Include="Forms\frmAchivements.Designer.cs">
       <DependentUpon>frmAchivements.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAcivities.cs">
+    <Compile Include="Forms\frmAcivities.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAcivities.Designer.cs">
+    <Compile Include="Forms\frmAcivities.Designer.cs">
       <DependentUpon>frmAcivities.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBooks.cs">
+    <Compile Include="Forms\frmBooks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBooks.Designer.cs">
+    <Compile Include="Forms\frmBooks.Designer.cs">
       <DependentUpon>frmBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCreateAccount.cs">
+    <Compile Include="Forms\frmCreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCreateAccount.Designer.cs">
+    <Compile Include="Forms\frmCreateAccount.Designer.cs">
       <DependentUpon>frmCreateAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmFunds.cs">
+    <Compile Include="Forms\frmFunds.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFunds.Designer.cs">
+    <Compile Include="Forms\frmFunds.Designer.cs">
       <DependentUpon>frmFunds.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGoals.cs">
+    <Compile Include="Forms\frmGoals.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGoals.Designer.cs">
+    <Compile Include="Forms\frmGoals.Designer.cs">
       <DependentUpon>frmGoals.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHelpingMaterial.cs">
+    <Compile Include="Forms\frmHelpingMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHelpingMaterial.Designer.cs">
+    <Compile Include="Forms\frmHelpingMaterial.Designer.cs">
       <DependentUpon>frmHelpingMaterial.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHostelExpenditure.cs">
+    <Compile Include="Forms\frmHostelExpenditure.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHostelExpenditure.Designer.cs">
+    <Compile Include="Forms\frmHostelExpenditure.Designer.cs">
       <DependentUpon>frmHostelExpenditure.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="Forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMeal.cs">
+    <Compile Include="Forms\frmMeal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMeal.Designer.cs">
+    <Compile Include="Forms\frmMeal.Designer.cs">
       <DependentUpon>frmMeal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPhone.cs">
+    <Compile Include="Forms\frmPhone.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPhone.Designer.cs">
+    <Compile Include="Forms\frmPhone.Designer.cs">
       <DependentUpon>frmPhone.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReport.cs">
+    <Compile Include="Forms\frmReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReport.Designer.cs">
+    <Compile Include="Forms\frmReport.Designer.cs">
       <DependentUpon>frmReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSecret.cs">
+    <Compile Include="Forms\frmSecret.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSecret.Designer.cs">
+    <Compile Include="Forms\frmSecret.Designer.cs">
       <DependentUpon>frmSecret.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSignIn.cs">
+    <Compile Include="Forms\frmSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSignIn.Designer.cs">
+    <Compile Include="Forms\frmSignIn.Designer.cs">
       <DependentUpon>frmSignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTransport.cs">
+    <Compile Include="Forms\frmTransport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTransport.Designer.cs">
+    <Compile Include="Forms\frmTransport.Designer.cs">
       <DependentUpon>frmTransport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUpdatePassword.cs">
+    <Compile Include="Forms\frmUpdatePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUpdatePassword.Designer.cs">
+    <Compile Include="Forms\frmUpdatePassword.Designer.cs">
       <DependentUpon>frmUpdatePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWallet.cs">
+    <Compile Include="Forms\frmWallet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWallet.Designer.cs">
+    <Compile Include="Forms\frmWallet.Designer.cs">
       <DependentUpon>frmWallet.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAbout.resx">
+    <EmbeddedResource Include="Forms\frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmFee.resx">
+    <EmbeddedResource Include="Forms\frmChecking.resx">
+      <DependentUpon>frmChecking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFee.resx">
       <DependentUpon>frmFee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAchivements.resx">
+    <EmbeddedResource Include="Forms\frmAchivements.resx">
       <DependentUpon>frmAchivements.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAcivities.resx">
+    <EmbeddedResource Include="Forms\frmAcivities.resx">
       <DependentUpon>frmAcivities.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBooks.resx">
+    <EmbeddedResource Include="Forms\frmBooks.resx">
       <DependentUpon>frmBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCreateAccount.resx">
+    <EmbeddedResource Include="Forms\frmCreateAccount.resx">
       <DependentUpon>frmCreateAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmFunds.resx">
+    <EmbeddedResource Include="Forms\frmFunds.resx">
       <DependentUpon>frmFunds.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGoals.resx">
+    <EmbeddedResource Include="Forms\frmGoals.resx">
       <DependentUpon>frmGoals.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHelpingMaterial.resx">
+    <EmbeddedResource Include="Forms\frmHelpingMaterial.resx">
       <DependentUpon>frmHelpingMaterial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHostelExpenditure.resx">
+    <EmbeddedResource Include="Forms\frmHostelExpenditure.resx">
       <DependentUpon>frmHostelExpenditure.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMeal.resx">
+    <EmbeddedResource Include="Forms\frmMeal.resx">
       <DependentUpon>frmMeal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPhone.resx">
+    <EmbeddedResource Include="Forms\frmPhone.resx">
       <DependentUpon>frmPhone.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReport.resx">
+    <EmbeddedResource Include="Forms\frmReport.resx">
       <DependentUpon>frmReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSecret.resx">
+    <EmbeddedResource Include="Forms\frmSecret.resx">
       <DependentUpon>frmSecret.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSignIn.resx">
+    <EmbeddedResource Include="Forms\frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTransport.resx">
+    <EmbeddedResource Include="Forms\frmTransport.resx">
       <DependentUpon>frmTransport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdatePassword.resx">
+    <EmbeddedResource Include="Forms\frmUpdatePassword.resx">
       <DependentUpon>frmUpdatePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWallet.resx">
+    <EmbeddedResource Include="Forms\frmWallet.resx">
       <DependentUpon>frmWallet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

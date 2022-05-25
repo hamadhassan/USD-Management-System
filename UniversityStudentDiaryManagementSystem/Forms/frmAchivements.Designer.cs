@@ -66,10 +66,11 @@
             this.btnSave.Location = new System.Drawing.Point(117, 146);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(88, 31);
-            this.btnSave.TabIndex = 9;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -79,7 +80,7 @@
             this.btnClose.Location = new System.Drawing.Point(213, 146);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(85, 31);
-            this.btnClose.TabIndex = 8;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -87,10 +88,11 @@
             // 
             // rctxtbxRemarks
             // 
+            this.rctxtbxRemarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rctxtbxRemarks.Location = new System.Drawing.Point(117, 84);
             this.rctxtbxRemarks.Name = "rctxtbxRemarks";
             this.rctxtbxRemarks.Size = new System.Drawing.Size(181, 56);
-            this.rctxtbxRemarks.TabIndex = 3;
+            this.rctxtbxRemarks.TabIndex = 2;
             this.rctxtbxRemarks.Text = "";
             // 
             // txtbxPresentedBy
@@ -98,7 +100,7 @@
             this.txtbxPresentedBy.Location = new System.Drawing.Point(117, 55);
             this.txtbxPresentedBy.Name = "txtbxPresentedBy";
             this.txtbxPresentedBy.Size = new System.Drawing.Size(181, 26);
-            this.txtbxPresentedBy.TabIndex = 2;
+            this.txtbxPresentedBy.TabIndex = 1;
             // 
             // cmbxType
             // 
@@ -112,7 +114,7 @@
             this.cmbxType.Location = new System.Drawing.Point(117, 24);
             this.cmbxType.Name = "cmbxType";
             this.cmbxType.Size = new System.Drawing.Size(181, 28);
-            this.cmbxType.TabIndex = 1;
+            this.cmbxType.TabIndex = 0;
             // 
             // label3
             // 
@@ -143,6 +145,7 @@
             // 
             // frmAchivements
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(337, 216);

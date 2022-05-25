@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UniversityStudentDiaryManagementSystem.Forms;
 
 namespace UniversityStudentDiaryManagementSystem
 {
@@ -49,18 +50,18 @@ namespace UniversityStudentDiaryManagementSystem
             signIn.Show();
             this.Hide();
         }
-
+        #region Fee
         private void academicToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFee acdemicFee = new frmFee();
+            frmFee acdemicFee = new frmFee(1);
             acdemicFee.ShowDialog();
         }
         private void hostelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFee acdemicFee = new frmFee();
+            frmFee acdemicFee = new frmFee(2);
             acdemicFee.ShowDialog();
         }
-
+        #endregion
         private void dailyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReport report=new frmReport();
@@ -186,19 +187,19 @@ namespace UniversityStudentDiaryManagementSystem
             frmPhone phone = new frmPhone();
             phone.ShowDialog();
         }
-
+        #region Book
         private void borrowToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBooks books = new frmBooks();
+            frmBooks books = new frmBooks(1);
             books.ShowDialog();
         }
 
         private void purchaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBooks books = new frmBooks();
+            frmBooks books = new frmBooks(2);
             books.ShowDialog();
         }
-
+        #endregion
         private void busToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmTransport transport = new frmTransport();
@@ -210,31 +211,25 @@ namespace UniversityStudentDiaryManagementSystem
             frmTransport transport = new frmTransport();
             transport.ShowDialog();
         }
-
+        #region activities
         private void sportiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAcivities acivities = new frmAcivities();
+            frmAcivities acivities = new frmAcivities(1);
             acivities.ShowDialog();
         }
 
         private void socialToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAcivities acivities = new frmAcivities();
+            frmAcivities acivities = new frmAcivities(2);
             acivities.ShowDialog();
         }
+        #endregion
 
         private void achivementDetailToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAchivements achivements = new frmAchivements();
+            frmAchivements achivements = new frmAchivements(1);
             achivements.ShowDialog();
         }
-
-        private void resultToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            frmAchivements achivements = new frmAchivements();
-            achivements.ShowDialog();
-        }
-
         private void quotesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmSecret secret = new frmSecret();
@@ -318,5 +313,24 @@ namespace UniversityStudentDiaryManagementSystem
             frmAbout about = new frmAbout();
             about.ShowDialog();
         }
+
+        private void btnChecking_Click(object sender, EventArgs e)
+        {
+            frmChecking checking = new frmChecking();
+            checking.ShowDialog();
+        }
+        #region Achivements
+        private void coToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAchivements achivements = new frmAchivements(1);
+            achivements.ShowDialog();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            frmAchivements achivements = new frmAchivements(2);
+            achivements.ShowDialog();
+        }
+        #endregion
     }
 }
