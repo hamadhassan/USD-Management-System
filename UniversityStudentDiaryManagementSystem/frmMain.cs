@@ -52,13 +52,13 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void academicToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAcdemicFee acdemicFee = new frmAcdemicFee();
+            frmFee acdemicFee = new frmFee();
             acdemicFee.ShowDialog();
         }
         private void hostelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHostelFee hostelFee=new frmHostelFee();
-            hostelFee.ShowDialog();
+            frmFee acdemicFee = new frmFee();
+            acdemicFee.ShowDialog();
         }
 
         private void dailyToolStripMenuItem_Click(object sender, EventArgs e)
