@@ -60,16 +60,17 @@
             // 
             // combxLoginAs
             // 
+            this.combxLoginAs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combxLoginAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.combxLoginAs.FormattingEnabled = true;
             this.combxLoginAs.Items.AddRange(new object[] {
+            "Select option",
             "Admin",
             "Agent"});
             this.combxLoginAs.Location = new System.Drawing.Point(137, 194);
             this.combxLoginAs.Name = "combxLoginAs";
             this.combxLoginAs.Size = new System.Drawing.Size(169, 28);
             this.combxLoginAs.TabIndex = 13;
-            this.combxLoginAs.Text = "Select one option";
             // 
             // btnExit
             // 

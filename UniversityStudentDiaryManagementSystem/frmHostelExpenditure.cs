@@ -16,5 +16,16 @@ namespace UniversityStudentDiaryManagementSystem
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmHostelExpenditure_Load(object sender, EventArgs e)
+        {
+            cmbxMonth.SelectedIndex = 0;
+            cmbxType.SelectedIndex = 0;
+        }
     }
 }

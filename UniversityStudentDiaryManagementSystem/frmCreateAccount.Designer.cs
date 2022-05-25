@@ -39,7 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.combxRole = new System.Windows.Forms.ComboBox();
+            this.cmbxRole = new System.Windows.Forms.ComboBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -150,20 +150,21 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "First Name :";
             // 
-            // combxRole
+            // cmbxRole
             // 
-            this.combxRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.combxRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combxRole.FormattingEnabled = true;
-            this.combxRole.Items.AddRange(new object[] {
+            this.cmbxRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbxRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbxRole.FormattingEnabled = true;
+            this.cmbxRole.Items.AddRange(new object[] {
+            "Select option",
             "Admin",
             "Agent"});
-            this.combxRole.Location = new System.Drawing.Point(107, 28);
-            this.combxRole.Name = "combxRole";
-            this.combxRole.Size = new System.Drawing.Size(162, 28);
-            this.combxRole.TabIndex = 17;
-            this.combxRole.Text = "Select one option";
-            this.combxRole.SelectedIndexChanged += new System.EventHandler(this.combxRole_SelectedIndexChanged);
+            this.cmbxRole.Location = new System.Drawing.Point(107, 28);
+            this.cmbxRole.Name = "cmbxRole";
+            this.cmbxRole.Size = new System.Drawing.Size(162, 28);
+            this.cmbxRole.TabIndex = 17;
+            this.cmbxRole.SelectedIndexChanged += new System.EventHandler(this.combxRole_SelectedIndexChanged);
             // 
             // btnClose
             // 
@@ -183,7 +184,7 @@
             // 
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.txtbxUsername);
-            this.groupBox1.Controls.Add(this.combxRole);
+            this.groupBox1.Controls.Add(this.cmbxRole);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnCreateAccount);
             this.groupBox1.Controls.Add(this.label2);
@@ -200,6 +201,7 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create Account";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // frmCreateAccount
             // 
@@ -213,6 +215,7 @@
             this.Name = "frmCreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Account";
+            this.Load += new System.EventHandler(this.frmCreateAccount_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -231,7 +234,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox combxRole;
+        private System.Windows.Forms.ComboBox cmbxRole;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.GroupBox groupBox1;
     }

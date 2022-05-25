@@ -40,6 +40,7 @@
             this.btnSaveImage = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblUserName
@@ -92,7 +93,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(166, 267);
+            this.btnClose.Location = new System.Drawing.Point(111, 259);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(85, 31);
             this.btnClose.TabIndex = 7;
@@ -118,7 +119,7 @@
             this.btnUploadImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUploadImage.Location = new System.Drawing.Point(25, 230);
             this.btnUploadImage.Name = "btnUploadImage";
-            this.btnUploadImage.Size = new System.Drawing.Size(226, 31);
+            this.btnUploadImage.Size = new System.Drawing.Size(179, 31);
             this.btnUploadImage.TabIndex = 7;
             this.btnUploadImage.Text = "Uplode Image";
             this.btnUploadImage.UseVisualStyleBackColor = true;
@@ -139,9 +140,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Location = new System.Drawing.Point(8, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(256, 303);
+            this.groupBox1.Size = new System.Drawing.Size(215, 303);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Wallet";
@@ -150,11 +152,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 321);
+            this.ClientSize = new System.Drawing.Size(234, 321);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSaveImage);
             this.Controls.Add(this.btnUploadImage);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblComments);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblAmount);
@@ -169,6 +170,7 @@
             this.Text = "Wallet";
             this.Load += new System.EventHandler(this.frmWallet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

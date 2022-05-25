@@ -16,5 +16,15 @@ namespace UniversityStudentDiaryManagementSystem
         {
             InitializeComponent();
         }
+
+        private void frmMeal_Load(object sender, EventArgs e)
+        {
+            cmbxTime.SelectedIndex = 0;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

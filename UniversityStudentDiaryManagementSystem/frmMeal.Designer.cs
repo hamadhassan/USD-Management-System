@@ -28,58 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMeal));
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbxTime = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbxCharges = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtbxMenu = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rhtextbxRemaks = new System.Windows.Forms.RichTextBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnSaveImage = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 21);
+            this.label1.Location = new System.Drawing.Point(9, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Time :";
             // 
-            // comboBox1
+            // cmbxTime
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbxTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbxTime.FormattingEnabled = true;
+            this.cmbxTime.Items.AddRange(new object[] {
+            "Select option",
             "Breakfast",
             "Lunch",
             "Dinner",
             "Hangout"});
-            this.comboBox1.Location = new System.Drawing.Point(90, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(152, 28);
-            this.comboBox1.TabIndex = 1;
+            this.cmbxTime.Location = new System.Drawing.Point(84, 25);
+            this.cmbxTime.Name = "cmbxTime";
+            this.cmbxTime.Size = new System.Drawing.Size(176, 28);
+            this.cmbxTime.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 51);
+            this.label2.Location = new System.Drawing.Point(9, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Menu :";
             // 
-            // textBox1
+            // txtbxCharges
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 26);
-            this.textBox1.TabIndex = 4;
+            this.txtbxCharges.Location = new System.Drawing.Point(84, 86);
+            this.txtbxCharges.Name = "txtbxCharges";
+            this.txtbxCharges.Size = new System.Drawing.Size(176, 26);
+            this.txtbxCharges.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 80);
+            this.label3.Location = new System.Drawing.Point(9, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 0;
@@ -88,59 +96,107 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 106);
+            this.label4.Location = new System.Drawing.Point(9, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Remaks :";
             // 
-            // textBox2
+            // txtbxMenu
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 26);
-            this.textBox2.TabIndex = 4;
+            this.txtbxMenu.Location = new System.Drawing.Point(84, 57);
+            this.txtbxMenu.Name = "txtbxMenu";
+            this.txtbxMenu.Size = new System.Drawing.Size(176, 26);
+            this.txtbxMenu.TabIndex = 5;
             // 
-            // textBox3
+            // groupBox1
             // 
-            this.textBox3.Location = new System.Drawing.Point(90, 45);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(152, 26);
-            this.textBox3.TabIndex = 5;
+            this.groupBox1.Controls.Add(this.rhtextbxRemaks);
+            this.groupBox1.Controls.Add(this.btnClose);
+            this.groupBox1.Controls.Add(this.btnSaveImage);
+            this.groupBox1.Controls.Add(this.cmbxTime);
+            this.groupBox1.Controls.Add(this.txtbxMenu);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtbxCharges);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(277, 223);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Meal";
+            // 
+            // rhtextbxRemaks
+            // 
+            this.rhtextbxRemaks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rhtextbxRemaks.Location = new System.Drawing.Point(84, 115);
+            this.rhtextbxRemaks.Name = "rhtextbxRemaks";
+            this.rhtextbxRemaks.Size = new System.Drawing.Size(176, 51);
+            this.rhtextbxRemaks.TabIndex = 12;
+            this.rhtextbxRemaks.Text = "";
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(175, 172);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(85, 31);
+            this.btnClose.TabIndex = 11;
+            this.btnClose.Text = "Close";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnSaveImage
+            // 
+            this.btnSaveImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveImage.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveImage.Image")));
+            this.btnSaveImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveImage.Location = new System.Drawing.Point(84, 172);
+            this.btnSaveImage.Name = "btnSaveImage";
+            this.btnSaveImage.Size = new System.Drawing.Size(85, 31);
+            this.btnSaveImage.TabIndex = 10;
+            this.btnSaveImage.Text = "Save";
+            this.btnSaveImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSaveImage.UseVisualStyleBackColor = true;
             // 
             // frmMeal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 420);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(299, 244);
+            this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMeal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Meal";
+            this.Load += new System.EventHandler(this.frmMeal_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbxTime;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbxCharges;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtbxMenu;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSaveImage;
+        private System.Windows.Forms.RichTextBox rhtextbxRemaks;
     }
 }

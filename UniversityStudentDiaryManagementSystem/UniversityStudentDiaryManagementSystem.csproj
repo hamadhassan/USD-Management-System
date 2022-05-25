@@ -52,11 +52,11 @@
     <Compile Include="frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAcdemicFee.cs">
+    <Compile Include="frmFee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAcdemicFee.Designer.cs">
-      <DependentUpon>frmAcdemicFee.cs</DependentUpon>
+    <Compile Include="frmFee.Designer.cs">
+      <DependentUpon>frmFee.cs</DependentUpon>
     </Compile>
     <Compile Include="BL\Credential.cs" />
     <Compile Include="DL\CredentialDL.cs" />
@@ -107,12 +107,6 @@
     </Compile>
     <Compile Include="frmHostelExpenditure.Designer.cs">
       <DependentUpon>frmHostelExpenditure.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmHostelFee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHostelFee.Designer.cs">
-      <DependentUpon>frmHostelFee.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -173,8 +167,8 @@
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAcdemicFee.resx">
-      <DependentUpon>frmAcdemicFee.cs</DependentUpon>
+    <EmbeddedResource Include="frmFee.resx">
+      <DependentUpon>frmFee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAchivements.resx">
       <DependentUpon>frmAchivements.cs</DependentUpon>
@@ -199,9 +193,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHostelExpenditure.resx">
       <DependentUpon>frmHostelExpenditure.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmHostelFee.resx">
-      <DependentUpon>frmHostelFee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

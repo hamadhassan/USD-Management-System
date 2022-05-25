@@ -26,5 +26,22 @@ namespace UniversityStudentDiaryManagementSystem
         {
 
         }
+
+        private void frmFee_Load(object sender, EventArgs e)
+        {
+            cmbxAcademicSemester.SelectedIndex = 0 ;
+            cobxHostelSemester.SelectedIndex = 0;
+        }
+
+        private void btnAcademicClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnHostelClose_Click(object sender, EventArgs e)
+        {
+            Close();
+
+        }
     }
 }

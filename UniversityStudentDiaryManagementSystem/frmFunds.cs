@@ -16,5 +16,15 @@ namespace UniversityStudentDiaryManagementSystem
         {
             InitializeComponent();
         }
+
+        private void frmFunds_Load(object sender, EventArgs e)
+        {
+            cmbxType.SelectedIndex = 0;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

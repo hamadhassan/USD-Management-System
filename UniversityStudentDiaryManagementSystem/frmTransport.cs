@@ -16,5 +16,20 @@ namespace UniversityStudentDiaryManagementSystem
         {
             InitializeComponent();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmTransport_Load(object sender, EventArgs e)
+        {
+            cmbxType.SelectedIndex = 0;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

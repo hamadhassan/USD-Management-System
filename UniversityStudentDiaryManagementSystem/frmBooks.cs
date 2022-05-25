@@ -16,5 +16,33 @@ namespace UniversityStudentDiaryManagementSystem
         {
             InitializeComponent();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbcType.SelectedIndex == 1)
+            {
+                lblBookFrom.Text = "Friend Name :";
+            }
+            else if(cmbcType.SelectedIndex == 2)
+            {
+                lblBookFrom.Text = "Publisher :";
+
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmBooks_Load(object sender, EventArgs e)
+        {
+            cmbcType.SelectedIndex = 0;
+        }
     }
 }
