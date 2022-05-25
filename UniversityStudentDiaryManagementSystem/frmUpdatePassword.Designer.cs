@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdatePassword));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBxShowPassword = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtbxOldPassword = new System.Windows.Forms.TextBox();
@@ -39,7 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtbxNewPassword = new System.Windows.Forms.TextBox();
             this.txtbxConfirmPassword = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,16 +77,33 @@
             this.checkBxShowPassword.UseVisualStyleBackColor = true;
             this.checkBxShowPassword.CheckedChanged += new System.EventHandler(this.checkBxShowPassword_CheckedChanged);
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(269, 172);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 30);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Close";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnChangePassword
             // 
             this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnChangePassword.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnChangePassword.Location = new System.Drawing.Point(104, 172);
+            this.btnChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Image")));
+            this.btnChangePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChangePassword.Location = new System.Drawing.Point(93, 172);
             this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(159, 30);
+            this.btnChangePassword.Size = new System.Drawing.Size(170, 30);
             this.btnChangePassword.TabIndex = 4;
             this.btnChangePassword.Text = "Change Password";
+            this.btnChangePassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnChangePassword.UseVisualStyleBackColor = true;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
@@ -167,19 +185,6 @@
             this.txtbxConfirmPassword.Size = new System.Drawing.Size(185, 26);
             this.txtbxConfirmPassword.TabIndex = 3;
             this.txtbxConfirmPassword.UseSystemPasswordChar = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button1.Location = new System.Drawing.Point(269, 172);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 30);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmUpdatePassword
             // 

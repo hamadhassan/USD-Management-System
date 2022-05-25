@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignIn));
             this.txtbxPassword = new System.Windows.Forms.TextBox();
             this.txtbxUsername = new System.Windows.Forms.TextBox();
             this.combxLoginAs = new System.Windows.Forms.ComboBox();
@@ -37,11 +38,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCreateAccount = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtbxPassword
             // 
-            this.txtbxPassword.Location = new System.Drawing.Point(115, 75);
+            this.txtbxPassword.Location = new System.Drawing.Point(137, 257);
             this.txtbxPassword.Name = "txtbxPassword";
             this.txtbxPassword.Size = new System.Drawing.Size(169, 26);
             this.txtbxPassword.TabIndex = 10;
@@ -49,7 +53,7 @@
             // 
             // txtbxUsername
             // 
-            this.txtbxUsername.Location = new System.Drawing.Point(115, 45);
+            this.txtbxUsername.Location = new System.Drawing.Point(137, 227);
             this.txtbxUsername.Name = "txtbxUsername";
             this.txtbxUsername.Size = new System.Drawing.Size(169, 26);
             this.txtbxUsername.TabIndex = 6;
@@ -61,7 +65,7 @@
             this.combxLoginAs.Items.AddRange(new object[] {
             "Admin",
             "Agent"});
-            this.combxLoginAs.Location = new System.Drawing.Point(115, 12);
+            this.combxLoginAs.Location = new System.Drawing.Point(137, 194);
             this.combxLoginAs.Name = "combxLoginAs";
             this.combxLoginAs.Size = new System.Drawing.Size(169, 28);
             this.combxLoginAs.TabIndex = 13;
@@ -72,11 +76,14 @@
             this.btnExit.BackColor = System.Drawing.SystemColors.Control;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Black;
-            this.btnExit.Location = new System.Drawing.Point(210, 107);
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(232, 289);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(74, 31);
             this.btnExit.TabIndex = 12;
             this.btnExit.Text = "Exit";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -85,18 +92,21 @@
             this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(115, 107);
+            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
+            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.Location = new System.Drawing.Point(137, 289);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(74, 31);
+            this.btnLogin.Size = new System.Drawing.Size(81, 31);
             this.btnLogin.TabIndex = 11;
             this.btnLogin.Text = "Login";
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 79);
+            this.label3.Location = new System.Drawing.Point(31, 261);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 20);
@@ -106,7 +116,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 48);
+            this.label2.Location = new System.Drawing.Point(31, 230);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 20);
@@ -116,7 +126,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 15);
+            this.label1.Location = new System.Drawing.Point(31, 197);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
@@ -128,19 +138,42 @@
             this.btnCreateAccount.BackColor = System.Drawing.SystemColors.Control;
             this.btnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateAccount.ForeColor = System.Drawing.Color.Black;
-            this.btnCreateAccount.Location = new System.Drawing.Point(12, 144);
+            this.btnCreateAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateAccount.Image")));
+            this.btnCreateAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCreateAccount.Location = new System.Drawing.Point(35, 326);
             this.btnCreateAccount.Name = "btnCreateAccount";
-            this.btnCreateAccount.Size = new System.Drawing.Size(272, 31);
+            this.btnCreateAccount.Size = new System.Drawing.Size(271, 31);
             this.btnCreateAccount.TabIndex = 11;
-            this.btnCreateAccount.Text = "Create Account";
+            this.btnCreateAccount.Text = "Don\'t Have Account? Create Account";
+            this.btnCreateAccount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCreateAccount.UseVisualStyleBackColor = false;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(91, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(148, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(12, 9);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(316, 366);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Sign in";
             // 
             // frmSignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(293, 189);
+            this.ClientSize = new System.Drawing.Size(336, 389);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtbxPassword);
             this.Controls.Add(this.txtbxUsername);
             this.Controls.Add(this.combxLoginAs);
@@ -150,12 +183,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmSignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignIn";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +207,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCreateAccount;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

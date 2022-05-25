@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateAccount));
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.txtbxPassword = new System.Windows.Forms.TextBox();
             this.txtbxUsername = new System.Windows.Forms.TextBox();
@@ -50,11 +51,14 @@
             this.btnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateAccount.ForeColor = System.Drawing.Color.Black;
+            this.btnCreateAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateAccount.Image")));
+            this.btnCreateAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCreateAccount.Location = new System.Drawing.Point(9, 180);
             this.btnCreateAccount.Name = "btnCreateAccount";
-            this.btnCreateAccount.Size = new System.Drawing.Size(135, 33);
+            this.btnCreateAccount.Size = new System.Drawing.Size(155, 33);
             this.btnCreateAccount.TabIndex = 16;
             this.btnCreateAccount.Text = "Create Account";
+            this.btnCreateAccount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCreateAccount.UseVisualStyleBackColor = false;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
@@ -165,11 +169,13 @@
             // 
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(150, 180);
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(170, 180);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(119, 33);
+            this.btnClose.Size = new System.Drawing.Size(99, 33);
             this.btnClose.TabIndex = 18;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "  Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 

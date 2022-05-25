@@ -38,13 +38,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUploadImage = new System.Windows.Forms.Button();
             this.btnSaveImage = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(103, 146);
+            this.lblUserName.Location = new System.Drawing.Point(116, 160);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(26, 20);
             this.lblUserName.TabIndex = 0;
@@ -53,7 +54,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 172);
+            this.label1.Location = new System.Drawing.Point(40, 182);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 20);
             this.label1.TabIndex = 1;
@@ -62,7 +63,7 @@
             // lblAmount
             // 
             this.lblAmount.AutoSize = true;
-            this.lblAmount.Location = new System.Drawing.Point(127, 172);
+            this.lblAmount.Location = new System.Drawing.Point(140, 182);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.Size = new System.Drawing.Size(36, 20);
             this.lblAmount.TabIndex = 2;
@@ -71,7 +72,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 194);
+            this.label2.Location = new System.Drawing.Point(40, 204);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 3;
@@ -80,7 +81,7 @@
             // lblComments
             // 
             this.lblComments.AutoSize = true;
-            this.lblComments.Location = new System.Drawing.Point(127, 194);
+            this.lblComments.Location = new System.Drawing.Point(140, 204);
             this.lblComments.Name = "lblComments";
             this.lblComments.Size = new System.Drawing.Size(29, 20);
             this.lblComments.TabIndex = 4;
@@ -89,18 +90,21 @@
             // btnClose
             // 
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(138, 257);
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(166, 267);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(100, 31);
+            this.btnClose.Size = new System.Drawing.Size(85, 31);
             this.btnClose.TabIndex = 7;
             this.btnClose.Text = "Close";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(58, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(71, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(124, 124);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +114,9 @@
             // btnUploadImage
             // 
             this.btnUploadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUploadImage.Location = new System.Drawing.Point(12, 220);
+            this.btnUploadImage.Image = ((System.Drawing.Image)(resources.GetObject("btnUploadImage.Image")));
+            this.btnUploadImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUploadImage.Location = new System.Drawing.Point(25, 230);
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.Size = new System.Drawing.Size(226, 31);
             this.btnUploadImage.TabIndex = 7;
@@ -121,18 +127,30 @@
             // btnSaveImage
             // 
             this.btnSaveImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveImage.Location = new System.Drawing.Point(12, 257);
+            this.btnSaveImage.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveImage.Image")));
+            this.btnSaveImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveImage.Location = new System.Drawing.Point(25, 267);
             this.btnSaveImage.Name = "btnSaveImage";
-            this.btnSaveImage.Size = new System.Drawing.Size(100, 31);
+            this.btnSaveImage.Size = new System.Drawing.Size(88, 31);
             this.btnSaveImage.TabIndex = 7;
             this.btnSaveImage.Text = "Save";
+            this.btnSaveImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSaveImage.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(8, 8);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(256, 303);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Wallet";
             // 
             // frmWallet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(265, 297);
+            this.ClientSize = new System.Drawing.Size(277, 321);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSaveImage);
             this.Controls.Add(this.btnUploadImage);
@@ -142,6 +160,7 @@
             this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -166,5 +185,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnUploadImage;
         private System.Windows.Forms.Button btnSaveImage;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -86,6 +86,7 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -94,6 +95,7 @@
             this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tolstplblCurrentTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -112,10 +114,7 @@
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.timerCurrentDateTime = new System.Windows.Forms.Timer(this.components);
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip.SuspendLayout();
@@ -157,7 +156,7 @@
             // statusToolStripMenuItem
             // 
             this.statusToolStripMenuItem.Name = "statusToolStripMenuItem";
-            this.statusToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.statusToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.statusToolStripMenuItem.Text = "Status";
             this.statusToolStripMenuItem.Click += new System.EventHandler(this.statusToolStripMenuItem_Click);
             // 
@@ -173,14 +172,14 @@
             // academicToolStripMenuItem
             // 
             this.academicToolStripMenuItem.Name = "academicToolStripMenuItem";
-            this.academicToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.academicToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.academicToolStripMenuItem.Text = "Academic";
             this.academicToolStripMenuItem.Click += new System.EventHandler(this.academicToolStripMenuItem_Click);
             // 
             // hostelToolStripMenuItem
             // 
             this.hostelToolStripMenuItem.Name = "hostelToolStripMenuItem";
-            this.hostelToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.hostelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.hostelToolStripMenuItem.Text = "Hostel";
             this.hostelToolStripMenuItem.Click += new System.EventHandler(this.hostelToolStripMenuItem_Click);
             // 
@@ -197,21 +196,21 @@
             // dailyToolStripMenuItem
             // 
             this.dailyToolStripMenuItem.Name = "dailyToolStripMenuItem";
-            this.dailyToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.dailyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dailyToolStripMenuItem.Text = "Today";
             this.dailyToolStripMenuItem.Click += new System.EventHandler(this.dailyToolStripMenuItem_Click);
             // 
             // monthlyToolStripMenuItem
             // 
             this.monthlyToolStripMenuItem.Name = "monthlyToolStripMenuItem";
-            this.monthlyToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.monthlyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.monthlyToolStripMenuItem.Text = "Quarterly";
             this.monthlyToolStripMenuItem.Click += new System.EventHandler(this.monthlyToolStripMenuItem_Click);
             // 
             // yearToolStripMenuItem
             // 
             this.yearToolStripMenuItem.Name = "yearToolStripMenuItem";
-            this.yearToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.yearToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.yearToolStripMenuItem.Text = "Yearly";
             this.yearToolStripMenuItem.Click += new System.EventHandler(this.yearToolStripMenuItem_Click);
             // 
@@ -236,7 +235,7 @@
             this.dinnerToolStripMenuItem,
             this.hangOutToolStripMenuItem});
             this.mealToolStripMenuItem.Name = "mealToolStripMenuItem";
-            this.mealToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.mealToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mealToolStripMenuItem.Text = "Meal";
             // 
             // breakfastToolStripMenuItem
@@ -270,35 +269,35 @@
             // messMealToolStripMenuItem
             // 
             this.messMealToolStripMenuItem.Name = "messMealToolStripMenuItem";
-            this.messMealToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.messMealToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.messMealToolStripMenuItem.Text = "Mess Meal";
             this.messMealToolStripMenuItem.Click += new System.EventHandler(this.messMealToolStripMenuItem_Click);
             // 
             // serviceToolStripMenuItem
             // 
             this.serviceToolStripMenuItem.Name = "serviceToolStripMenuItem";
-            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.serviceToolStripMenuItem.Text = "Room Service ";
             this.serviceToolStripMenuItem.Click += new System.EventHandler(this.serviceToolStripMenuItem_Click);
             // 
             // roomRenovationToolStripMenuItem
             // 
             this.roomRenovationToolStripMenuItem.Name = "roomRenovationToolStripMenuItem";
-            this.roomRenovationToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.roomRenovationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.roomRenovationToolStripMenuItem.Text = "Room Renovation";
             this.roomRenovationToolStripMenuItem.Click += new System.EventHandler(this.roomRenovationToolStripMenuItem_Click);
             // 
             // laundaryToolStripMenuItem
             // 
             this.laundaryToolStripMenuItem.Name = "laundaryToolStripMenuItem";
-            this.laundaryToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.laundaryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.laundaryToolStripMenuItem.Text = "Laundry";
             this.laundaryToolStripMenuItem.Click += new System.EventHandler(this.laundaryToolStripMenuItem_Click);
             // 
             // barberToolStripMenuItem
             // 
             this.barberToolStripMenuItem.Name = "barberToolStripMenuItem";
-            this.barberToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.barberToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.barberToolStripMenuItem.Text = "Barber";
             this.barberToolStripMenuItem.Click += new System.EventHandler(this.barberToolStripMenuItem_Click);
             // 
@@ -314,14 +313,14 @@
             // printingToolStripMenuItem
             // 
             this.printingToolStripMenuItem.Name = "printingToolStripMenuItem";
-            this.printingToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.printingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.printingToolStripMenuItem.Text = "Photocopy Shop";
             this.printingToolStripMenuItem.Click += new System.EventHandler(this.printingToolStripMenuItem_Click);
             // 
             // copyingToolStripMenuItem
             // 
             this.copyingToolStripMenuItem.Name = "copyingToolStripMenuItem";
-            this.copyingToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.copyingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.copyingToolStripMenuItem.Text = "Stationary Shop";
             this.copyingToolStripMenuItem.Click += new System.EventHandler(this.copyingToolStripMenuItem_Click);
             // 
@@ -338,21 +337,21 @@
             // classToolStripMenuItem
             // 
             this.classToolStripMenuItem.Name = "classToolStripMenuItem";
-            this.classToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.classToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.classToolStripMenuItem.Text = "Class ";
             this.classToolStripMenuItem.Click += new System.EventHandler(this.classToolStripMenuItem_Click);
             // 
             // socitiesToolStripMenuItem
             // 
             this.socitiesToolStripMenuItem.Name = "socitiesToolStripMenuItem";
-            this.socitiesToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.socitiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.socitiesToolStripMenuItem.Text = "Socities";
             this.socitiesToolStripMenuItem.Click += new System.EventHandler(this.socitiesToolStripMenuItem_Click);
             // 
             // socialWorkToolStripMenuItem
             // 
             this.socialWorkToolStripMenuItem.Name = "socialWorkToolStripMenuItem";
-            this.socialWorkToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.socialWorkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.socialWorkToolStripMenuItem.Text = "Social Work";
             this.socialWorkToolStripMenuItem.Click += new System.EventHandler(this.socialWorkToolStripMenuItem_Click);
             // 
@@ -369,21 +368,21 @@
             // dailyToolStripMenuItem1
             // 
             this.dailyToolStripMenuItem1.Name = "dailyToolStripMenuItem1";
-            this.dailyToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
+            this.dailyToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.dailyToolStripMenuItem1.Text = "Today";
             this.dailyToolStripMenuItem1.Click += new System.EventHandler(this.dailyToolStripMenuItem1_Click);
             // 
             // quatilyToolStripMenuItem
             // 
             this.quatilyToolStripMenuItem.Name = "quatilyToolStripMenuItem";
-            this.quatilyToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.quatilyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quatilyToolStripMenuItem.Text = "Quarterly";
             this.quatilyToolStripMenuItem.Click += new System.EventHandler(this.quatilyToolStripMenuItem_Click);
             // 
             // yearlyToolStripMenuItem
             // 
             this.yearlyToolStripMenuItem.Name = "yearlyToolStripMenuItem";
-            this.yearlyToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.yearlyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.yearlyToolStripMenuItem.Text = "Yearly";
             this.yearlyToolStripMenuItem.Click += new System.EventHandler(this.yearlyToolStripMenuItem_Click);
             // 
@@ -398,7 +397,7 @@
             // packagesToolStripMenuItem
             // 
             this.packagesToolStripMenuItem.Name = "packagesToolStripMenuItem";
-            this.packagesToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.packagesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.packagesToolStripMenuItem.Text = "Package";
             this.packagesToolStripMenuItem.Click += new System.EventHandler(this.packagesToolStripMenuItem_Click);
             // 
@@ -414,14 +413,14 @@
             // borrowToolStripMenuItem
             // 
             this.borrowToolStripMenuItem.Name = "borrowToolStripMenuItem";
-            this.borrowToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.borrowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.borrowToolStripMenuItem.Text = "Borrow";
             this.borrowToolStripMenuItem.Click += new System.EventHandler(this.borrowToolStripMenuItem_Click);
             // 
             // purchaseToolStripMenuItem
             // 
             this.purchaseToolStripMenuItem.Name = "purchaseToolStripMenuItem";
-            this.purchaseToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.purchaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.purchaseToolStripMenuItem.Text = "Purchase";
             this.purchaseToolStripMenuItem.Click += new System.EventHandler(this.purchaseToolStripMenuItem_Click);
             // 
@@ -437,14 +436,14 @@
             // busToolStripMenuItem
             // 
             this.busToolStripMenuItem.Name = "busToolStripMenuItem";
-            this.busToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.busToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.busToolStripMenuItem.Text = "Bus";
             this.busToolStripMenuItem.Click += new System.EventHandler(this.busToolStripMenuItem_Click);
             // 
             // otherToolStripMenuItem
             // 
             this.otherToolStripMenuItem.Name = "otherToolStripMenuItem";
-            this.otherToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.otherToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.otherToolStripMenuItem.Text = "Other";
             this.otherToolStripMenuItem.Click += new System.EventHandler(this.otherToolStripMenuItem_Click);
             // 
@@ -460,14 +459,14 @@
             // sportiesToolStripMenuItem
             // 
             this.sportiesToolStripMenuItem.Name = "sportiesToolStripMenuItem";
-            this.sportiesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.sportiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sportiesToolStripMenuItem.Text = "Sporties";
             this.sportiesToolStripMenuItem.Click += new System.EventHandler(this.sportiesToolStripMenuItem_Click);
             // 
             // socialToolStripMenuItem
             // 
             this.socialToolStripMenuItem.Name = "socialToolStripMenuItem";
-            this.socialToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.socialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.socialToolStripMenuItem.Text = "Social";
             this.socialToolStripMenuItem.Click += new System.EventHandler(this.socialToolStripMenuItem_Click);
             // 
@@ -483,14 +482,14 @@
             // achivementDetailToolStripMenuItem
             // 
             this.achivementDetailToolStripMenuItem.Name = "achivementDetailToolStripMenuItem";
-            this.achivementDetailToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.achivementDetailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.achivementDetailToolStripMenuItem.Text = "Achivement";
             this.achivementDetailToolStripMenuItem.Click += new System.EventHandler(this.achivementDetailToolStripMenuItem_Click);
             // 
             // resultToolStripMenuItem1
             // 
             this.resultToolStripMenuItem1.Name = "resultToolStripMenuItem1";
-            this.resultToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.resultToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.resultToolStripMenuItem1.Text = "Result";
             this.resultToolStripMenuItem1.Click += new System.EventHandler(this.resultToolStripMenuItem1_Click);
             // 
@@ -507,21 +506,21 @@
             // quotesToolStripMenuItem
             // 
             this.quotesToolStripMenuItem.Name = "quotesToolStripMenuItem";
-            this.quotesToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.quotesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quotesToolStripMenuItem.Text = "Quotes";
             this.quotesToolStripMenuItem.Click += new System.EventHandler(this.quotesToolStripMenuItem_Click);
             // 
             // eventToolStripMenuItem
             // 
             this.eventToolStripMenuItem.Name = "eventToolStripMenuItem";
-            this.eventToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.eventToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eventToolStripMenuItem.Text = "Event";
             this.eventToolStripMenuItem.Click += new System.EventHandler(this.eventToolStripMenuItem_Click);
             // 
             // notesToolStripMenuItem
             // 
             this.notesToolStripMenuItem.Name = "notesToolStripMenuItem";
-            this.notesToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.notesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.notesToolStripMenuItem.Text = "Note";
             this.notesToolStripMenuItem.Click += new System.EventHandler(this.notesToolStripMenuItem_Click);
             // 
@@ -572,6 +571,13 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.aboutToolStripMenuItem.Text = "Help";
             // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem1.Text = "About";
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -586,7 +592,7 @@
             this.tolstplblCurentDate,
             this.toolStripStatusLabel6,
             this.tolstplblCurrentTime});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 373);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 411);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(929, 25);
             this.statusStrip1.TabIndex = 1;
@@ -651,59 +657,76 @@
             this.toolStripSeparator4,
             this.toolStripButton5,
             this.toolStripSeparator13,
-            this.toolStripButton14,
-            this.toolStripSeparator12});
+            this.toolStripButton14});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(929, 38);
+            this.toolStrip.Size = new System.Drawing.Size(929, 54);
             this.toolStrip.TabIndex = 2;
             this.toolStrip.Text = "toolStrip1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(65, 51);
+            this.toolStripButton2.Text = "   Wallet    ";
+            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 54);
             // 
             // toolStripButton3
             // 
             this.toolStripButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(46, 35);
-            this.toolStripButton3.Text = "Report";
+            this.toolStripButton3.Size = new System.Drawing.Size(58, 51);
+            this.toolStripButton3.Text = "  Report  ";
+            this.toolStripButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 54);
             // 
             // toolStripButton4
             // 
             this.toolStripButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(37, 35);
-            this.toolStripButton4.Text = "Meal";
+            this.toolStripButton4.Size = new System.Drawing.Size(49, 51);
+            this.toolStripButton4.Text = "  Meal  ";
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 54);
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(74, 35);
-            this.toolStripButton1.Text = "Expenditure";
+            this.toolStripButton1.Size = new System.Drawing.Size(80, 51);
+            this.toolStripButton1.Text = " Expenditure ";
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -711,17 +734,18 @@
             // 
             this.toolStripSeparator7.AccessibleDescription = "vv";
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 54);
             // 
             // toolStripButton9
             // 
             this.toolStripButton9.AccessibleDescription = "vv";
             this.toolStripButton9.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(69, 35);
-            this.toolStripButton9.Text = "Photocopy";
+            this.toolStripButton9.Size = new System.Drawing.Size(75, 51);
+            this.toolStripButton9.Text = " Photocopy ";
             this.toolStripButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
             // 
@@ -729,117 +753,99 @@
             // 
             this.toolStripSeparator8.AccessibleDescription = "vv";
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 54);
             // 
             // toolStripButton8
             // 
             this.toolStripButton8.AccessibleDescription = "vv";
             this.toolStripButton8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(64, 35);
-            this.toolStripButton8.Text = "Stationary";
+            this.toolStripButton8.Size = new System.Drawing.Size(70, 51);
+            this.toolStripButton8.Text = " Stationary ";
             this.toolStripButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 54);
             // 
             // toolStripButton7
             // 
             this.toolStripButton7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(43, 35);
-            this.toolStripButton7.Text = "Funds";
+            this.toolStripButton7.Size = new System.Drawing.Size(58, 51);
+            this.toolStripButton7.Text = "   Funds  ";
             this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 54);
             // 
             // toolStripButton6
             // 
             this.toolStripButton6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(40, 35);
-            this.toolStripButton6.Text = "Goals";
+            this.toolStripButton6.Size = new System.Drawing.Size(58, 51);
+            this.toolStripButton6.Text = "   Goals   ";
             this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 54);
             // 
             // toolStripButton5
             // 
             this.toolStripButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(45, 35);
-            this.toolStripButton5.Text = "Phone";
+            this.toolStripButton5.Size = new System.Drawing.Size(63, 51);
+            this.toolStripButton5.Text = "   Phone   ";
             this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripSeparator13
             // 
             this.toolStripSeparator13.Name = "toolStripSeparator13";
-            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 54);
             // 
             // toolStripButton14
             // 
             this.toolStripButton14.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
+            this.toolStripButton14.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(43, 35);
-            this.toolStripButton14.Text = "Secret";
+            this.toolStripButton14.Size = new System.Drawing.Size(61, 51);
+            this.toolStripButton14.Text = "   Secret   ";
             this.toolStripButton14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton14.Click += new System.EventHandler(this.toolStripButton14_Click);
-            // 
-            // toolStripSeparator12
-            // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 38);
             // 
             // timerCurrentDateTime
             // 
             this.timerCurrentDateTime.Enabled = true;
             this.timerCurrentDateTime.Tick += new System.EventHandler(this.timerCurrentDateTime_Tick);
             // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(44, 35);
-            this.toolStripButton2.Text = "Wallet";
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // aboutToolStripMenuItem1
-            // 
-            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.aboutToolStripMenuItem1.Text = "About";
-            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 398);
+            this.ClientSize = new System.Drawing.Size(929, 436);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip);
@@ -938,7 +944,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
         private System.Windows.Forms.ToolStripButton toolStripButton14;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
         private System.Windows.Forms.ToolStripStatusLabel tolstplblCurentDate;
         private System.Windows.Forms.ToolStripStatusLabel tolstplblCurrentTime;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel6;
