@@ -11,7 +11,7 @@ namespace UniversityStudentDiaryManagementSystem.BL
         private string typeAcitivity;
         private string minutes;
         private string remarks;
-        public Activities(string typeActivity,string minutes,string remarks)
+        public Activities(string typeActivity, string minutes, string remarks)
         {
             this.typeAcitivity = typeActivity;
             this.minutes = minutes;

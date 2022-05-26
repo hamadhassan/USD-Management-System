@@ -145,25 +145,25 @@ namespace UniversityStudentDiaryManagementSystem
             frmHelpingMaterial helpingMaterial = new frmHelpingMaterial();
             helpingMaterial.ShowDialog();
         }
-
+        #region Fund
         private void classToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFunds funds=new frmFunds();
+            frmFunds funds=new frmFunds(1);
             funds.ShowDialog();
         }
 
         private void socitiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFunds funds = new frmFunds();
+            frmFunds funds = new frmFunds(2);
             funds.ShowDialog();
         }
 
         private void socialWorkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFunds funds = new frmFunds();
+            frmFunds funds = new frmFunds(3);
             funds.ShowDialog();
         }
-
+        #endregion
         private void dailyToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmGoals frmGoals = new frmGoals();
@@ -284,13 +284,7 @@ namespace UniversityStudentDiaryManagementSystem
             frmHelpingMaterial helpingMaterial = new frmHelpingMaterial();
             helpingMaterial.ShowDialog();
         }
-
-        private void toolStripButton7_Click(object sender, EventArgs e)
-        {
-            frmFunds funds=new frmFunds(); 
-            funds.ShowDialog();
-        }
-
+     
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             frmPhone phone = new frmPhone();

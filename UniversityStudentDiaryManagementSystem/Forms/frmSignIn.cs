@@ -22,26 +22,35 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string loginAs = combxLoginAs.SelectedItem.ToString();
-            string username = txtbxUsername.Text;
-            string password = txtbxPassword.Text;
-            Credential crediational = new Credential();
-            CredentialDL.setIntoListCrediantialList(crediational);
-            bool checkCondition = crediational.checkUser(loginAs, username, password, CredentialDL.getCrediationalList());
-            if (checkCondition)
+            if (combxLoginAs.SelectedIndex != 0)
             {
-                frmMain main = new frmMain();
-                main.Show();
-                this.Hide();
+                string loginAs = combxLoginAs.SelectedItem.ToString();
+                string username = txtbxUsername.Text;
+                string password = txtbxPassword.Text;
+                Credential crediational = new Credential();
+                CredentialDL.setIntoListCrediantialList(crediational);
+                bool checkCondition = crediational.checkUser(loginAs, username, password, CredentialDL.getCrediationalList());
+                if (checkCondition)
+                {
+                    frmMain main = new frmMain();
+                    main.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username and password", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
+                combxLoginAs.Text = "Select one option";
+                txtbxUsername.Clear();
+                txtbxPassword.Clear();
             }
             else
             {
-                MessageBox.Show("Invalid username and password", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+                MessageBox.Show("Please select the type ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                combxLoginAs.Focus();
             }
-            combxLoginAs.Text = "Select one option";
-            txtbxUsername.Clear();
-            txtbxPassword.Clear();
+            
 
         }
 
@@ -54,6 +63,11 @@ namespace UniversityStudentDiaryManagementSystem
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void frmSignIn_Load(object sender, EventArgs e)
+        {
+            combxLoginAs.SelectedIndex = 0;
         }
     }
 }

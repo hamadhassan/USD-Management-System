@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFunds));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rctxbxObjective = new System.Windows.Forms.RichTextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.txtbxAmount = new System.Windows.Forms.TextBox();
@@ -37,7 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.rctxbxObjective = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +56,16 @@
             this.groupBox1.Size = new System.Drawing.Size(313, 192);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Achivements";
+            this.groupBox1.Text = "Fund";
+            // 
+            // rctxbxObjective
+            // 
+            this.rctxbxObjective.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rctxbxObjective.Location = new System.Drawing.Point(117, 85);
+            this.rctxbxObjective.Name = "rctxbxObjective";
+            this.rctxbxObjective.Size = new System.Drawing.Size(181, 52);
+            this.rctxbxObjective.TabIndex = 2;
+            this.rctxbxObjective.Text = "";
             // 
             // btnSave
             // 
@@ -66,10 +75,11 @@
             this.btnSave.Location = new System.Drawing.Point(117, 140);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(88, 31);
-            this.btnSave.TabIndex = 9;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -79,7 +89,7 @@
             this.btnClose.Location = new System.Drawing.Point(213, 140);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(85, 31);
-            this.btnClose.TabIndex = 8;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -90,7 +100,7 @@
             this.txtbxAmount.Location = new System.Drawing.Point(117, 55);
             this.txtbxAmount.Name = "txtbxAmount";
             this.txtbxAmount.Size = new System.Drawing.Size(181, 26);
-            this.txtbxAmount.TabIndex = 2;
+            this.txtbxAmount.TabIndex = 1;
             // 
             // cmbxType
             // 
@@ -100,11 +110,12 @@
             this.cmbxType.Items.AddRange(new object[] {
             "Select option",
             "Class",
-            "Community"});
+            "Socities",
+            "Social Work"});
             this.cmbxType.Location = new System.Drawing.Point(117, 24);
             this.cmbxType.Name = "cmbxType";
             this.cmbxType.Size = new System.Drawing.Size(181, 28);
-            this.cmbxType.TabIndex = 1;
+            this.cmbxType.TabIndex = 0;
             // 
             // label3
             // 
@@ -133,16 +144,9 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Type :";
             // 
-            // rctxbxObjective
-            // 
-            this.rctxbxObjective.Location = new System.Drawing.Point(117, 85);
-            this.rctxbxObjective.Name = "rctxbxObjective";
-            this.rctxbxObjective.Size = new System.Drawing.Size(181, 52);
-            this.rctxbxObjective.TabIndex = 10;
-            this.rctxbxObjective.Text = "";
-            // 
             // frmFunds
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 211);
@@ -152,7 +156,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmFunds";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Achivements";
+            this.Text = "Fund";
             this.Load += new System.EventHandler(this.frmFunds_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

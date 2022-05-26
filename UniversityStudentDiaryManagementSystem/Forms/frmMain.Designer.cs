@@ -801,7 +801,6 @@
             this.toolStripButton7.Size = new System.Drawing.Size(58, 51);
             this.toolStripButton7.Text = "   Funds  ";
             this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
             // toolStripSeparator5
             // 

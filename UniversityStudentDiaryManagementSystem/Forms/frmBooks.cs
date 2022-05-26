@@ -98,7 +98,7 @@ namespace UniversityStudentDiaryManagementSystem
                 double amount = double.Parse(txtbxAmount.Text);
                 if (cmbxType.SelectedIndex != 0)
                 {
-                    Book book = new Book(typeBook, title, authorName, bookFrom, remarks,amount);
+                    BookPublisher book = new BookPublisher(typeBook, title, authorName, bookFrom, remarks,amount);
                     if (BookDL.setIntoBookList(book))
                     {
                         MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);

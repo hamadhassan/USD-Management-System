@@ -48,7 +48,7 @@
             this.txtbxPassword.Location = new System.Drawing.Point(137, 257);
             this.txtbxPassword.Name = "txtbxPassword";
             this.txtbxPassword.Size = new System.Drawing.Size(169, 26);
-            this.txtbxPassword.TabIndex = 10;
+            this.txtbxPassword.TabIndex = 2;
             this.txtbxPassword.UseSystemPasswordChar = true;
             // 
             // txtbxUsername
@@ -56,7 +56,7 @@
             this.txtbxUsername.Location = new System.Drawing.Point(137, 227);
             this.txtbxUsername.Name = "txtbxUsername";
             this.txtbxUsername.Size = new System.Drawing.Size(169, 26);
-            this.txtbxUsername.TabIndex = 6;
+            this.txtbxUsername.TabIndex = 1;
             // 
             // combxLoginAs
             // 
@@ -70,7 +70,7 @@
             this.combxLoginAs.Location = new System.Drawing.Point(137, 194);
             this.combxLoginAs.Name = "combxLoginAs";
             this.combxLoginAs.Size = new System.Drawing.Size(169, 28);
-            this.combxLoginAs.TabIndex = 13;
+            this.combxLoginAs.TabIndex = 0;
             // 
             // btnExit
             // 
@@ -82,7 +82,7 @@
             this.btnExit.Location = new System.Drawing.Point(232, 289);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(74, 31);
-            this.btnExit.TabIndex = 12;
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Exit";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExit.UseVisualStyleBackColor = false;
@@ -98,7 +98,7 @@
             this.btnLogin.Location = new System.Drawing.Point(137, 289);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(81, 31);
-            this.btnLogin.TabIndex = 11;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -144,7 +144,7 @@
             this.btnCreateAccount.Location = new System.Drawing.Point(35, 326);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(271, 31);
-            this.btnCreateAccount.TabIndex = 11;
+            this.btnCreateAccount.TabIndex = 5;
             this.btnCreateAccount.Text = "Don\'t Have Account? Create Account";
             this.btnCreateAccount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCreateAccount.UseVisualStyleBackColor = false;
@@ -171,6 +171,7 @@
             // 
             // frmSignIn
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(336, 389);
@@ -191,6 +192,7 @@
             this.Name = "frmSignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignIn";
+            this.Load += new System.EventHandler(this.frmSignIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

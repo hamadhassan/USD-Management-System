@@ -49,11 +49,14 @@
     <Compile Include="BL\Achivement.cs" />
     <Compile Include="BL\Activities.cs" />
     <Compile Include="BL\Book.cs" />
+    <Compile Include="BL\BookPublisher.cs" />
     <Compile Include="BL\Fee.cs" />
+    <Compile Include="BL\Fund.cs" />
     <Compile Include="DL\AchivementDL.cs" />
     <Compile Include="DL\ActivitiesDL.cs" />
     <Compile Include="DL\BookDL.cs" />
     <Compile Include="DL\FeeDL.cs" />
+    <Compile Include="DL\FundDL.cs" />
     <Compile Include="Forms\frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
