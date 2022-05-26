@@ -62,6 +62,7 @@ namespace UniversityStudentDiaryManagementSystem
             acdemicFee.ShowDialog();
         }
         #endregion
+
         private void dailyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReport report=new frmReport();
@@ -79,72 +80,79 @@ namespace UniversityStudentDiaryManagementSystem
             frmReport report = new frmReport();
             report.ShowDialog();
         }
-
+        #region Meal
         private void breakfastToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMeal meal=new frmMeal();
+            frmMeal meal=new frmMeal(1);
             meal.ShowDialog();
         }
 
         private void lunchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMeal meal = new frmMeal();
+            frmMeal meal = new frmMeal(2);
             meal.ShowDialog();
         }
 
         private void dinnerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMeal meal = new frmMeal();
+            frmMeal meal = new frmMeal(3);
             meal.ShowDialog();
         }
 
         private void hangOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMeal meal = new frmMeal();
+            frmMeal meal = new frmMeal(4);
             meal.ShowDialog();
         }
+        #endregion
 
+        #region Expebditure
         private void messMealToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHostelExpenditure hostelExpenditure=new frmHostelExpenditure();
+            frmHostelExpenditure hostelExpenditure=new frmHostelExpenditure(1);
             hostelExpenditure.ShowDialog();
         }
 
         private void serviceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure();
+            frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(2);
             hostelExpenditure.ShowDialog();
         }
 
         private void roomRenovationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure();
+            frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(3);
             hostelExpenditure.ShowDialog();
         }
 
         private void laundaryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure();
+            frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(4);
             hostelExpenditure.ShowDialog();
         }
 
         private void barberToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure();
+            frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(5);
             hostelExpenditure.ShowDialog();
         }
 
+        #endregion
+
+        #region Helping material
         private void printingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHelpingMaterial helpingMaterial=new frmHelpingMaterial();
+            frmHelpingMaterial helpingMaterial=new frmHelpingMaterial(1);
             helpingMaterial.ShowDialog();
         }
 
         private void copyingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHelpingMaterial helpingMaterial = new frmHelpingMaterial();
+            frmHelpingMaterial helpingMaterial = new frmHelpingMaterial(2);
             helpingMaterial.ShowDialog();
         }
+        #endregion
+
         #region Fund
         private void classToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -182,11 +190,14 @@ namespace UniversityStudentDiaryManagementSystem
             frmGoals.ShowDialog();
         }
 
+        #region Package 
         private void packagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPhone phone = new frmPhone();
             phone.ShowDialog();
         }
+        #endregion
+       
         #region Book
         private void borrowToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -230,25 +241,41 @@ namespace UniversityStudentDiaryManagementSystem
             frmAchivements achivements = new frmAchivements(1);
             achivements.ShowDialog();
         }
+        #region Secret
         private void quotesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSecret secret = new frmSecret();
+            frmSecret secret = new frmSecret(1);
             secret.ShowDialog();
         }
 
         private void eventToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSecret secret = new frmSecret();
+            frmSecret secret = new frmSecret(2);
             secret.ShowDialog();
         }
 
         private void notesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSecret secret = new frmSecret();
+            frmSecret secret = new frmSecret(3);
             secret.ShowDialog();
         }
+        #endregion
 
-      
+        #region Achivements
+        private void coToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAchivements achivements = new frmAchivements(1);
+            achivements.ShowDialog();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            frmAchivements achivements = new frmAchivements(2);
+            achivements.ShowDialog();
+        }
+        #endregion
+
+        #region Tool Srip Button 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             frmWallet wallet= new frmWallet();
@@ -259,42 +286,6 @@ namespace UniversityStudentDiaryManagementSystem
         {
             frmReport report= new frmReport();
             report.ShowDialog();    
-        }
-
-        private void toolStripButton4_Click(object sender, EventArgs e)
-        {
-            frmMeal meal = new frmMeal();
-            meal.ShowDialog();  
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            frmHostelExpenditure hostelExpenditure =new frmHostelExpenditure();
-            hostelExpenditure.ShowDialog();
-        }
-
-        private void toolStripButton9_Click(object sender, EventArgs e)
-        {
-            frmHelpingMaterial helpingMaterial=new frmHelpingMaterial();
-            helpingMaterial.ShowDialog();
-        }
-
-        private void toolStripButton8_Click(object sender, EventArgs e)
-        {
-            frmHelpingMaterial helpingMaterial = new frmHelpingMaterial();
-            helpingMaterial.ShowDialog();
-        }
-     
-        private void toolStripButton5_Click(object sender, EventArgs e)
-        {
-            frmPhone phone = new frmPhone();
-            phone.ShowDialog();
-        }
-
-        private void toolStripButton14_Click(object sender, EventArgs e)
-        {
-            frmSecret secret = new frmSecret();
-            secret.ShowDialog();
         }
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
@@ -313,17 +304,45 @@ namespace UniversityStudentDiaryManagementSystem
             frmChecking checking = new frmChecking();
             checking.ShowDialog();
         }
-        #region Achivements
-        private void coToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            frmAchivements achivements = new frmAchivements(1);
-            achivements.ShowDialog();
+            frmMeal meal = new frmMeal(0);
+            meal.ShowDialog();
         }
 
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            frmAchivements achivements = new frmAchivements(2);
-            achivements.ShowDialog();
+            frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(0);
+            hostelExpenditure.ShowDialog();
+        }
+
+        private void toolStripButton9_Click(object sender, EventArgs e)
+        {
+            frmHelpingMaterial helpingMaterial = new frmHelpingMaterial(1);
+            helpingMaterial.ShowDialog();
+        }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            frmHelpingMaterial helpingMaterial = new frmHelpingMaterial(2);
+            helpingMaterial.ShowDialog();
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            frmFunds funds = new frmFunds(0);
+            funds.ShowDialog();
+        }
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            frmPhone phone = new frmPhone();
+            phone.ShowDialog();
+        }
+
+        private void toolStripButton14_Click(object sender, EventArgs e)
+        {
+            frmSecret secret = new frmSecret(0);
+            secret.ShowDialog();    
         }
         #endregion
     }

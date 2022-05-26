@@ -120,17 +120,17 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        zgAAAM4BlP6ToAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEuSURBVEhLpZUx
-        bsIwFEAt0cJFunVEdlYUZ+kBchjY2mPQTqVVVQFqu5SeigGn6mj+j/IrE1nOz/eTLIGD3yPBFurXmlVT
-        maMri7VfLK5UJuhAFzobWywx4BprfDtK854TwbXo+PdZc1JQ2QQT4khE7uEunpWvb6fOmo/wAtzV1s/n
-        193aQXxdT0D+Gjrgi3/7u5tZ9wF5ZFBOSCJsOTEmMlpOcCJiOZGKZMuJeETvmlK/hXMiORGLXI4MOdFF
-        PvtyeGSHbDnSPnPbfywQqPSec06SxH/QIMI8jFGi8sr8uEp/hXOiSGorcs5JEs4+F0c4cmJ0ZIycYEck
-        cmIwkiMnkhF48xRewG2IC7q1bNpIbwtD9PHiT18qJyKRk3K2eIAXfzBecuQEOtCFTmf1/Rkp2Fvd98yv
-        NQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAM4AAADOAZT+k6AAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAABLklEQVRIS6WVMW7CMBRALdHCRbp1RHZWFGfpAXIY2Npj0E6lVVUBaruUnooBp+po/o/yKxNZzs/3
+        kyyBg98jwRbq15pVU5mjK4u1XyyuVCboQBc6G1ssMeAaa3w7SvOeE8G16Pj3WXNSUNkEE+JIRO7hLp6V
+        r2+nzpqP8ALc1dbP59fd2kF8XU9A/ho64It/+7ubWfcBeWRQTkgibDkxJjJaTnAiYjmRimTLiXhE75pS
+        v4VzIjkRi1yODDnRRT77cnhkh2w50j5z238sEKj0nnNOksR/0CDCPIxRovLK/LhKf4VzokhqK3LOSRLO
+        PhdHOHJidGSMnGBHJHJiMJIjJ5IRePMUXsBtiAu6tWzaSG8LQ/Tx4k9fKicikZNytniAF38wXnLkBDrQ
+        hU5n9f0ZKdhb3ffMrzUAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnSaveImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
         pQAAAKUBcMTeVQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFTSURBVEhL3da9

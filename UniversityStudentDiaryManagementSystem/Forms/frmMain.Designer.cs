@@ -488,27 +488,27 @@
             this.coToolStripMenuItem,
             this.toolStripMenuItem3});
             this.achivementDetailToolStripMenuItem.Name = "achivementDetailToolStripMenuItem";
-            this.achivementDetailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.achivementDetailToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.achivementDetailToolStripMenuItem.Text = "Achivement";
             // 
             // coToolStripMenuItem
             // 
             this.coToolStripMenuItem.Name = "coToolStripMenuItem";
-            this.coToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.coToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.coToolStripMenuItem.Text = "Co-Curricular";
             this.coToolStripMenuItem.Click += new System.EventHandler(this.coToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(157, 22);
             this.toolStripMenuItem3.Text = "Extra-Curricular";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // resultToolStripMenuItem1
             // 
             this.resultToolStripMenuItem1.Name = "resultToolStripMenuItem1";
-            this.resultToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.resultToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.resultToolStripMenuItem1.Text = "Result";
             // 
             // secretToolStripMenuItem
@@ -801,6 +801,7 @@
             this.toolStripButton7.Size = new System.Drawing.Size(58, 51);
             this.toolStripButton7.Text = "   Funds  ";
             this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
             // toolStripSeparator5
             // 

@@ -32,7 +32,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rhtextbxRemaks = new System.Windows.Forms.RichTextBox();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnSaveImage = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.cmbxType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbxCharges = new System.Windows.Forms.TextBox();
@@ -45,7 +45,7 @@
             // 
             this.groupBox1.Controls.Add(this.rhtextbxRemaks);
             this.groupBox1.Controls.Add(this.btnClose);
-            this.groupBox1.Controls.Add(this.btnSaveImage);
+            this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.cmbxType);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtbxCharges);
@@ -64,7 +64,7 @@
             this.rhtextbxRemaks.Location = new System.Drawing.Point(84, 87);
             this.rhtextbxRemaks.Name = "rhtextbxRemaks";
             this.rhtextbxRemaks.Size = new System.Drawing.Size(176, 51);
-            this.rhtextbxRemaks.TabIndex = 12;
+            this.rhtextbxRemaks.TabIndex = 2;
             this.rhtextbxRemaks.Text = "";
             // 
             // btnClose
@@ -76,25 +76,26 @@
             this.btnClose.Location = new System.Drawing.Point(175, 142);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(85, 31);
-            this.btnClose.TabIndex = 11;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnSaveImage
+            // btnSave
             // 
-            this.btnSaveImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveImage.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveImage.Image")));
-            this.btnSaveImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveImage.Location = new System.Drawing.Point(84, 142);
-            this.btnSaveImage.Name = "btnSaveImage";
-            this.btnSaveImage.Size = new System.Drawing.Size(85, 31);
-            this.btnSaveImage.TabIndex = 10;
-            this.btnSaveImage.Text = "Save";
-            this.btnSaveImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveImage.UseVisualStyleBackColor = true;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(84, 142);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(85, 31);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // cmbxType
             // 
@@ -108,7 +109,7 @@
             this.cmbxType.Location = new System.Drawing.Point(84, 25);
             this.cmbxType.Name = "cmbxType";
             this.cmbxType.Size = new System.Drawing.Size(176, 28);
-            this.cmbxType.TabIndex = 1;
+            this.cmbxType.TabIndex = 0;
             // 
             // label1
             // 
@@ -124,7 +125,7 @@
             this.txtbxCharges.Location = new System.Drawing.Point(84, 58);
             this.txtbxCharges.Name = "txtbxCharges";
             this.txtbxCharges.Size = new System.Drawing.Size(176, 26);
-            this.txtbxCharges.TabIndex = 4;
+            this.txtbxCharges.TabIndex = 1;
             // 
             // label3
             // 
@@ -146,6 +147,7 @@
             // 
             // frmHelpingMaterial
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 207);
@@ -168,7 +170,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox rhtextbxRemaks;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnSaveImage;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ComboBox cmbxType;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtbxCharges;

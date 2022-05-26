@@ -23,7 +23,11 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmFunds_Load(object sender, EventArgs e)
         {
-            if (selectedIndex == 1)
+            if (selectedIndex == 0)
+            {
+                cmbxType.SelectedIndex = 0;
+            }
+            else if (selectedIndex == 1)
             {
                 cmbxType.SelectedIndex = 1;
             }

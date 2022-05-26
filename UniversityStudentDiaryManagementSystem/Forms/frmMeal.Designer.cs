@@ -37,9 +37,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtbxMenu = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rhtextbxRemaks = new System.Windows.Forms.RichTextBox();
+            this.rctxtbxRemaks = new System.Windows.Forms.RichTextBox();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnSaveImage = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,9 +111,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rhtextbxRemaks);
+            this.groupBox1.Controls.Add(this.rctxtbxRemaks);
             this.groupBox1.Controls.Add(this.btnClose);
-            this.groupBox1.Controls.Add(this.btnSaveImage);
+            this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.cmbxTime);
             this.groupBox1.Controls.Add(this.txtbxMenu);
             this.groupBox1.Controls.Add(this.label1);
@@ -128,14 +128,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Meal";
             // 
-            // rhtextbxRemaks
+            // rctxtbxRemaks
             // 
-            this.rhtextbxRemaks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rhtextbxRemaks.Location = new System.Drawing.Point(84, 115);
-            this.rhtextbxRemaks.Name = "rhtextbxRemaks";
-            this.rhtextbxRemaks.Size = new System.Drawing.Size(176, 51);
-            this.rhtextbxRemaks.TabIndex = 12;
-            this.rhtextbxRemaks.Text = "";
+            this.rctxtbxRemaks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rctxtbxRemaks.Location = new System.Drawing.Point(84, 115);
+            this.rctxtbxRemaks.Name = "rctxtbxRemaks";
+            this.rctxtbxRemaks.Size = new System.Drawing.Size(176, 51);
+            this.rctxtbxRemaks.TabIndex = 12;
+            this.rctxtbxRemaks.Text = "";
             // 
             // btnClose
             // 
@@ -152,22 +152,24 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnSaveImage
+            // btnSave
             // 
-            this.btnSaveImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveImage.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveImage.Image")));
-            this.btnSaveImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveImage.Location = new System.Drawing.Point(84, 172);
-            this.btnSaveImage.Name = "btnSaveImage";
-            this.btnSaveImage.Size = new System.Drawing.Size(85, 31);
-            this.btnSaveImage.TabIndex = 10;
-            this.btnSaveImage.Text = "Save";
-            this.btnSaveImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveImage.UseVisualStyleBackColor = true;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(84, 172);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(85, 31);
+            this.btnSave.TabIndex = 10;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmMeal
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 244);
@@ -196,7 +198,7 @@
         private System.Windows.Forms.TextBox txtbxMenu;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnSaveImage;
-        private System.Windows.Forms.RichTextBox rhtextbxRemaks;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.RichTextBox rctxtbxRemaks;
     }
 }

@@ -52,11 +52,21 @@
     <Compile Include="BL\BookPublisher.cs" />
     <Compile Include="BL\Fee.cs" />
     <Compile Include="BL\Fund.cs" />
+    <Compile Include="BL\HelpingMaterial.cs" />
+    <Compile Include="BL\HostelExpenditure.cs" />
+    <Compile Include="BL\Meal.cs" />
+    <Compile Include="BL\Phone.cs" />
+    <Compile Include="BL\Secret.cs" />
     <Compile Include="DL\AchivementDL.cs" />
     <Compile Include="DL\ActivitiesDL.cs" />
     <Compile Include="DL\BookDL.cs" />
     <Compile Include="DL\FeeDL.cs" />
     <Compile Include="DL\FundDL.cs" />
+    <Compile Include="DL\HelpingMaterialDL.cs" />
+    <Compile Include="DL\HostelExpenditureDL.cs" />
+    <Compile Include="DL\MealDL.cs" />
+    <Compile Include="DL\PhoneDL.cs" />
+    <Compile Include="DL\SecretDL.cs" />
     <Compile Include="Forms\frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>

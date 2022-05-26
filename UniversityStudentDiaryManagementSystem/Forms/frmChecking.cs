@@ -20,7 +20,7 @@ namespace UniversityStudentDiaryManagementSystem.Forms
 
         private void frmChecking_Load(object sender, EventArgs e)
         {
-          dataGridView1.DataSource=FundDL.getFundlist();
+          dataGridView1.DataSource=PhoneDL.getPhonelist();
         }
     }
 }

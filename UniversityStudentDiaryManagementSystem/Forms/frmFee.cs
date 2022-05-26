@@ -75,6 +75,7 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmFee_Load(object sender, EventArgs e)
         {
+            cmbxSemester.SelectedIndex = 0;
             if (selectedIndex == 1)
             {
                 cmbxType.SelectedIndex = 1;

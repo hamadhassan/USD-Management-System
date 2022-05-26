@@ -7,24 +7,74 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UniversityStudentDiaryManagementSystem.BL;
+using UniversityStudentDiaryManagementSystem.DL;
 
 namespace UniversityStudentDiaryManagementSystem
 {
     public partial class frmSecret : Form
     {
-        public frmSecret()
+        private int selectedIndex;
+
+        public frmSecret(int selectedIndex)
         {
             InitializeComponent();
+            this.selectedIndex = selectedIndex;
         }
 
         private void frmSecret_Load(object sender, EventArgs e)
         {
-            cmbxType.SelectedIndex = 0;
+            if (selectedIndex == 0)
+            {
+                cmbxType.SelectedIndex = 0;
+            }
+            else if (selectedIndex == 1)
+            {
+                cmbxType.SelectedIndex = 1;
+            }
+            else if (selectedIndex == 2)
+            {
+                cmbxType.SelectedIndex = 2;
+            }
+            else if (selectedIndex == 3)
+            {
+                cmbxType.SelectedIndex = 3;
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        private void clearFields()
+        {
+            cmbxType.SelectedIndex = 0;
+            rctxtbxComment.Clear();
+            cmbxType.Focus();
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string typeSecret = cmbxType.SelectedItem.ToString();
+            string detail = rctxtbxComment.Text;
+            if (cmbxType.SelectedIndex != 0)
+            {
+                Secret secret=new Secret(typeSecret, detail);
+                if (SecretDL.setIntoSecretList(secret))
+                {
+                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    clearFields();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select the type ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbxType.Focus();
+            }
         }
     }
 }
