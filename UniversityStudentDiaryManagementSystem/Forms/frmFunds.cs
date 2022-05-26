@@ -54,21 +54,29 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string typeFund = cmbxType.SelectedItem.ToString();
-            double amount =double.Parse(txtbxAmount.Text);
-            string remarks = rctxbxObjective.Text;
             if (cmbxType.SelectedIndex != 0)
             {
-                Fund fund = new Fund(typeFund, amount, remarks);
-                if (FundDL.setIntoFundList(fund))
+                if (txtbxAmount.Text != String.Empty)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
+                    string typeFund = cmbxType.SelectedItem.ToString();
+                    double amount = double.Parse(txtbxAmount.Text);
+                    string remarks = rctxbxObjective.Text;
+                    Fund fund = new Fund(typeFund, amount, remarks);
+                    if (FundDL.setIntoFundList(fund))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtbxAmount.Focus();
                 }
             }
             else

@@ -104,7 +104,6 @@
             this.label5.Size = new System.Drawing.Size(50, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "Role :";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -164,7 +163,6 @@
             this.cmbxRole.Name = "cmbxRole";
             this.cmbxRole.Size = new System.Drawing.Size(162, 28);
             this.cmbxRole.TabIndex = 17;
-            this.cmbxRole.SelectedIndexChanged += new System.EventHandler(this.combxRole_SelectedIndexChanged);
             // 
             // btnClose
             // 
@@ -201,7 +199,6 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create Account";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // frmCreateAccount
             // 

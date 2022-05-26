@@ -48,21 +48,30 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string typeAchivement=cmbxType.SelectedItem.ToString();
-            string presentedBy=txtbxPresentedBy.Text;
-            string remarks=rctxtbxRemarks.Text;
+         
             if (cmbxType.SelectedIndex != 0)
             {
-                Achivement achivement = new Achivement(typeAchivement, presentedBy, remarks);
-                if (AchivementDL.setIntoAchivementsList(achivement))
+                if (txtbxPresentedBy.Text != String.Empty)
                 {
-                    MessageBox.Show("Data Successfully Saved","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    clearFields();
+                    string typeAchivement = cmbxType.SelectedItem.ToString();
+                    string presentedBy = txtbxPresentedBy.Text;
+                    string remarks = rctxtbxRemarks.Text;
+                    Achivement achivement = new Achivement(typeAchivement, presentedBy, remarks);
+                    if (AchivementDL.setIntoAchivementsList(achivement))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtbxPresentedBy.Focus();
                 }
             }
             else

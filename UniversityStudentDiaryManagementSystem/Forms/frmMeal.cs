@@ -60,23 +60,32 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string typeMeal=cmbxTime.SelectedItem.ToString();
-            string menu=txtbxMenu.Text;
-            double charges=double.Parse(txtbxCharges.Text);
-            string remarks=rctxtbxRemaks.Text;
+           
             if (cmbxTime.SelectedIndex != 0)
             {
-                Meal meal = new Meal(typeMeal, menu, charges, remarks);
-                if (MealDL.setIntoMealList(meal))
+                if (txtbxMenu.Text != String.Empty || txtbxCharges.Text != String.Empty)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
+                    string typeMeal = cmbxTime.SelectedItem.ToString();
+                    string menu = txtbxMenu.Text;
+                    double charges = double.Parse(txtbxCharges.Text);
+                    string remarks = rctxtbxRemaks.Text;
+                    Meal meal = new Meal(typeMeal, menu, charges, remarks);
+                    if (MealDL.setIntoMealList(meal))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    MessageBox.Show("Please provide the all detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+
             }
             else
             {

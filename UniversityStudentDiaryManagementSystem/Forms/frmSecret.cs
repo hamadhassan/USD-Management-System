@@ -54,20 +54,28 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string typeSecret = cmbxType.SelectedItem.ToString();
-            string detail = rctxtbxComment.Text;
             if (cmbxType.SelectedIndex != 0)
             {
-                Secret secret=new Secret(typeSecret, detail);
-                if (SecretDL.setIntoSecretList(secret))
+                if (rctxtbxComment.Text != String.Empty)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
+                    string typeSecret = cmbxType.SelectedItem.ToString();
+                    string detail = rctxtbxComment.Text;
+                    Secret secret = new Secret(typeSecret, detail);
+                    if (SecretDL.setIntoSecretList(secret))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    MessageBox.Show("Please write something", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    rctxtbxComment.Focus();
                 }
             }
             else

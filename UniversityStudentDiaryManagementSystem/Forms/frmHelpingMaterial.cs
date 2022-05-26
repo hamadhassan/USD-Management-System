@@ -51,22 +51,31 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string typeHelpingMaterial=cmbxType.SelectedItem.ToString();
-            double charges=double.Parse(txtbxCharges.Text);
-            string remarks=rhtextbxRemaks.Text;
             if (cmbxType.SelectedIndex != 0)
             {
-               HelpingMaterial helpingMaterial =new HelpingMaterial(typeHelpingMaterial,charges,remarks);
-                if (HelpingMaterialDL.setIntoHelpingMaterialList(helpingMaterial))
+                if (txtbxCharges.Text != String.Empty)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
+                    string typeHelpingMaterial = cmbxType.SelectedItem.ToString();
+                    double charges = double.Parse(txtbxCharges.Text);
+                    string remarks = rhtextbxRemaks.Text;
+                    HelpingMaterial helpingMaterial = new HelpingMaterial(typeHelpingMaterial, charges, remarks);
+                    if (HelpingMaterialDL.setIntoHelpingMaterialList(helpingMaterial))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtbxCharges.Focus();
                 }
+               
             }
             else
             {

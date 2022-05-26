@@ -23,32 +23,61 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            string firstName = txtbxFirstName.Text;
-            string lastName = txtbxLastName.Text;
-            string username = txtbxUsername.Text;
-            string password = txtbxPassword.Text;
-            string role = cmbxRole.SelectedItem.ToString();
-            Credential newUser = new Credential(firstName, lastName, username, password, role);
-            CredentialDL.setIntoListCrediantialList(newUser);
-            txtbxFirstName.Clear();
-            txtbxLastName.Clear();
-            txtbxPassword.Clear();
-            txtbxUsername.Clear();
-            cmbxRole.Text= "Select one option";
-            MessageBox.Show("Account Created", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+            if(cmbxRole.SelectedIndex != 0)
+            {
+                if (txtbxFirstName.Text != String.Empty)
+                {
+                    if(txtbxLastName.Text != String.Empty)
+                    {
+                        if (txtbxPassword.Text != String.Empty)
+                        {
+                            if (txtbxUsername.Text != String.Empty)
+                            {
+                                string firstName = txtbxFirstName.Text;
+                                string lastName = txtbxLastName.Text;
+                                string username = txtbxUsername.Text;
+                                string password = txtbxPassword.Text;
+                                string role = cmbxRole.SelectedItem.ToString();
+                                Credential newUser = new Credential(firstName, lastName, username, password, role);
+                                CredentialDL.setIntoListCrediantialList(newUser);
+                                txtbxFirstName.Clear();
+                                txtbxLastName.Clear();
+                                txtbxPassword.Clear();
+                                txtbxUsername.Clear();
+                                MessageBox.Show("Account Created", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                txtbxUsername.Focus();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtbxPassword.Focus();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtbxLastName.Focus();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtbxFirstName.Focus();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select the role ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbxRole.Focus();
+            }
+           
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void combxRole_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -57,11 +86,6 @@ namespace UniversityStudentDiaryManagementSystem
         private void frmCreateAccount_Load(object sender, EventArgs e)
         {
             cmbxRole.SelectedIndex = 0;
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -47,21 +47,29 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string typeAcitivity = cmbxType.SelectedItem.ToString();
-            string minutes= txtbxMinutes.Text;
-            string remarks= rctxtbxRemarks.Text;
             if (cmbxType.SelectedIndex != 0)
             {
-                Activities activities=new Activities(typeAcitivity, minutes, remarks);
-                if (ActivitiesDL.setIntoActivitiesList(activities))
+                if (txtbxMinutes.Text != String.Empty)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
+                    string typeAcitivity = cmbxType.SelectedItem.ToString();
+                    string minutes = txtbxMinutes.Text;
+                    string remarks = rctxtbxRemarks.Text;
+                    Activities activities = new Activities(typeAcitivity, minutes, remarks);
+                    if (ActivitiesDL.setIntoActivitiesList(activities))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtbxMinutes.Focus();
                 }
             }
             else

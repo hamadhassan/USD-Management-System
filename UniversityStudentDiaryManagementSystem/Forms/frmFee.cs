@@ -38,26 +38,34 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSaveAcademic_Click(object sender, EventArgs e)
         {
-            string feeType=cmbxType.SelectedItem.ToString();
-            string semester=cmbxSemester.SelectedItem.ToString();
-            string challanNo=txtbxChallanNo.Text;
-            double amount=double.Parse(txtbxAmount.Text);
-            string date=dateTimePicker.Text;
-            string remarks=rchtxtbxRemarks.Text;
+          
             if (cmbxType.SelectedIndex != 0)
             {
                 if (cmbxSemester.SelectedIndex != 0)
                 {
-                   Fee fee=new Fee(feeType,semester,challanNo,amount,date,remarks);
-                    if (FeeDL.setIntoFeeList(fee))
+                    if (txtbxChallanNo.Text != String.Empty || txtbxAmount.Text != String.Empty)
                     {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
+                        string feeType = cmbxType.SelectedItem.ToString();
+                        string semester = cmbxSemester.SelectedItem.ToString();
+                        string challanNo = txtbxChallanNo.Text;
+                        double amount = double.Parse(txtbxAmount.Text);
+                        string date = dateTimePicker.Text;
+                        string remarks = rchtxtbxRemarks.Text;
+                        Fee fee = new Fee(feeType, semester, challanNo, amount, date, remarks);
+                        if (FeeDL.setIntoFeeList(fee))
+                        {
+                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clearFields();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearFields();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
+                        MessageBox.Show("Please provide the all detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else

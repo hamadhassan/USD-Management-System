@@ -66,26 +66,51 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string typeBook=cmbxType.SelectedItem.ToString();
-            string title=txtbxTitle.Text;
-            string authorName=txtbxAuthor.Text;
-            string bookFrom=txtbxBookFrom.Text;
-            string remarks=rctxtbxRemaks.Text;
             if (cmbxType.SelectedIndex == 1)
-            {
+            {//borrow
                 if (cmbxType.SelectedIndex != 0)
                 {
-                    Book book = new Book(typeBook, title, authorName, bookFrom, remarks);
-                    if (BookDL.setIntoBookList(book))
+                    if(txtbxTitle.Text!=String.Empty )
                     {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
+                        if (txtbxAuthor.Text != String.Empty)
+                        {
+                            if (txtbxBookFrom.Text != String.Empty)
+                            {
+                                string typeBook = cmbxType.SelectedItem.ToString();
+                                string title = txtbxTitle.Text;
+                                string authorName = txtbxAuthor.Text;
+                                string bookFrom = txtbxBookFrom.Text;
+                                string remarks = rctxtbxRemaks.Text;
+                                Book book = new Book(typeBook, title, authorName, bookFrom, remarks);
+                                if (BookDL.setIntoBookList(book))
+                                {
+                                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    clearFields();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    clearFields();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                txtbxBookFrom.Focus();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtbxAuthor.Focus();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
+                        MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtbxTitle.Focus();
                     }
+                  
                 }
                 else
                 {
@@ -94,21 +119,59 @@ namespace UniversityStudentDiaryManagementSystem
                 }
             }
             else if(cmbxType.SelectedIndex == 2)
-            {
-                double amount = double.Parse(txtbxAmount.Text);
+            {//publisher
                 if (cmbxType.SelectedIndex != 0)
                 {
-                    BookPublisher book = new BookPublisher(typeBook, title, authorName, bookFrom, remarks,amount);
-                    if (BookDL.setIntoBookList(book))
+                    if (txtbxTitle.Text != String.Empty)
                     {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
+                        if (txtbxAuthor.Text != String.Empty)
+                        {
+                            if (txtbxBookFrom.Text != String.Empty)
+                            {
+                                if(txtbxAmount.Text != String.Empty)
+                                {
+                                    string typeBook = cmbxType.SelectedItem.ToString();
+                                    string title = txtbxTitle.Text;
+                                    string authorName = txtbxAuthor.Text;
+                                    string bookFrom = txtbxBookFrom.Text;
+                                    string remarks = rctxtbxRemaks.Text;
+                                    double amount = double.Parse(txtbxAmount.Text);
+                                    BookPublisher book = new BookPublisher(typeBook, title, authorName, bookFrom, remarks, amount);
+                                    if (BookDL.setIntoBookList(book))
+                                    {
+                                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        clearFields();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        clearFields();
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    txtbxAmount.Focus();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                txtbxBookFrom.Focus();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtbxAuthor.Focus();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
+                        MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtbxTitle.Focus();
                     }
+
                 }
                 else
                 {

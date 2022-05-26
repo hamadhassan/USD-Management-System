@@ -22,7 +22,7 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (combxLoginAs.SelectedIndex != 0)
+            if (combxLoginAs.SelectedIndex != 0||txtbxPassword.Text!=String.Empty||txtbxUsername.Text!=String.Empty)
             {
                 string loginAs = combxLoginAs.SelectedItem.ToString();
                 string username = txtbxUsername.Text;

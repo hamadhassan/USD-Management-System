@@ -65,26 +65,34 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string typeHostelExpenditure=cmbxType.SelectedItem.ToString();
-            string month=cmbxMonth.SelectedItem.ToString();
-            double charges=double.Parse(txbxCharges.Text);
-            string remarks=rctxtbxRemaks.Text;
-
             if (cmbxType.SelectedIndex != 0)
             {
                 if (cmbxMonth.SelectedIndex != 0)
                 {
-                    HostelExpenditure hostelExpenditure = new HostelExpenditure(typeHostelExpenditure, month, charges, remarks);
-                    if (HostelExpenditureDL.setIntoHostelExpenditureList(hostelExpenditure))
+                    if(txbxCharges.Text != String.Empty)
                     {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
+                        string typeHostelExpenditure = cmbxType.SelectedItem.ToString();
+                        string month = cmbxMonth.SelectedItem.ToString();
+                        double charges = double.Parse(txbxCharges.Text);
+                        string remarks = rctxtbxRemaks.Text;
+                        HostelExpenditure hostelExpenditure = new HostelExpenditure(typeHostelExpenditure, month, charges, remarks);
+                        if (HostelExpenditureDL.setIntoHostelExpenditureList(hostelExpenditure))
+                        {
+                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clearFields();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearFields();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
+                        MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txbxCharges.Focus();
                     }
+                    
                 }
                 else
                 {
