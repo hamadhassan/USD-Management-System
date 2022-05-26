@@ -189,6 +189,12 @@
     <Compile Include="Forms\frmWallet.Designer.cs">
       <DependentUpon>frmWallet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmUserFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserFile.Designer.cs">
+      <DependentUpon>frmUserFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmAbout.resx">
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUpdatePassword.resx">
       <DependentUpon>frmUpdatePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserFile.resx">
+      <DependentUpon>frmUserFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmWallet.resx">
       <DependentUpon>frmWallet.cs</DependentUpon>

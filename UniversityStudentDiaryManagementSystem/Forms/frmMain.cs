@@ -345,5 +345,28 @@ namespace UniversityStudentDiaryManagementSystem
             secret.ShowDialog();    
         }
         #endregion
+
+        #region File
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserFile file = new frmUserFile();
+            file.Show();
+            this.Hide();
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserFile file = new frmUserFile();
+            file.Show();
+            this.Hide();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserFile file = new frmUserFile();
+            file.Show();
+            this.Hide();
+        }
+        #endregion
     }
 }
