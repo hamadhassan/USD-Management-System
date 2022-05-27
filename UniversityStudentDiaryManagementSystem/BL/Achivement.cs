@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniversityStudentDiaryManagementSystem.BL
 {
-    internal class Achivement
+    public class Achivement
     {
         private string typeAchivement;
         private string presentedBy;

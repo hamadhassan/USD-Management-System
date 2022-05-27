@@ -16,10 +16,16 @@ namespace UniversityStudentDiaryManagementSystem
     public partial class frmAchivements : Form
     {
         private int selectedIndex;
+        private Achivement previous;
         public frmAchivements(int selectedIndex)
         {
             InitializeComponent();
             this.selectedIndex = selectedIndex;
+        }
+        public frmAchivements(Achivement previous)
+        {
+            InitializeComponent();
+            this.previous = previous;
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -28,6 +34,12 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmAchivements_Load(object sender, EventArgs e)
         {
+            if (previous != null)
+            {
+                cmbxType.Text = previous.TypeAchivement;
+                txtbxPresentedBy.Text = previous.PresentedBy;
+                rctxtbxRemarks.Text = previous.Remakrks;
+            }
             if (selectedIndex == 1)
             {
                 cmbxType.SelectedIndex = 1;
@@ -45,10 +57,8 @@ namespace UniversityStudentDiaryManagementSystem
             rctxtbxRemarks.Clear();
             cmbxType.Focus();
         }
-
-        private void btnSave_Click(object sender, EventArgs e)
+        private Achivement saveRecord()
         {
-         
             if (cmbxType.SelectedIndex != 0)
             {
                 if (txtbxPresentedBy.Text != String.Empty)
@@ -57,16 +67,7 @@ namespace UniversityStudentDiaryManagementSystem
                     string presentedBy = txtbxPresentedBy.Text;
                     string remarks = rctxtbxRemarks.Text;
                     Achivement achivement = new Achivement(typeAchivement, presentedBy, remarks);
-                    if (AchivementDL.setIntoAchivementsList(achivement))
-                    {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
-                    }
+                    return achivement;
                 }
                 else
                 {
@@ -76,9 +77,40 @@ namespace UniversityStudentDiaryManagementSystem
             }
             else
             {
-                MessageBox.Show("Please select the type ","Information",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Please select the type ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cmbxType.Focus();
             }
+            return null;
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (previous != null)
+            {
+                if (AchivementDL.EditFromAchivementsList(previous, saveRecord()))
+                {
+                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    clearFields();
+                }
+            }
+            else
+            {
+                if (AchivementDL.setIntoAchivementsList(saveRecord()))
+                {
+                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    clearFields();
+                }
+            }
+           
         }
     }
 }

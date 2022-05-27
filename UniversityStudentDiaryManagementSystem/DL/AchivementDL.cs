@@ -19,6 +19,31 @@ namespace UniversityStudentDiaryManagementSystem.DL
         {
             return achivementList;
         }
+        public static void deleteFromAchivementsList(Achivement achivement)
+        {
+            for (int index = 0; index < achivementList.Count; index++)
+            {
+                if (achivementList[index].TypeAchivement == achivement.TypeAchivement && achivementList[index].PresentedBy == achivement.PresentedBy&& achivementList[index].Remakrks == achivement.Remakrks)
+                {
+                    achivementList.RemoveAt(index);
+                }
+            }
 
+        }
+        public static bool EditFromAchivementsList(Achivement previous, Achivement updated)
+        {
+            foreach (Achivement a in achivementList)
+            {
+                if (a.TypeAchivement == previous.TypeAchivement && a.PresentedBy == previous.PresentedBy && a.Remakrks == previous.Remakrks)
+                {
+                    a.TypeAchivement = updated.TypeAchivement;
+                    a.PresentedBy = updated.PresentedBy;
+                    a.Remakrks = updated.Remakrks;
+                    return true;
+                }
+            }
+            return false;
+        }
+        
     }
 }

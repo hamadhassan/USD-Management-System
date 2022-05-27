@@ -36,36 +36,56 @@ namespace UniversityStudentDiaryManagementSystem
         {
            cmbxOption.SelectedIndex=0;
         }
+        public void dataBind()
+        {
+            datagvAll.DataSource = null;
+            datagvAll.DataSource = AchivementDL.getAchivementslist();
+            datagvAll.Refresh();
+        }
+        private void datagvAll_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(cmbxOption.SelectedIndex != 0)
+            {
+                if (cmbxOption.SelectedIndex == 1)
+                {
+                    Achivement achivement = (Achivement)datagvAll.CurrentRow.DataBoundItem;
+                    if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
+                    {
+                        AchivementDL.deleteFromAchivementsList(achivement);
+                        dataBind();
+                    }
+                    else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
+                    {
+                        frmAchivements a = new frmAchivements(achivement);
+                        a.ShowDialog();
+                        dataBind();
+                    }
+                }
+                if(cmbxOption.SelectedIndex == 2)
+                {
+                    Activities activities  = (Activities)datagvAll.CurrentRow.DataBoundItem;
+                    if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
+                    {
+                        ActivitiesDL.deleteFromActivitiesList(activities);
+                        dataBind();
+                    }
+                    else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
+                    {
+                        frmAcivities a = new frmAcivities(activities);
+                        a.ShowDialog();
+                        dataBind();
+                    }
+                }
+              
+            }
+           
+        }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnClose_Click_1(object sender, EventArgs e)
         {
             frmMain main = new frmMain();
             main.Show();
             this.Hide();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            int rowIndex = datagvAll.CurrentCell.RowIndex;
-            datagvAll.Rows.RemoveAt(rowIndex);
-
-        }
-
-        private void datagvAll_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
-            //{
-            //    MUserDL.deleteUserFromList(user);
-            //    MUserDL.storeAllDataIntoFile(path);
-            //    dataBind();
-            //}
-            //else if (usersGV.Columns["Edit"].Index == e.ColumnIndex)
-            //{
-            //    EditUserForm myform = new EditUserForm(user);
-            //    myform.ShowDialog();
-            //    MUserDL.storeAllDataIntoFile(path);
-            //    dataBind();
-            //}
         }
     }
 }

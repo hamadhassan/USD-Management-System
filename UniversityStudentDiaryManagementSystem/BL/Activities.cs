@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniversityStudentDiaryManagementSystem.BL
 {
-    internal class Activities
+    public class Activities
     {
         private string typeAcitivity;
         private string minutes;
