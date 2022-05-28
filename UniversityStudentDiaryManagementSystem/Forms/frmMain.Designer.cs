@@ -121,7 +121,6 @@
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.timerCurrentDateTime = new System.Windows.Forms.Timer(this.components);
-            this.btnChecking = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip.SuspendLayout();
@@ -895,22 +894,11 @@
             this.timerCurrentDateTime.Enabled = true;
             this.timerCurrentDateTime.Tick += new System.EventHandler(this.timerCurrentDateTime_Tick);
             // 
-            // btnChecking
-            // 
-            this.btnChecking.Location = new System.Drawing.Point(728, 341);
-            this.btnChecking.Name = "btnChecking";
-            this.btnChecking.Size = new System.Drawing.Size(108, 44);
-            this.btnChecking.TabIndex = 3;
-            this.btnChecking.Text = "Checking";
-            this.btnChecking.UseVisualStyleBackColor = true;
-            this.btnChecking.Click += new System.EventHandler(this.btnChecking_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 436);
-            this.Controls.Add(this.btnChecking);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip);
@@ -1019,7 +1007,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
-        private System.Windows.Forms.Button btnChecking;
         private System.Windows.Forms.ToolStripMenuItem coToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;

@@ -56,7 +56,7 @@
             this.btnCreateAccount.Location = new System.Drawing.Point(9, 180);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(155, 33);
-            this.btnCreateAccount.TabIndex = 16;
+            this.btnCreateAccount.TabIndex = 5;
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCreateAccount.UseVisualStyleBackColor = false;
@@ -68,7 +68,7 @@
             this.txtbxPassword.Location = new System.Drawing.Point(107, 148);
             this.txtbxPassword.Name = "txtbxPassword";
             this.txtbxPassword.Size = new System.Drawing.Size(162, 26);
-            this.txtbxPassword.TabIndex = 14;
+            this.txtbxPassword.TabIndex = 4;
             // 
             // txtbxUsername
             // 
@@ -76,7 +76,7 @@
             this.txtbxUsername.Location = new System.Drawing.Point(107, 118);
             this.txtbxUsername.Name = "txtbxUsername";
             this.txtbxUsername.Size = new System.Drawing.Size(162, 26);
-            this.txtbxUsername.TabIndex = 13;
+            this.txtbxUsername.TabIndex = 3;
             // 
             // txtbxLastName
             // 
@@ -84,7 +84,7 @@
             this.txtbxLastName.Location = new System.Drawing.Point(107, 89);
             this.txtbxLastName.Name = "txtbxLastName";
             this.txtbxLastName.Size = new System.Drawing.Size(162, 26);
-            this.txtbxLastName.TabIndex = 12;
+            this.txtbxLastName.TabIndex = 2;
             // 
             // txtbxFirstName
             // 
@@ -92,7 +92,7 @@
             this.txtbxFirstName.Location = new System.Drawing.Point(107, 60);
             this.txtbxFirstName.Name = "txtbxFirstName";
             this.txtbxFirstName.Size = new System.Drawing.Size(162, 26);
-            this.txtbxFirstName.TabIndex = 6;
+            this.txtbxFirstName.TabIndex = 1;
             // 
             // label5
             // 
@@ -162,7 +162,7 @@
             this.cmbxRole.Location = new System.Drawing.Point(107, 28);
             this.cmbxRole.Name = "cmbxRole";
             this.cmbxRole.Size = new System.Drawing.Size(162, 28);
-            this.cmbxRole.TabIndex = 17;
+            this.cmbxRole.TabIndex = 0;
             // 
             // btnClose
             // 
@@ -173,7 +173,7 @@
             this.btnClose.Location = new System.Drawing.Point(170, 180);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(99, 33);
-            this.btnClose.TabIndex = 18;
+            this.btnClose.TabIndex = 6;
             this.btnClose.Text = "  Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);

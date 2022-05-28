@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using UniversityStudentDiaryManagementSystem.Forms;
 
 namespace UniversityStudentDiaryManagementSystem
 {
@@ -17,11 +16,14 @@ namespace UniversityStudentDiaryManagementSystem
         {
             InitializeComponent();
         }
+        #region DataTime
         private void timerCurrentDateTime_Tick(object sender, EventArgs e)
         {
             tolstplblCurentDate.Text = DateTime.Now.ToString("dddd dd/MM/yyyy");
             tolstplblCurrentTime.Text = DateTime.Now.ToString("hh:mm:ss:tt");
         }
+        #endregion
+
         #region Credientail
         private void createAUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -311,11 +313,6 @@ namespace UniversityStudentDiaryManagementSystem
             about.ShowDialog();
         }
 
-        private void btnChecking_Click(object sender, EventArgs e)
-        {
-            frmChecking checking = new frmChecking();
-            checking.ShowDialog();
-        }
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             frmMeal meal = new frmMeal(0);

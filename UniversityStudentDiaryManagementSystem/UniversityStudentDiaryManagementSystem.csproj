@@ -57,6 +57,8 @@
     <Compile Include="BL\Meal.cs" />
     <Compile Include="BL\Phone.cs" />
     <Compile Include="BL\Secret.cs" />
+    <Compile Include="BL\Transport.cs" />
+    <Compile Include="BL\Wallet.cs" />
     <Compile Include="DL\AchivementDL.cs" />
     <Compile Include="DL\ActivitiesDL.cs" />
     <Compile Include="DL\BookDL.cs" />
@@ -67,17 +69,13 @@
     <Compile Include="DL\MealDL.cs" />
     <Compile Include="DL\PhoneDL.cs" />
     <Compile Include="DL\SecretDL.cs" />
+    <Compile Include="DL\TransportDL.cs" />
+    <Compile Include="DL\WalletDL.cs" />
     <Compile Include="Forms\frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmChecking.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmChecking.Designer.cs">
-      <DependentUpon>frmChecking.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmFee.cs">
       <SubType>Form</SubType>
@@ -199,9 +197,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmChecking.resx">
-      <DependentUpon>frmChecking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmFee.resx">
       <DependentUpon>frmFee.cs</DependentUpon>

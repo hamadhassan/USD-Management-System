@@ -46,7 +46,7 @@ namespace UniversityStudentDiaryManagementSystem.BL
             }
             return false;
         }
-       
+        
       
     }
 }

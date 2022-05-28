@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UniversityStudentDiaryManagementSystem.BL;
+using System.IO;
 
 namespace UniversityStudentDiaryManagementSystem.DL
 {
@@ -44,6 +45,64 @@ namespace UniversityStudentDiaryManagementSystem.DL
             }
             return false;
         }
-        
+        public static string parseData(string record, int field)
+        {
+            int comma = 1;
+            string item = "";
+            for (int x = 0; x < record.Length; x++)
+            {
+                if (record[x] == ',')
+                {
+                    comma++;
+                }
+                else if (comma == field)
+                {
+                    item = item + record[x];
+                }
+            }
+            return item;
+        }
+        public static bool readRecordFromFile(string path)
+        {
+            if (File.Exists(path))
+            {
+                StreamReader fileVariable = new StreamReader(path);
+                string record;
+                while ((record = fileVariable.ReadLine()) != null)
+                {
+                    string typeAchivement=parseData(record,1);
+                    string presentedBy =parseData(record,2);
+                    string remark=parseData(record,3);
+                    Achivement achivement=new Achivement(typeAchivement,presentedBy,remark);
+                    achivementList.Add(achivement);
+                }
+                fileVariable.Close();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static void storeRecordIntoFile(Achivement record, string path)
+        {
+            StreamWriter file = new StreamWriter(path, true);
+            file.WriteLine(record.TypeAchivement + "," + record.PresentedBy + "," + record.Remakrks);
+            file.Flush();
+            file.Close();
+
+        }
+        public static void storeAllRecordIntoFile(string path)
+        {
+            StreamWriter file = new StreamWriter(path);
+            foreach (Achivement record in achivementList)
+            {
+                file.WriteLine(record.TypeAchivement + "," + record.PresentedBy + "," + record.Remakrks);
+            }
+            file.Flush();
+            file.Close();
+        }
+
     }
 }

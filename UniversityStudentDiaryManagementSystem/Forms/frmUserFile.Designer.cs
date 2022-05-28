@@ -34,13 +34,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.datagvAll = new System.Windows.Forms.DataGridView();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtbxSearch = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtbxSearch = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagvAll)).BeginInit();
@@ -58,12 +58,10 @@
             "Books",
             "Fee",
             "Funds",
-            "Goals",
             "HelpingMaterial",
             "Hostel Expenditure",
             "Meal",
             "Phone",
-            "Report",
             "Secret",
             "Trasnport",
             "Wallet"});
@@ -118,6 +116,24 @@
             this.datagvAll.TabIndex = 0;
             this.datagvAll.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvAll_CellContentClick);
             // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Name = "Edit";
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            // 
             // btnClose
             // 
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -143,6 +159,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Type word";
             // 
+            // txtbxSearch
+            // 
+            this.txtbxSearch.Location = new System.Drawing.Point(86, 35);
+            this.txtbxSearch.Name = "txtbxSearch";
+            this.txtbxSearch.Size = new System.Drawing.Size(175, 26);
+            this.txtbxSearch.TabIndex = 2;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -151,13 +174,6 @@
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Search :";
-            // 
-            // txtbxSearch
-            // 
-            this.txtbxSearch.Location = new System.Drawing.Point(86, 35);
-            this.txtbxSearch.Name = "txtbxSearch";
-            this.txtbxSearch.Size = new System.Drawing.Size(175, 26);
-            this.txtbxSearch.TabIndex = 2;
             // 
             // groupBox4
             // 
@@ -168,24 +184,6 @@
             this.groupBox4.TabIndex = 69;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Close";
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Delete.Text = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Edit.Text = "Edit";
-            this.Edit.UseColumnTextForButtonValue = true;
             // 
             // frmUserFile
             // 

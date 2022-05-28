@@ -62,6 +62,10 @@ namespace UniversityStudentDiaryManagementSystem
             {
                 datagvAll.DataSource = SecretDL.getSecretlist();
             }
+            else if (cmbxOption.SelectedIndex == 11)
+            {
+                datagvAll.DataSource = TransportDL.getTransportlist();
+            }
 
 
         }
@@ -113,6 +117,10 @@ namespace UniversityStudentDiaryManagementSystem
             else if (cmbxOption.SelectedIndex == 10)
             {
                 datagvAll.DataSource = SecretDL.getSecretlist();
+            }
+            else if (cmbxOption.SelectedIndex == 11)
+            {
+                datagvAll.DataSource = TransportDL.getTransportlist();
             }
             datagvAll.Refresh();
         }
@@ -266,6 +274,21 @@ namespace UniversityStudentDiaryManagementSystem
                     else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
                     {
                         frmSecret f = new frmSecret(secret);
+                        f.ShowDialog();
+                        dataBind();
+                    }
+                }
+                else if (cmbxOption.SelectedIndex == 11)
+                {
+                    Transport transport = (Transport)datagvAll.CurrentRow.DataBoundItem;
+                    if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
+                    {
+                        TransportDL.deleteFromTransportList(transport);
+                        dataBind();
+                    }
+                    else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
+                    {
+                        frmTransport f = new frmTransport(transport);
                         f.ShowDialog();
                         dataBind();
                     }
