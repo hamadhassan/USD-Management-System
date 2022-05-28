@@ -19,5 +19,32 @@ namespace UniversityStudentDiaryManagementSystem.DL
         {
             return bookList;
         }
+        public static void deleteFromBookList(Book book)
+        {
+            for (int index = 0; index < bookList.Count; index++)
+            {
+                if (bookList[index].TypeBook == book.TypeBook && bookList[index].Title == book.Title && bookList[index].AuthorName == book.AuthorName && bookList[index].BookFrom == book.BookFrom && bookList[index].Remarks == book.Remarks)
+                {
+                    bookList.RemoveAt(index);
+
+                }
+            }
+        }
+        public static bool EditFromBookList(Book previous, Book updated)
+        {
+            foreach (Book a in bookList)
+            {
+                if (a.TypeBook == previous.TypeBook && a.Title == previous.Title && a.AuthorName == previous.AuthorName && a.BookFrom == previous.BookFrom && a.Remarks == previous.Remarks)
+                {
+                    a.TypeBook = updated.TypeBook;
+                    a.Title = updated.Title;
+                    a.AuthorName = updated.AuthorName;
+                    a.BookFrom = updated.BookFrom;
+                    a.Remarks = updated.Remarks;
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

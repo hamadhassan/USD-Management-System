@@ -16,14 +16,44 @@ namespace UniversityStudentDiaryManagementSystem
     public partial class frmFee : Form
     {
         private int selectedIndex;
+        private Fee previous;
         public frmFee(int selectedIndex)
         {
             InitializeComponent();
             this.selectedIndex = selectedIndex;
         }
+        public frmFee(Fee previous)
+        {
+            InitializeComponent();
+            this.previous = previous;
+        }
         private void btnAcademicClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        private void frmFee_Load(object sender, EventArgs e)
+        {
+            if (previous != null)
+            {
+                cmbxType.Text=previous.FeeType;
+                cmbxSemester.Text=previous.Semester;
+                txtbxChallanNo.Text=previous.ChallanNo;
+                txtbxAmount.Text=previous.Amount.ToString();
+                rchtxtbxRemarks.Text=previous.Remarks;
+                dateTimePicker.Text = previous.Date;
+            }
+            else
+            {
+                cmbxSemester.SelectedIndex = 0;
+                if (selectedIndex == 1)
+                {
+                    cmbxType.SelectedIndex = 1;
+                }
+                else if (selectedIndex == 2)
+                {
+                    cmbxType.SelectedIndex = 2;
+                }
+            }
         }
         private void clearFields()
         {
@@ -36,9 +66,9 @@ namespace UniversityStudentDiaryManagementSystem
             dateTimePicker.Text = today.ToString();
             cmbxType.Focus();
         }
-        private void btnSaveAcademic_Click(object sender, EventArgs e)
+        private Fee takeFee()
         {
-          
+
             if (cmbxType.SelectedIndex != 0)
             {
                 if (cmbxSemester.SelectedIndex != 0)
@@ -52,16 +82,7 @@ namespace UniversityStudentDiaryManagementSystem
                         string date = dateTimePicker.Text;
                         string remarks = rchtxtbxRemarks.Text;
                         Fee fee = new Fee(feeType, semester, challanNo, amount, date, remarks);
-                        if (FeeDL.setIntoFeeList(fee))
-                        {
-                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            clearFields();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            clearFields();
-                        }
+                        return fee;
                     }
                     else
                     {
@@ -79,19 +100,41 @@ namespace UniversityStudentDiaryManagementSystem
                 MessageBox.Show("Please select the type ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cmbxType.Focus();
             }
+            return null;
+        }
+        private void btnSaveAcademic_Click(object sender, EventArgs e)
+        {
+            if (previous != null)
+            {
+                if (FeeDL.EditFromFeeList(previous, takeFee()))
+                {
+                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    clearFields();
+                }
+            }
+            else
+            {
+                if (FeeDL.setIntoFeeList(takeFee()))
+                {
+                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    clearFields();
+                }
+            }
+          
+             
+         
         }
 
-        private void frmFee_Load(object sender, EventArgs e)
-        {
-            cmbxSemester.SelectedIndex = 0;
-            if (selectedIndex == 1)
-            {
-                cmbxType.SelectedIndex = 1;
-            }
-            else if (selectedIndex == 2)
-            {
-                cmbxType.SelectedIndex = 2;
-            }
-        }
+      
     }
 }

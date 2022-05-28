@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniversityStudentDiaryManagementSystem.BL
 {
-    internal class Fee
+    public class Fee
     {
         private string feeType;
         private string semester;

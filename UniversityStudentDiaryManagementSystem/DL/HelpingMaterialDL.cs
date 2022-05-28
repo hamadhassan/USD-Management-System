@@ -19,5 +19,30 @@ namespace UniversityStudentDiaryManagementSystem.DL
         {
             return helpingMaterialList;
         }
+        public static void deleteFromHelpingMaterialList(HelpingMaterial helpingMaterial)
+        {
+            for (int index = 0; index < helpingMaterialList.Count; index++)
+            {
+                if (helpingMaterialList[index].TypeHelpingMaterial == helpingMaterial.TypeHelpingMaterial && helpingMaterialList[index].Charges == helpingMaterial.Charges && helpingMaterialList[index].Remarks == helpingMaterial.Remarks)
+                {
+                    helpingMaterialList.RemoveAt(index);
+
+                }
+            }
+        }
+        public static bool EditFromhelpingMaterialList(HelpingMaterial previous, HelpingMaterial updated)
+        {
+            foreach (HelpingMaterial a in helpingMaterialList)
+            {
+                if (a.TypeHelpingMaterial == previous.TypeHelpingMaterial && a.Charges == previous.Charges && a.Remarks == previous.Remarks)
+                {
+                    a.TypeHelpingMaterial = updated.TypeHelpingMaterial;
+                    a.Charges = updated.Charges;
+                    a.Remarks = updated.Remarks;
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
