@@ -19,5 +19,28 @@ namespace UniversityStudentDiaryManagementSystem.DL
         {
             return secretList;
         }
+        public static void deleteFromSecretList(Secret secret)
+        {
+            for (int index = 0; index < secretList.Count; index++)
+            {
+                if (secretList[index].TypeSecret == secret.TypeSecret && secretList[index].Detail == secret.Detail)
+                {
+                    secretList.RemoveAt(index);
+                }
+            }
+        }
+        public static bool EditFromSecretList(Secret previous, Secret updated)
+        {
+            foreach (Secret a in secretList)
+            {
+                if (a.TypeSecret == previous.TypeSecret && a.Detail == previous.Detail)
+                {
+                    a.TypeSecret = updated.TypeSecret;  
+                    a.Detail = updated.Detail;
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

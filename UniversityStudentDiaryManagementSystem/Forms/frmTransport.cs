@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UniversityStudentDiaryManagementSystem.BL;
+using UniversityStudentDiaryManagementSystem.DL;
+
 
 namespace UniversityStudentDiaryManagementSystem
 {
     public partial class frmTransport : Form
     {
-        public frmTransport()
+        private int selectedIndex;
+        private Transport previous;
+        public frmTransport(int selectedIndex)
         {
             InitializeComponent();
+        }
+        public frmTransport (Transport previous)
+        {
+            InitializeComponent();
+            this.previous = previous;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

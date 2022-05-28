@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniversityStudentDiaryManagementSystem.BL
 {
-    internal class Fund
+    public class Fund
     {
         private string typeFund;
         private double amount;

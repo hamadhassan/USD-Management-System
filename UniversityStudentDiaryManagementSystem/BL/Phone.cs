@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniversityStudentDiaryManagementSystem.BL
 {
-    internal class Phone
+    public class Phone
     {
         private double amount;
         private string remarks;

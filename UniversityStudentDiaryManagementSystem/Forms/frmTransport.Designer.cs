@@ -33,11 +33,11 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.rctxbxReamarks = new System.Windows.Forms.RichTextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtbxAmount = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbxDestination = new System.Windows.Forms.TextBox();
+            this.txtbxPickupLocation = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbxType = new System.Windows.Forms.ComboBox();
@@ -50,11 +50,11 @@
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.rctxbxReamarks);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtbxAmount);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtbxDestination);
+            this.groupBox1.Controls.Add(this.txtbxPickupLocation);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cmbxType);
@@ -65,7 +65,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Transport";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnClose
             // 
@@ -75,7 +74,7 @@
             this.btnClose.Location = new System.Drawing.Point(234, 210);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(82, 31);
-            this.btnClose.TabIndex = 13;
+            this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -89,10 +88,11 @@
             this.btnSave.Location = new System.Drawing.Point(140, 210);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(81, 31);
-            this.btnSave.TabIndex = 12;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // rctxbxReamarks
             // 
@@ -100,15 +100,15 @@
             this.rctxbxReamarks.Location = new System.Drawing.Point(139, 150);
             this.rctxbxReamarks.Name = "rctxbxReamarks";
             this.rctxbxReamarks.Size = new System.Drawing.Size(178, 54);
-            this.rctxbxReamarks.TabIndex = 5;
+            this.rctxbxReamarks.TabIndex = 4;
             this.rctxbxReamarks.Text = "";
             // 
-            // textBox3
+            // txtbxAmount
             // 
-            this.textBox3.Location = new System.Drawing.Point(140, 120);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(177, 26);
-            this.textBox3.TabIndex = 4;
+            this.txtbxAmount.Location = new System.Drawing.Point(140, 120);
+            this.txtbxAmount.Name = "txtbxAmount";
+            this.txtbxAmount.Size = new System.Drawing.Size(177, 26);
+            this.txtbxAmount.TabIndex = 3;
             // 
             // label5
             // 
@@ -128,19 +128,19 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Amount :";
             // 
-            // textBox2
+            // txtbxDestination
             // 
-            this.textBox2.Location = new System.Drawing.Point(140, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 26);
-            this.textBox2.TabIndex = 2;
+            this.txtbxDestination.Location = new System.Drawing.Point(140, 90);
+            this.txtbxDestination.Name = "txtbxDestination";
+            this.txtbxDestination.Size = new System.Drawing.Size(177, 26);
+            this.txtbxDestination.TabIndex = 2;
             // 
-            // textBox1
+            // txtbxPickupLocation
             // 
-            this.textBox1.Location = new System.Drawing.Point(140, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtbxPickupLocation.Location = new System.Drawing.Point(140, 61);
+            this.txtbxPickupLocation.Name = "txtbxPickupLocation";
+            this.txtbxPickupLocation.Size = new System.Drawing.Size(177, 26);
+            this.txtbxPickupLocation.TabIndex = 1;
             // 
             // label3
             // 
@@ -172,7 +172,7 @@
             this.cmbxType.Location = new System.Drawing.Point(139, 28);
             this.cmbxType.Name = "cmbxType";
             this.cmbxType.Size = new System.Drawing.Size(177, 28);
-            this.cmbxType.TabIndex = 1;
+            this.cmbxType.TabIndex = 0;
             // 
             // label1
             // 
@@ -185,6 +185,7 @@
             // 
             // frmTransport
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(353, 272);
@@ -208,11 +209,11 @@
         private System.Windows.Forms.ComboBox cmbxType;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rctxbxReamarks;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtbxAmount;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbxDestination;
+        private System.Windows.Forms.TextBox txtbxPickupLocation;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnClose;

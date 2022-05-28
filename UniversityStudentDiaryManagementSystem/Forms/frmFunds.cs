@@ -15,29 +15,44 @@ namespace UniversityStudentDiaryManagementSystem
     public partial class frmFunds : Form
     {
         private int selectedIndex;
+        private Fund previous;
         public frmFunds(int selectedIndex)
         {
             InitializeComponent();
             this.selectedIndex = selectedIndex;
         }
+        public frmFunds(Fund previous)
+        {
+            InitializeComponent();
+            this.previous=previous;
+        }
 
         private void frmFunds_Load(object sender, EventArgs e)
         {
-            if (selectedIndex == 0)
+            if (previous != null)
             {
-                cmbxType.SelectedIndex = 0;
+                cmbxType.Text = previous.TypeFund;
+                txtbxAmount.Text=previous.Amount.ToString();
+                rctxbxObjective.Text=previous.Remarks;
             }
-            else if (selectedIndex == 1)
+            else
             {
-                cmbxType.SelectedIndex = 1;
-            }
-            else if (selectedIndex == 2)
-            {
-                cmbxType.SelectedIndex = 2;
-            }
-            else if (selectedIndex == 3)
-            {
-                cmbxType.SelectedIndex = 3;
+                if (selectedIndex == 0)
+                {
+                    cmbxType.SelectedIndex = 0;
+                }
+                else if (selectedIndex == 1)
+                {
+                    cmbxType.SelectedIndex = 1;
+                }
+                else if (selectedIndex == 2)
+                {
+                    cmbxType.SelectedIndex = 2;
+                }
+                else if (selectedIndex == 3)
+                {
+                    cmbxType.SelectedIndex = 3;
+                }
             }
         }
 
@@ -52,7 +67,7 @@ namespace UniversityStudentDiaryManagementSystem
             rctxbxObjective.Clear();
             cmbxType.Focus();
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private Fund takeFund()
         {
             if (cmbxType.SelectedIndex != 0)
             {
@@ -62,16 +77,7 @@ namespace UniversityStudentDiaryManagementSystem
                     double amount = double.Parse(txtbxAmount.Text);
                     string remarks = rctxbxObjective.Text;
                     Fund fund = new Fund(typeFund, amount, remarks);
-                    if (FundDL.setIntoFundList(fund))
-                    {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
-                    }
+                    return fund;
                 }
                 else
                 {
@@ -83,6 +89,36 @@ namespace UniversityStudentDiaryManagementSystem
             {
                 MessageBox.Show("Please select the type ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cmbxType.Focus();
+            }
+            return null;
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (previous != null)
+            {
+                if (FundDL.EditFromFundList(previous, takeFund()))
+                {
+                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    clearFields();
+                }
+            }
+            else
+            {
+                if (FundDL.setIntoFundList(takeFund()))
+                {
+                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    clearFields();
+                }
             }
         }
     }

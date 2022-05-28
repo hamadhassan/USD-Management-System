@@ -22,6 +22,7 @@ namespace UniversityStudentDiaryManagementSystem
             tolstplblCurentDate.Text = DateTime.Now.ToString("dddd dd/MM/yyyy");
             tolstplblCurrentTime.Text = DateTime.Now.ToString("hh:mm:ss:tt");
         }
+        #region Credientail
         private void createAUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCreateAccount frmCreateAccount = new frmCreateAccount();
@@ -38,18 +39,23 @@ namespace UniversityStudentDiaryManagementSystem
             updatePassword.ShowDialog();
         }
 
-        private void statusToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmWallet wallet= new frmWallet();
-            wallet.ShowDialog();
-        }
-
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             frmSignIn signIn = new frmSignIn();
             signIn.Show();
             this.Hide();
         }
+        #endregion
+
+        #region Wallet
+        private void statusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmWallet wallet= new frmWallet();
+            wallet.ShowDialog();
+        }
+
+        #endregion
+
         #region Fee
         private void academicToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -63,6 +69,7 @@ namespace UniversityStudentDiaryManagementSystem
         }
         #endregion
 
+        #region Report
         private void dailyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReport report=new frmReport();
@@ -80,6 +87,8 @@ namespace UniversityStudentDiaryManagementSystem
             frmReport report = new frmReport();
             report.ShowDialog();
         }
+        #endregion
+
         #region Meal
         private void breakfastToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -172,6 +181,8 @@ namespace UniversityStudentDiaryManagementSystem
             funds.ShowDialog();
         }
         #endregion
+
+        #region Goals
         private void dailyToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmGoals frmGoals = new frmGoals();
@@ -189,6 +200,8 @@ namespace UniversityStudentDiaryManagementSystem
             frmGoals frmGoals = new frmGoals();
             frmGoals.ShowDialog();
         }
+
+        #endregion 
 
         #region Package 
         private void packagesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -211,17 +224,21 @@ namespace UniversityStudentDiaryManagementSystem
             books.ShowDialog();
         }
         #endregion
+
+        #region Trasport
         private void busToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmTransport transport = new frmTransport();
+            frmTransport transport = new frmTransport(1);
             transport.ShowDialog();
         }
 
         private void otherToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmTransport transport = new frmTransport();
+            frmTransport transport = new frmTransport(2);
             transport.ShowDialog();
         }
+        #endregion
+
         #region activities
         private void sportiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -236,11 +253,6 @@ namespace UniversityStudentDiaryManagementSystem
         }
         #endregion
 
-        private void achivementDetailToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmAchivements achivements = new frmAchivements(1);
-            achivements.ShowDialog();
-        }
         #region Secret
         private void quotesToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniversityStudentDiaryManagementSystem.BL
 {
-    internal class Meal
+    public class Meal
     {
         private string typeMeal;
         private string menu;

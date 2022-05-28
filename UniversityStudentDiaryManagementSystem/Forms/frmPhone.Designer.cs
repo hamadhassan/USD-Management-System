@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhone));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rctxtbxRemarks = new System.Windows.Forms.RichTextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbxAmount = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.rctxtbxRemarks = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +53,15 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Package";
+            // 
+            // rctxtbxRemarks
+            // 
+            this.rctxtbxRemarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rctxtbxRemarks.Location = new System.Drawing.Point(94, 64);
+            this.rctxtbxRemarks.Name = "rctxtbxRemarks";
+            this.rctxtbxRemarks.Size = new System.Drawing.Size(169, 48);
+            this.rctxtbxRemarks.TabIndex = 12;
+            this.rctxtbxRemarks.Text = "";
             // 
             // btnClose
             // 
@@ -107,15 +116,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Amount :";
             // 
-            // rctxtbxRemarks
-            // 
-            this.rctxtbxRemarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rctxtbxRemarks.Location = new System.Drawing.Point(94, 64);
-            this.rctxtbxRemarks.Name = "rctxtbxRemarks";
-            this.rctxtbxRemarks.Size = new System.Drawing.Size(169, 48);
-            this.rctxtbxRemarks.TabIndex = 12;
-            this.rctxtbxRemarks.Text = "";
-            // 
             // frmPhone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -128,6 +128,7 @@
             this.Name = "frmPhone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phone";
+            this.Load += new System.EventHandler(this.frmPhone_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

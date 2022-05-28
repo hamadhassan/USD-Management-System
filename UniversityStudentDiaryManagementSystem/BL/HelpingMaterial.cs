@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniversityStudentDiaryManagementSystem.BL
 {
-    internal class HelpingMaterial
+    public class HelpingMaterial
     {
         private string typeHelpingMaterial;
         private double charges;

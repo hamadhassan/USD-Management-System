@@ -15,30 +15,44 @@ namespace UniversityStudentDiaryManagementSystem
     public partial class frmSecret : Form
     {
         private int selectedIndex;
+        private Secret previous;
 
         public frmSecret(int selectedIndex)
         {
             InitializeComponent();
             this.selectedIndex = selectedIndex;
         }
+        public frmSecret(Secret previous)
+        {
+            InitializeComponent();
+            this.previous = previous;
+        }
 
         private void frmSecret_Load(object sender, EventArgs e)
         {
-            if (selectedIndex == 0)
+            if (previous != null)
             {
-                cmbxType.SelectedIndex = 0;
+                cmbxType.Text = previous.TypeSecret;
+                rctxtbxComment.Text=previous.Detail;
             }
-            else if (selectedIndex == 1)
+            else
             {
-                cmbxType.SelectedIndex = 1;
-            }
-            else if (selectedIndex == 2)
-            {
-                cmbxType.SelectedIndex = 2;
-            }
-            else if (selectedIndex == 3)
-            {
-                cmbxType.SelectedIndex = 3;
+                if (selectedIndex == 0)
+                {
+                    cmbxType.SelectedIndex = 0;
+                }
+                else if (selectedIndex == 1)
+                {
+                    cmbxType.SelectedIndex = 1;
+                }
+                else if (selectedIndex == 2)
+                {
+                    cmbxType.SelectedIndex = 2;
+                }
+                else if (selectedIndex == 3)
+                {
+                    cmbxType.SelectedIndex = 3;
+                }
             }
         }
 
@@ -52,7 +66,7 @@ namespace UniversityStudentDiaryManagementSystem
             rctxtbxComment.Clear();
             cmbxType.Focus();
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private Secret takeSecretRecord()
         {
             if (cmbxType.SelectedIndex != 0)
             {
@@ -61,16 +75,7 @@ namespace UniversityStudentDiaryManagementSystem
                     string typeSecret = cmbxType.SelectedItem.ToString();
                     string detail = rctxtbxComment.Text;
                     Secret secret = new Secret(typeSecret, detail);
-                    if (SecretDL.setIntoSecretList(secret))
-                    {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
-                    }
+                    return secret;
                 }
                 else
                 {
@@ -82,6 +87,36 @@ namespace UniversityStudentDiaryManagementSystem
             {
                 MessageBox.Show("Please select the type ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cmbxType.Focus();
+            }
+            return null;
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (previous != null)
+            {
+                if (SecretDL.EditFromSecretList(previous,takeSecretRecord()))
+                {
+                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    clearFields();
+                }
+            }
+            else
+            {
+                if (SecretDL.setIntoSecretList(takeSecretRecord()))
+                {
+                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    clearFields();
+                }
             }
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniversityStudentDiaryManagementSystem.BL
 {
-    internal class Secret
+    public class Secret
     {
         private string typeSecret;
         private string detail;
