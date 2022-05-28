@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
+using UniversityStudentDiaryManagementSystem.Path;
 
 namespace UniversityStudentDiaryManagementSystem
 {
@@ -80,6 +81,8 @@ namespace UniversityStudentDiaryManagementSystem
                 if (PhoneDL.setIntoPhoneList(takePhoneRecord()))
                 {
                     MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    PhoneDL.storeRecordIntoFile(takePhoneRecord(), FilePath.Phone);
+                    PhoneDL.clearList();
                     clearFields();
                 }
                 else

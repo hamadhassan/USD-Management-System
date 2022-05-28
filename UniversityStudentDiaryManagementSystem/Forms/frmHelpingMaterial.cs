@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
+using UniversityStudentDiaryManagementSystem.Path;
 
 
 namespace UniversityStudentDiaryManagementSystem
@@ -110,6 +111,8 @@ namespace UniversityStudentDiaryManagementSystem
                 if (HelpingMaterialDL.setIntoHelpingMaterialList(takeHelpingMaterialRecord()))
                 {
                     MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HelpingMaterialDL.storeRecordIntoFile(takeHelpingMaterialRecord(), FilePath.HelpingMaterial);
+                    HelpingMaterialDL.clearList();
                     clearFields();
                 }
                 else

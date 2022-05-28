@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
-
+using UniversityStudentDiaryManagementSystem.Path;
 
 namespace UniversityStudentDiaryManagementSystem
 {
@@ -219,6 +219,8 @@ namespace UniversityStudentDiaryManagementSystem
                     if (BookDL.setIntoBookList(takeBookBorrowRecord()))
                     {
                         MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        BookDL.storeRecordIntoFile(takeBookBorrowRecord(), FilePath.Books);
+                        BookDL.clearList();
                         clearFields();
                     }
                     else

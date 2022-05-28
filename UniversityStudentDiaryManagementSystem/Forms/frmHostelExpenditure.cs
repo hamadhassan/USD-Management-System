@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
+using UniversityStudentDiaryManagementSystem.Path;
 
 namespace UniversityStudentDiaryManagementSystem
 {
@@ -135,6 +136,8 @@ namespace UniversityStudentDiaryManagementSystem
                 if (HostelExpenditureDL.setIntoHostelExpenditureList(takeHostelExpenditureRecord()))
                 {
                     MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HostelExpenditureDL.storeRecordIntoFile(takeHostelExpenditureRecord(), FilePath.HostelExpenditure);
+                    HostelExpenditureDL.clearList();
                     clearFields();
                 }
                 else

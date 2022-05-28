@@ -73,8 +73,20 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmUserFile_Load(object sender, EventArgs e)
         {
-           cmbxOption.SelectedIndex=0;
+            cmbxOption.SelectedIndex=0;
             AchivementDL.loadRecordFromFile(FilePath.Achivement);
+            ActivitiesDL.loadRecordFromFile(FilePath.Activities);
+            BookDL.loadRecordFromFile(FilePath.Books);
+            FeeDL.loadRecordFromFile(FilePath.Fee);
+            FundDL.loadRecordFromFile(FilePath.Fund);
+            HelpingMaterialDL.loadRecordFromFile(FilePath.HelpingMaterial);
+            HostelExpenditureDL.loadRecordFromFile(FilePath.HostelExpenditure);
+            MealDL.loadRecordFromFile(FilePath.Meal);
+            PhoneDL.loadRecordFromFile(FilePath.Phone);
+            SecretDL.loadRecordFromFile(FilePath.Secret);
+            TransportDL.loadRecordFromFile(FilePath.Transport);
+
+
         }
         public void dataBind()
         {
@@ -150,151 +162,181 @@ namespace UniversityStudentDiaryManagementSystem
                 }
                 else if(cmbxOption.SelectedIndex == 2)
                 {
+                    ActivitiesDL.storeAllRecordIntoFile(FilePath.Activities);
                     Activities activities  = (Activities)datagvAll.CurrentRow.DataBoundItem;
                     if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                     {
                         ActivitiesDL.deleteFromActivitiesList(activities);
+                        ActivitiesDL.storeAllRecordIntoFile(FilePath.Activities);
                         dataBind();
                     }
                     else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
                     {
                         frmAcivities a = new frmAcivities(activities);
                         a.ShowDialog();
+                        ActivitiesDL.storeAllRecordIntoFile(FilePath.Activities);
                         dataBind();
                     }
                 }
                 else if (cmbxOption.SelectedIndex == 3)
                 {
+                    BookDL.storeAllRecordIntoFile(FilePath.Books);
                     Book book = (Book)datagvAll.CurrentRow.DataBoundItem;
                     if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                     {
-                        BookDL.deleteFromBookList(book);
+                        BookDL.deleteFromBookList(book); 
+                        BookDL.storeAllRecordIntoFile(FilePath.Books);
                         dataBind();
                     }
                     else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
                     {
                         frmBooks b = new frmBooks(book);
                         b.ShowDialog();
+                        BookDL.storeAllRecordIntoFile(FilePath.Books);
                         dataBind();
                     }
                 }
                 else if (cmbxOption.SelectedIndex == 4)
                 {
+                    FeeDL.storeAllRecordIntoFile(FilePath.Fee);
                     Fee fee = (Fee)datagvAll.CurrentRow.DataBoundItem;
                     if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                     {
                         FeeDL.deleteFromFeeList(fee);
+                        FeeDL.storeAllRecordIntoFile(FilePath.Fee);
                         dataBind();
                     }
                     else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
                     {
                         frmFee f = new frmFee(fee);
                         f.ShowDialog();
+                        FeeDL.storeAllRecordIntoFile(FilePath.Fee);
                         dataBind();
                     }
                 }
                 else if (cmbxOption.SelectedIndex == 5)
                 {
+                    FundDL.storeAllRecordIntoFile(FilePath.Fund);
                     Fund fund = (Fund)datagvAll.CurrentRow.DataBoundItem;
                     if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                     {
                         FundDL.deleteFromFundList(fund);
+                        FundDL.storeAllRecordIntoFile(FilePath.Fund);
                         dataBind();
                     }
                     else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
                     {
                         frmFunds f = new frmFunds(fund);
                         f.ShowDialog();
+                        FundDL.storeAllRecordIntoFile(FilePath.Fund);
                         dataBind();
                     }
                 }
                 else if (cmbxOption.SelectedIndex == 6)
                 {
+                    HelpingMaterialDL.storeAllRecordIntoFile(FilePath.HelpingMaterial);
                     HelpingMaterial helpingMaterial = (HelpingMaterial)datagvAll.CurrentRow.DataBoundItem;
                     if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                     {
                         HelpingMaterialDL.deleteFromHelpingMaterialList(helpingMaterial);
+                        HelpingMaterialDL.storeAllRecordIntoFile(FilePath.HelpingMaterial);
                         dataBind();
                     }
                     else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
                     {
                         frmHelpingMaterial f = new frmHelpingMaterial(helpingMaterial);
                         f.ShowDialog();
+                        HelpingMaterialDL.storeAllRecordIntoFile(FilePath.HelpingMaterial);
                         dataBind();
                     }
                 }
                 else if (cmbxOption.SelectedIndex == 7)
                 {
+                    HostelExpenditureDL.storeAllRecordIntoFile(FilePath.HostelExpenditure);
                     HostelExpenditure hostelExpenditure = (HostelExpenditure)datagvAll.CurrentRow.DataBoundItem;
                     if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                     {
                         HostelExpenditureDL.deleteFromHostelExpenditureList(hostelExpenditure);
+                        HostelExpenditureDL.storeAllRecordIntoFile(FilePath.HostelExpenditure);
                         dataBind();
                     }
                     else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
                     {
                         frmHostelExpenditure f = new frmHostelExpenditure(hostelExpenditure);
                         f.ShowDialog();
+                        HostelExpenditureDL.storeAllRecordIntoFile(FilePath.HostelExpenditure);
                         dataBind();
                     }
                 }
                 else if (cmbxOption.SelectedIndex == 8)
                 {
+                    MealDL.storeAllRecordIntoFile(FilePath.Meal);
                     Meal meal = (Meal)datagvAll.CurrentRow.DataBoundItem;
                     if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                     {
                         MealDL.deleteFromMealList(meal);
+                        MealDL.storeAllRecordIntoFile(FilePath.Meal);
                         dataBind();
                     }
                     else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
                     {
                         frmMeal f = new frmMeal(meal);
+                        MealDL.storeAllRecordIntoFile(FilePath.Meal);
                         f.ShowDialog();
                         dataBind();
                     }
                 }
                 else if (cmbxOption.SelectedIndex == 9)
                 {
+                    PhoneDL.storeAllRecordIntoFile(FilePath.Phone);
                     Phone phone = (Phone)datagvAll.CurrentRow.DataBoundItem;
                     if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                     {
                         PhoneDL.deleteFromPhoneList(phone);
+                        PhoneDL.storeAllRecordIntoFile(FilePath.Phone);
                         dataBind();
                     }
                     else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
                     {
                         frmPhone f = new frmPhone(phone);
                         f.ShowDialog();
+                        PhoneDL.storeAllRecordIntoFile(FilePath.Phone);
                         dataBind();
                     }
                 }
                 else if (cmbxOption.SelectedIndex == 10)
                 {
+                    SecretDL.storeAllRecordIntoFile(FilePath.Secret);
                     Secret secret = (Secret)datagvAll.CurrentRow.DataBoundItem;
                     if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                     {
                         SecretDL.deleteFromSecretList(secret);
+                        SecretDL.storeAllRecordIntoFile(FilePath.Secret);
                         dataBind();
                     }
                     else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
                     {
                         frmSecret f = new frmSecret(secret);
                         f.ShowDialog();
+                        SecretDL.storeAllRecordIntoFile(FilePath.Secret);
                         dataBind();
                     }
                 }
                 else if (cmbxOption.SelectedIndex == 11)
                 {
+                    TransportDL.storeAllRecordIntoFile(FilePath.Transport);
                     Transport transport = (Transport)datagvAll.CurrentRow.DataBoundItem;
                     if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                     {
                         TransportDL.deleteFromTransportList(transport);
+                        TransportDL.storeAllRecordIntoFile(FilePath.Transport);
                         dataBind();
                     }
                     else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
                     {
                         frmTransport f = new frmTransport(transport);
                         f.ShowDialog();
+                        TransportDL.storeAllRecordIntoFile(FilePath.Transport);
                         dataBind();
                     }
                 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
+using UniversityStudentDiaryManagementSystem.Path;
 
 namespace UniversityStudentDiaryManagementSystem
 {
@@ -110,6 +111,8 @@ namespace UniversityStudentDiaryManagementSystem
                 if (SecretDL.setIntoSecretList(takeSecretRecord()))
                 {
                     MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SecretDL.storeRecordIntoFile(takeSecretRecord(), FilePath.Secret);
+                    SecretDL.clearList();
                     clearFields();
                 }
                 else

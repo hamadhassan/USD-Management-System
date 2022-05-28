@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
+using UniversityStudentDiaryManagementSystem.Path;
 
 
 namespace UniversityStudentDiaryManagementSystem
@@ -119,6 +120,8 @@ namespace UniversityStudentDiaryManagementSystem
                 if (TransportDL.setIntoTransportList(takeTransportRecord()))
                 {
                     MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    TransportDL.storeRecordIntoFile(takeTransportRecord(), FilePath.Transport);
+                    TransportDL.clearList();
                     clearFields();
                 }
                 else

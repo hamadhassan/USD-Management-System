@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
+using UniversityStudentDiaryManagementSystem.Path;
 
 namespace UniversityStudentDiaryManagementSystem
 {
@@ -112,6 +113,8 @@ namespace UniversityStudentDiaryManagementSystem
                 if (FundDL.setIntoFundList(takeFund()))
                 {
                     MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FundDL.storeRecordIntoFile(takeFund(), FilePath.Fund);
+                    FundDL.clearList();
                     clearFields();
                 }
                 else
