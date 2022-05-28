@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
+using UniversityStudentDiaryManagementSystem.Path;
 
 
 namespace UniversityStudentDiaryManagementSystem
 {
-    public partial class frmAchivements : Form
+    public partial class frmAchivements : Form 
     {
         private int selectedIndex;
         private Achivement previous;
@@ -68,6 +69,7 @@ namespace UniversityStudentDiaryManagementSystem
                     string remarks = rctxtbxRemarks.Text;
                     Achivement achivement = new Achivement(typeAchivement, presentedBy, remarks);
                     return achivement;
+
                 }
                 else
                 {
@@ -102,6 +104,8 @@ namespace UniversityStudentDiaryManagementSystem
                 if (AchivementDL.setIntoAchivementsList(saveRecord()))
                 {
                     MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AchivementDL.storeRecordIntoFile(saveRecord(), FilePath.Achivement);
+                    AchivementDL.clearList();
                     clearFields();
                 }
                 else

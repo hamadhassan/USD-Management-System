@@ -193,6 +193,7 @@
     <Compile Include="Forms\frmUserFile.Designer.cs">
       <DependentUpon>frmUserFile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Path\FilePath.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmAbout.resx">

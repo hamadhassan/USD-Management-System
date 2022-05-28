@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.DL;
 using UniversityStudentDiaryManagementSystem.BL;
+using UniversityStudentDiaryManagementSystem.Path;
 
 
 namespace UniversityStudentDiaryManagementSystem
@@ -73,6 +74,7 @@ namespace UniversityStudentDiaryManagementSystem
         private void frmUserFile_Load(object sender, EventArgs e)
         {
            cmbxOption.SelectedIndex=0;
+            AchivementDL.loadRecordFromFile(FilePath.Achivement);
         }
         public void dataBind()
         {
@@ -130,16 +132,19 @@ namespace UniversityStudentDiaryManagementSystem
             {
                 if (cmbxOption.SelectedIndex == 1)
                 {
+                    AchivementDL.storeAllRecordIntoFile(FilePath.Achivement);
                     Achivement achivement = (Achivement)datagvAll.CurrentRow.DataBoundItem;
                     if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                     {
                         AchivementDL.deleteFromAchivementsList(achivement);
+                        AchivementDL.storeAllRecordIntoFile(FilePath.Achivement);
                         dataBind();
                     }
                     else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
                     {
                         frmAchivements a = new frmAchivements(achivement);
                         a.ShowDialog();
+                        AchivementDL.storeAllRecordIntoFile(FilePath.Achivement);
                         dataBind();
                     }
                 }

@@ -45,6 +45,10 @@ namespace UniversityStudentDiaryManagementSystem.DL
             }
             return false;
         }
+        public static void clearList()
+        {
+            achivementList.Clear();
+        }
         public static string parseData(string record, int field)
         {
             int comma = 1;
@@ -62,7 +66,7 @@ namespace UniversityStudentDiaryManagementSystem.DL
             }
             return item;
         }
-        public static bool readRecordFromFile(string path)
+        public static bool loadRecordFromFile(string path)
         {
             if (File.Exists(path))
             {

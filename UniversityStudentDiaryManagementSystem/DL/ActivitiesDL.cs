@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UniversityStudentDiaryManagementSystem.BL;
+using System.IO;
 
 namespace UniversityStudentDiaryManagementSystem.DL
 {
@@ -42,6 +43,67 @@ namespace UniversityStudentDiaryManagementSystem.DL
                 }
             }
             return false;
+        }
+        public static void clearList()
+        {
+            activitiesList.Clear();
+        }
+        public static string parseData(string record, int field)
+        {
+            int comma = 1;
+            string item = "";
+            for (int x = 0; x < record.Length; x++)
+            {
+                if (record[x] == ',')
+                {
+                    comma++;
+                }
+                else if (comma == field)
+                {
+                    item = item + record[x];
+                }
+            }
+            return item;
+        }
+        public static bool loadRecordFromFile(string path)
+        {
+            if (File.Exists(path))
+            {
+                StreamReader fileVariable = new StreamReader(path);
+                string record;
+                while ((record = fileVariable.ReadLine()) != null)
+                {
+                    string typeAcitivity = parseData(record, 1);
+                    string minutes = parseData(record, 2);
+                    string remarks= parseData(record, 3);
+                    Activities activities = new Activities(typeAcitivity, minutes, remarks);
+                    activitiesList.Add(activities);
+                }
+                fileVariable.Close();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static void storeRecordIntoFile(Activities record, string path)
+        {
+            StreamWriter file = new StreamWriter(path, true);
+            file.WriteLine(record.TypeAcitivity + "," + record.Minutes + "," + record.Remarks);
+            file.Flush();
+            file.Close();
+
+        }
+        public static void storeAllRecordIntoFile(string path)
+        {
+            StreamWriter file = new StreamWriter(path);
+            foreach (Activities record in activitiesList)
+            {
+                file.WriteLine(record.TypeAcitivity + "," + record.Minutes + "," + record.Remarks);
+            }
+            file.Flush();
+            file.Close();
         }
     }
 }

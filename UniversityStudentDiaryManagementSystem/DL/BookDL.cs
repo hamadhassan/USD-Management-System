@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UniversityStudentDiaryManagementSystem.BL;
+using System.IO;
 
 namespace UniversityStudentDiaryManagementSystem.DL
 {
@@ -45,6 +46,69 @@ namespace UniversityStudentDiaryManagementSystem.DL
                 }
             }
             return false;
+        }
+        public static void clearList()
+        {
+            bookList.Clear();
+        }
+        public static string parseData(string record, int field)
+        {
+            int comma = 1;
+            string item = "";
+            for (int x = 0; x < record.Length; x++)
+            {
+                if (record[x] == ',')
+                {
+                    comma++;
+                }
+                else if (comma == field)
+                {
+                    item = item + record[x];
+                }
+            }
+            return item;
+        }
+        public static bool loadRecordFromFile(string path)
+        {
+            if (File.Exists(path))
+            {
+                StreamReader fileVariable = new StreamReader(path);
+                string record;
+                while ((record = fileVariable.ReadLine()) != null)
+                {
+                    string typeBook=parseData(record,1);
+                    string title= parseData(record, 2);
+                    string authorName = parseData(record, 3);
+                    string bookFrom = parseData(record, 4);
+                    string remarks = parseData(record, 5);
+                    Book book=new Book(typeBook,title,authorName,bookFrom,remarks);
+                    bookList.Add(book);
+                }
+                fileVariable.Close();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static void storeRecordIntoFile(Book record, string path)
+        {
+            StreamWriter file = new StreamWriter(path, true);
+            file.WriteLine(record.TypeBook + "," + record.Title + "," + record.AuthorName + "," + record.BookFrom + "," + record.Remarks);
+            file.Flush();
+            file.Close();
+
+        }
+        public static void storeAllRecordIntoFile(string path)
+        {
+            StreamWriter file = new StreamWriter(path);
+            foreach (Book record in bookList)
+            {
+                file.WriteLine(record.TypeBook + "," + record.Title + "," + record.AuthorName + "," + record.BookFrom + "," + record.Remarks);
+            }
+            file.Flush();
+            file.Close();
         }
     }
 }

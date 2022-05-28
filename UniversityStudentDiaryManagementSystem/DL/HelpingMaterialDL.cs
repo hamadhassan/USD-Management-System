@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UniversityStudentDiaryManagementSystem.BL;
+using System.IO;
 
 namespace UniversityStudentDiaryManagementSystem.DL
 {
@@ -44,5 +45,67 @@ namespace UniversityStudentDiaryManagementSystem.DL
             }
             return false;
         }
+        public static void clearList()
+        {
+            helpingMaterialList.Clear();
+        }
+        public static string parseData(string record, int field)
+        {
+            int comma = 1;
+            string item = "";
+            for (int x = 0; x < record.Length; x++)
+            {
+                if (record[x] == ',')
+                {
+                    comma++;
+                }
+                else if (comma == field)
+                {
+                    item = item + record[x];
+                }
+            }
+            return item;
+        }
+        public static bool loadRecordFromFile(string path)
+        {
+            if (File.Exists(path))
+            {
+                StreamReader fileVariable = new StreamReader(path);
+                string record;
+                while ((record = fileVariable.ReadLine()) != null)
+                {
+                    string typeHelpingMaterial = parseData(record, 1);
+                    double charges= double.Parse(parseData(record, 2));
+                    string remarks= parseData(record, 3);
+                    HelpingMaterial helpingMaterial = new HelpingMaterial(typeHelpingMaterial, charges, remarks);
+                    helpingMaterialList.Add(helpingMaterial);
+                }
+                fileVariable.Close();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static void storeRecordIntoFile(HelpingMaterial record, string path)
+        {
+            StreamWriter file = new StreamWriter(path, true);
+            file.WriteLine(record.TypeHelpingMaterial + "," + record.Charges + "," + record.Remarks);
+            file.Flush();
+            file.Close();
+
+        }
+        public static void storeAllRecordIntoFile(string path)
+        {
+            StreamWriter file = new StreamWriter(path);
+            foreach (HelpingMaterial record in helpingMaterialList)
+            {
+                file.WriteLine(record.TypeHelpingMaterial + "," + record.Charges + "," + record.Remarks);
+            }
+            file.Flush();
+            file.Close();
+        }
     }
+
 }
