@@ -20,6 +20,28 @@ namespace UniversityStudentDiaryManagementSystem.DL
         {
             return feeList;
         }
+        public static Fee getAcademicFee()
+        {
+            foreach(Fee fee in feeList)
+            {
+                if (fee.FeeType == "Academic")
+                {
+                    return fee;
+                }
+            }
+            return null;
+        }
+        public static Fee getHostelFee()
+        {
+            foreach (Fee fee in feeList)
+            {
+                if (fee.FeeType == "Hostel")
+                {
+                    return fee;
+                }
+            }
+            return null;
+        }
         public static void deleteFromFeeList(Fee fee)
         {
             for (int index = 0; index < feeList.Count; index++)

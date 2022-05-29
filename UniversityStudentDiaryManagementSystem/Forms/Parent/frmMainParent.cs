@@ -87,5 +87,19 @@ namespace UniversityStudentDiaryManagementSystem
             about.ShowDialog();
 
         }
+        #region Fee
+        private void academicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFeeParent feeParent = new frmFeeParent();
+            feeParent.ShowDialog();
+        }
+
+        private void hostelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFeeParent feeParent = new frmFeeParent();
+            feeParent.ShowDialog();
+        }
+        #endregion
     }
 }
+

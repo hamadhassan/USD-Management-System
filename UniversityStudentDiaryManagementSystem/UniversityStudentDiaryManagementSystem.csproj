@@ -55,6 +55,7 @@
     <Compile Include="BL\HelpingMaterial.cs" />
     <Compile Include="BL\HostelExpenditure.cs" />
     <Compile Include="BL\Meal.cs" />
+    <Compile Include="BL\Notification.cs" />
     <Compile Include="BL\Phone.cs" />
     <Compile Include="BL\Result.cs" />
     <Compile Include="BL\Secret.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="DL\HelpingMaterialDL.cs" />
     <Compile Include="DL\HostelExpenditureDL.cs" />
     <Compile Include="DL\MealDL.cs" />
+    <Compile Include="DL\NotificationDL.cs" />
     <Compile Include="DL\PhoneDL.cs" />
     <Compile Include="DL\ResultDL.cs" />
     <Compile Include="DL\SecretDL.cs" />
@@ -219,9 +221,24 @@
     <Compile Include="Forms\Parent\frmWalletParent.Designer.cs">
       <DependentUpon>frmWalletParent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Parent\frmFeeParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Parent\frmFeeParent.Designer.cs">
+      <DependentUpon>frmFeeParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\frmNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\frmNotification.Designer.cs">
+      <DependentUpon>frmNotification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Path\FilePath.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Parent\frmFeeParent.resx">
+      <DependentUpon>frmFeeParent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Parent\frmMainParent.resx">
       <DependentUpon>frmMainParent.cs</DependentUpon>
     </EmbeddedResource>
@@ -293,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\frmResult.resx">
       <DependentUpon>frmResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\frmNotification.resx">
+      <DependentUpon>frmNotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

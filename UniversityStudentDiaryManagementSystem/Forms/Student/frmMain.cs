@@ -391,5 +391,11 @@ namespace UniversityStudentDiaryManagementSystem
             Application.Exit();
         }
         #endregion
+
+        private void toolStripButton12_Click(object sender, EventArgs e)
+        {
+            frmNotification notification = new frmNotification();
+            notification.ShowDialog();
+        }
     }
 }
