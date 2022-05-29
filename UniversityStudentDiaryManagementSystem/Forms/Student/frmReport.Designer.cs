@@ -41,6 +41,7 @@
             this.Name = "frmReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Report";
+            this.Load += new System.EventHandler(this.frmReport_Load);
             this.ResumeLayout(false);
 
         }

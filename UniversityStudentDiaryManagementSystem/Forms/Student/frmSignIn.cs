@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
+using UniversityStudentDiaryManagementSystem.Path;
+
 
 
 namespace UniversityStudentDiaryManagementSystem
@@ -28,11 +30,11 @@ namespace UniversityStudentDiaryManagementSystem
                 string username = txtbxUsername.Text;
                 string password = txtbxPassword.Text;
                 Credential crediational = new Credential();
-                CredentialDL.setIntoListCrediantialList(crediational);
+               // CredentialDL.setIntoListCrediantialList(crediational);
                 bool checkCondition = crediational.checkUser(loginAs, username, password, CredentialDL.getCrediationalList());
                 if (checkCondition)
                 {
-                     string role=crediational.checkRole(loginAs, username, password, CredentialDL.getCrediationalList());
+                    string role=crediational.checkRole(loginAs, username, password, CredentialDL.getCrediationalList());
                     if (role == "Student")
                     {
                         frmMain main = new frmMain();
@@ -52,7 +54,7 @@ namespace UniversityStudentDiaryManagementSystem
                     MessageBox.Show("Invalid username and password", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 }
-                combxLoginAs.Text = "Select one option";
+                combxLoginAs.SelectedIndex=0;
                 txtbxUsername.Clear();
                 txtbxPassword.Clear();
             }
@@ -79,6 +81,8 @@ namespace UniversityStudentDiaryManagementSystem
         private void frmSignIn_Load(object sender, EventArgs e)
         {
             combxLoginAs.SelectedIndex = 0;
+            CredentialDL.clearList();
+            CredentialDL.loadRecordFromFile(FilePath.Credential);
         }
     }
 }

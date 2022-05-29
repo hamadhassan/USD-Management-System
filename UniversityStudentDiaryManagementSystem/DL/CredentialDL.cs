@@ -31,18 +31,24 @@ namespace UniversityStudentDiaryManagementSystem.DL
             }
             return false;
         }
-        public static bool updatePassword(string oldPassword, string newPassword)
+        public static bool updatePassword(string oldPassword, string newPassword,string username1,string role1)
         {
             int index = 0;
             foreach (Credential c in crediantialsList)
             {
-                if (c.Password == oldPassword)
+                if (c.Role==role1 && c.Username==username1 && c.Password == oldPassword)
                 {
-                    c.Password= newPassword;
-                    crediantialsList.Insert(index,c);
-                    index++;
+                    string firstName=c.FirstName;
+                    string lastName=c.LastName;
+                    string username=c.Username;
+                    string password=newPassword;
+                    string role=c.Role;
+                    crediantialsList.RemoveAt(index);
+                    Credential credential=new Credential(firstName, lastName, username, password, role);
+                    crediantialsList.Add(credential);
                     return true;
                 }
+                index++;
             }
             return false;
         }
@@ -82,7 +88,6 @@ namespace UniversityStudentDiaryManagementSystem.DL
                     string role = parseData(record, 5);
                     Credential credential = new Credential(firstName, lastName, username, password, role);
                     crediantialsList.Add(credential);  
-
                 }
                 fileVariable.Close();
                 return true;

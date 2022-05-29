@@ -59,5 +59,33 @@ namespace UniversityStudentDiaryManagementSystem
         {
             Application.Exit();
         }
+
+        private void frmMainParent_Load(object sender, EventArgs e)
+        {
+            tolstplblCurentDate.Text = DateTime.Now.ToString("dddd dd/MM/yyyy");
+            tolstplblCurrentTime.Text = DateTime.Now.ToString("hh:mm:ss:tt");
+        }
+
+        private void dailyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monthlyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void yearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmAbout about = new frmAbout();
+            about.ShowDialog();
+
+        }
     }
 }

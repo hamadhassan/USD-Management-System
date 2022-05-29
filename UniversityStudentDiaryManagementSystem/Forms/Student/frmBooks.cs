@@ -190,6 +190,7 @@ namespace UniversityStudentDiaryManagementSystem
                     {
                         MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         clearFields();
+                        Close();
                     }
                     else
                     {
@@ -203,6 +204,7 @@ namespace UniversityStudentDiaryManagementSystem
                     {
                         MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         clearFields();
+                        Close();
                     }
                     else
                     {

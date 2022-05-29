@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
-
+using UniversityStudentDiaryManagementSystem.Path;
 
 namespace UniversityStudentDiaryManagementSystem
 {
@@ -40,6 +40,7 @@ namespace UniversityStudentDiaryManagementSystem
                                 string role = cmbxRole.SelectedItem.ToString();
                                 Credential newUser = new Credential(firstName, lastName, username, password, role);
                                 CredentialDL.setIntoListCrediantialList(newUser);
+                                CredentialDL.storeRecordIntoFile(newUser, FilePath.Credential);
                                 txtbxFirstName.Clear();
                                 txtbxLastName.Clear();
                                 txtbxPassword.Clear();
