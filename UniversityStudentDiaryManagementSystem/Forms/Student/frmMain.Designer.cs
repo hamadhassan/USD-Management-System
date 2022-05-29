@@ -121,6 +121,8 @@
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.timerCurrentDateTime = new System.Windows.Forms.Timer(this.components);
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip.SuspendLayout();
@@ -710,6 +712,8 @@
             this.toolStripSeparator4,
             this.toolStripButton5,
             this.toolStripSeparator13,
+            this.toolStripButton10,
+            this.toolStripSeparator9,
             this.toolStripButton14});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
@@ -881,11 +885,12 @@
             // 
             this.toolStripButton14.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
+            this.toolStripButton14.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolStripButton14.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(61, 51);
-            this.toolStripButton14.Text = "   Secret   ";
+            this.toolStripButton14.Size = new System.Drawing.Size(66, 51);
+            this.toolStripButton14.Text = "  Message ";
             this.toolStripButton14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton14.Click += new System.EventHandler(this.toolStripButton14_Click);
             // 
@@ -893,6 +898,22 @@
             // 
             this.timerCurrentDateTime.Enabled = true;
             this.timerCurrentDateTime.Tick += new System.EventHandler(this.timerCurrentDateTime_Tick);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 54);
+            // 
+            // toolStripButton10
+            // 
+            this.toolStripButton10.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
+            this.toolStripButton10.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.Size = new System.Drawing.Size(61, 51);
+            this.toolStripButton10.Text = "   Secret   ";
+            this.toolStripButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // frmMain
             // 
@@ -1013,5 +1034,7 @@
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton10;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
     }
 }

@@ -20,6 +20,7 @@ namespace UniversityStudentDiaryManagementSystem.Path
         private static string phone = "phone.txt";
         private static string secret = "secret.txt";
         private static string transport = "transport.txt";
+        private static string wallet = "wallet.txt";
 
         public  static string Achivement { get => achivement; set => achivement = value; }
         public static string Activities { get => activities; set => activities = value; }
@@ -33,5 +34,6 @@ namespace UniversityStudentDiaryManagementSystem.Path
         public static string Phone { get => phone; set => phone = value; }
         public static string Secret { get => secret; set => secret = value; }
         public static string Transport { get => transport; set => transport = value; }
+        public static string Wallet { get => wallet; set => wallet = value; }
     }
 }

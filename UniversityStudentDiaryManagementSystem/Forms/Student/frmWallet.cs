@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
+using UniversityStudentDiaryManagementSystem.DL;
+using UniversityStudentDiaryManagementSystem.Path;
+
 
 namespace UniversityStudentDiaryManagementSystem
 {
@@ -20,6 +23,9 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmWallet_Load(object sender, EventArgs e)
         {
+            Wallet wallet = WalletDL.loadRecordFromFile(FilePath.Wallet);
+            txtbxBalance.Text =Convert.ToString(wallet.Amount);
+            rctxtbxComments.Text = wallet.Comments;
 
         }
 

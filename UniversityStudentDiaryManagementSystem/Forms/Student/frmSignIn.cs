@@ -32,9 +32,20 @@ namespace UniversityStudentDiaryManagementSystem
                 bool checkCondition = crediational.checkUser(loginAs, username, password, CredentialDL.getCrediationalList());
                 if (checkCondition)
                 {
-                    frmMain main = new frmMain();
-                    main.Show();
-                    this.Hide();
+                     string role=crediational.checkRole(loginAs, username, password, CredentialDL.getCrediationalList());
+                    if (role == "Student")
+                    {
+                        frmMain main = new frmMain();
+                        main.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        frmMainParent mainParent = new frmMainParent();
+                        mainParent.Show();
+                        Hide();
+                    }
+                  
                 }
                 else
                 {

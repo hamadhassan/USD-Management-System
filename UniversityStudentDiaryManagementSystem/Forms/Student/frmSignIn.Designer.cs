@@ -65,8 +65,8 @@
             this.combxLoginAs.FormattingEnabled = true;
             this.combxLoginAs.Items.AddRange(new object[] {
             "Select option",
-            "Admin",
-            "Agent"});
+            "Student",
+            "Parent"});
             this.combxLoginAs.Location = new System.Drawing.Point(137, 194);
             this.combxLoginAs.Name = "combxLoginAs";
             this.combxLoginAs.Size = new System.Drawing.Size(169, 28);

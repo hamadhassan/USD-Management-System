@@ -21,11 +21,11 @@ namespace UniversityStudentDiaryManagementSystem.BL
         public string Role { get => role; set => role = value; }
         public Credential()
         {
-            firstName = "admin";
-            lastName = "admin";
-            username = "admin";
-            password = "admin";
-            role = "Admin";
+            firstName = "student";
+            lastName = "student";
+            username = "student";
+            password = "student";
+            role = "Student";
         }
         public Credential(string firstName, string lastName, string username, string password, string role)
         {
@@ -45,6 +45,24 @@ namespace UniversityStudentDiaryManagementSystem.BL
                 }
             }
             return false;
+        }
+        public string checkRole(string role, string username, string password, List<Credential> crediationalsList)
+        {
+            foreach (Credential c in crediationalsList)
+            {
+                if (c.username == username && c.password == password && c.role == role)
+                {
+                    if(c.role == "Student")
+                    {
+                        return "Student";
+                    }
+                    else 
+                    {
+                        return "Parent";
+                    }
+                }
+            }
+            return null;
         }
         
       

@@ -50,7 +50,8 @@
             // 
             // cmbxOption
             // 
-            this.cmbxOption.FormattingEnabled = true;
+            this.cmbxOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxOption.Items.AddRange(new object[] {
             "Select option",
             "Achivements",

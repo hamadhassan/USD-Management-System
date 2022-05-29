@@ -28,3 +28,7 @@ D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\Un
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmReport.resources
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmFee.resources
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmUserFile.resources
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.Forms.frmMessage.resources
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmResult.resources
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmMainParent.resources
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmWalletParent.resources

@@ -157,8 +157,8 @@
             this.cmbxRole.FormattingEnabled = true;
             this.cmbxRole.Items.AddRange(new object[] {
             "Select option",
-            "Admin",
-            "Agent"});
+            "Student",
+            "Parent"});
             this.cmbxRole.Location = new System.Drawing.Point(107, 28);
             this.cmbxRole.Name = "cmbxRole";
             this.cmbxRole.Size = new System.Drawing.Size(162, 28);
