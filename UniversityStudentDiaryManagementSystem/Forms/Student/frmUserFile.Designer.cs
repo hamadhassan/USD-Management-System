@@ -64,8 +64,8 @@
             "Meal",
             "Phone",
             "Secret",
-            "Trasnport",
-            "Wallet"});
+            "Transport",
+            "Result"});
             this.cmbxOption.Location = new System.Drawing.Point(86, 30);
             this.cmbxOption.Name = "cmbxOption";
             this.cmbxOption.Size = new System.Drawing.Size(175, 28);
@@ -143,7 +143,7 @@
             this.btnClose.Location = new System.Drawing.Point(37, 28);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(85, 31);
-            this.btnClose.TabIndex = 72;
+            this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -165,7 +165,7 @@
             this.txtbxSearch.Location = new System.Drawing.Point(86, 35);
             this.txtbxSearch.Name = "txtbxSearch";
             this.txtbxSearch.Size = new System.Drawing.Size(175, 26);
-            this.txtbxSearch.TabIndex = 2;
+            this.txtbxSearch.TabIndex = 0;
             // 
             // label2
             // 

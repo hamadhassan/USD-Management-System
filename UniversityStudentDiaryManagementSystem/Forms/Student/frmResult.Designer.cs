@@ -34,12 +34,12 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.rctxtbxRemarks = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtbxSemester = new System.Windows.Forms.TextBox();
+            this.txtbxCGPA = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtbxGPA = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtbxSemester = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtbxCGPA = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,11 +102,34 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 128);
+            this.label3.Location = new System.Drawing.Point(6, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Remarks :";
+            // 
+            // txtbxSemester
+            // 
+            this.txtbxSemester.Location = new System.Drawing.Point(91, 37);
+            this.txtbxSemester.Name = "txtbxSemester";
+            this.txtbxSemester.Size = new System.Drawing.Size(179, 26);
+            this.txtbxSemester.TabIndex = 0;
+            // 
+            // txtbxCGPA
+            // 
+            this.txtbxCGPA.Location = new System.Drawing.Point(91, 94);
+            this.txtbxCGPA.Name = "txtbxCGPA";
+            this.txtbxCGPA.Size = new System.Drawing.Size(179, 26);
+            this.txtbxCGPA.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "CGPA :";
             // 
             // txtbxGPA
             // 
@@ -133,29 +156,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Semester :";
             // 
-            // txtbxSemester
-            // 
-            this.txtbxSemester.Location = new System.Drawing.Point(91, 37);
-            this.txtbxSemester.Name = "txtbxSemester";
-            this.txtbxSemester.Size = new System.Drawing.Size(179, 26);
-            this.txtbxSemester.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "CGPA :";
-            // 
-            // txtbxCGPA
-            // 
-            this.txtbxCGPA.Location = new System.Drawing.Point(91, 94);
-            this.txtbxCGPA.Name = "txtbxCGPA";
-            this.txtbxCGPA.Size = new System.Drawing.Size(179, 26);
-            this.txtbxCGPA.TabIndex = 1;
-            // 
             // frmResult
             // 
             this.AcceptButton = this.btnSave;
@@ -169,6 +169,7 @@
             this.Name = "frmResult";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Result";
+            this.Load += new System.EventHandler(this.frmResult_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

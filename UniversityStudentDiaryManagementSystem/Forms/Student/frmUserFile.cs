@@ -67,6 +67,10 @@ namespace UniversityStudentDiaryManagementSystem
             {
                 datagvAll.DataSource = TransportDL.getTransportlist();
             }
+            else if (cmbxOption.SelectedIndex == 12)
+            {
+                datagvAll.DataSource = ResultDL.getResultlist();
+            }
 
 
         }
@@ -85,6 +89,7 @@ namespace UniversityStudentDiaryManagementSystem
             PhoneDL.loadRecordFromFile(FilePath.Phone);
             SecretDL.loadRecordFromFile(FilePath.Secret);
             TransportDL.loadRecordFromFile(FilePath.Transport);
+            ResultDL.loadRecordFromFile(FilePath.Result);
 
 
         }
@@ -136,6 +141,11 @@ namespace UniversityStudentDiaryManagementSystem
             {
                 datagvAll.DataSource = TransportDL.getTransportlist();
             }
+            else if (cmbxOption.SelectedIndex == 12)
+            {
+                datagvAll.DataSource = ResultDL.getResultlist();
+            }
+
             datagvAll.Refresh();
         }
         private void datagvAll_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -337,6 +347,24 @@ namespace UniversityStudentDiaryManagementSystem
                         frmTransport f = new frmTransport(transport);
                         f.ShowDialog();
                         TransportDL.storeAllRecordIntoFile(FilePath.Transport);
+                        dataBind();
+                    }
+                }
+                else if (cmbxOption.SelectedIndex == 12)
+                {
+                    ResultDL.storeAllRecordIntoFile(FilePath.Result);
+                    Result result = (Result)datagvAll.CurrentRow.DataBoundItem;
+                    if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
+                    {
+                        ResultDL.deleteFromResultList(result);
+                        ResultDL.storeAllRecordIntoFile(FilePath.Result);
+                        dataBind();
+                    }
+                    else if (datagvAll.Columns["Edit"].Index == e.ColumnIndex)
+                    {
+                        frmResult f = new frmResult(result);
+                        f.ShowDialog();
+                        ResultDL.storeAllRecordIntoFile(FilePath.Result);
                         dataBind();
                     }
                 }

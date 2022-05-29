@@ -78,7 +78,6 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private Meal takeMealRecord()
         {
-
             if (cmbxTime.SelectedIndex != 0)
             {
                 if (txtbxMenu.Text != String.Empty || txtbxCharges.Text != String.Empty)

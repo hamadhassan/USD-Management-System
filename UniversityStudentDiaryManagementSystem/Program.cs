@@ -17,7 +17,7 @@ namespace UniversityStudentDiaryManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainParent());
+            Application.Run(new frmSignIn());
         }
     }
 }

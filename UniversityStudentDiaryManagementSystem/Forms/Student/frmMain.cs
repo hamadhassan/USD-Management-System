@@ -287,6 +287,12 @@ namespace UniversityStudentDiaryManagementSystem
             frmAchivements achivements = new frmAchivements(2);
             achivements.ShowDialog();
         }
+
+        private void resultToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmResult result = new frmResult();
+            result.ShowDialog();
+        }
         #endregion
 
         #region Tool Srip Button 
@@ -375,6 +381,14 @@ namespace UniversityStudentDiaryManagementSystem
             frmUserFile file = new frmUserFile();
             file.Show();
             this.Hide();
+        }
+        #endregion
+
+        #region Close 
+
+        private void toolStripButton11_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
         #endregion
     }
