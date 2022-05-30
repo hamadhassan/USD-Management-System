@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFeeParent));
-            this.btnClose = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbxAcdemicFee = new System.Windows.Forms.GroupBox();
             this.lblNoAcademicFee = new System.Windows.Forms.Label();
             this.lblRemarks = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnMarkAsDone = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblNoHostelFee = new System.Windows.Forms.Label();
@@ -56,32 +56,29 @@
             this.lblHostelC = new System.Windows.Forms.Label();
             this.lblHostelS = new System.Windows.Forms.Label();
             this.btnMarkAsDoneHostel = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1.SuspendLayout();
             this.gbxAcdemicFee.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnClose
+            // tableLayoutPanel1
             // 
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(617, 272);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(85, 31);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.Text = "Close";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Semester :";
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.14006F));
+            this.tableLayoutPanel1.Controls.Add(this.gbxAcdemicFee, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnClose, 0, 2);
+            this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.13793F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.86207F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(714, 323);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // gbxAcdemicFee
             // 
@@ -97,10 +94,11 @@
             this.gbxAcdemicFee.Controls.Add(this.label2);
             this.gbxAcdemicFee.Controls.Add(this.label1);
             this.gbxAcdemicFee.Controls.Add(this.btnMarkAsDone);
-            this.gbxAcdemicFee.Location = new System.Drawing.Point(12, 12);
+            this.gbxAcdemicFee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbxAcdemicFee.Location = new System.Drawing.Point(3, 3);
             this.gbxAcdemicFee.Name = "gbxAcdemicFee";
-            this.gbxAcdemicFee.Size = new System.Drawing.Size(690, 124);
-            this.gbxAcdemicFee.TabIndex = 7;
+            this.gbxAcdemicFee.Size = new System.Drawing.Size(708, 112);
+            this.gbxAcdemicFee.TabIndex = 15;
             this.gbxAcdemicFee.TabStop = false;
             this.gbxAcdemicFee.Text = "Academic Fee";
             // 
@@ -197,6 +195,15 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Challan No :";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Semester :";
+            // 
             // btnMarkAsDone
             // 
             this.btnMarkAsDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -209,7 +216,6 @@
             this.btnMarkAsDone.Text = "Mark As Done";
             this.btnMarkAsDone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMarkAsDone.UseVisualStyleBackColor = true;
-            this.btnMarkAsDone.Click += new System.EventHandler(this.btnMarkAsDone_Click);
             // 
             // groupBox1
             // 
@@ -225,10 +231,11 @@
             this.groupBox1.Controls.Add(this.lblHostelC);
             this.groupBox1.Controls.Add(this.lblHostelS);
             this.groupBox1.Controls.Add(this.btnMarkAsDoneHostel);
-            this.groupBox1.Location = new System.Drawing.Point(12, 142);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(3, 121);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(690, 124);
-            this.groupBox1.TabIndex = 12;
+            this.groupBox1.Size = new System.Drawing.Size(708, 143);
+            this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hostel Fee";
             // 
@@ -346,16 +353,27 @@
             this.btnMarkAsDoneHostel.Text = "Mark As Done";
             this.btnMarkAsDoneHostel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMarkAsDoneHostel.UseVisualStyleBackColor = true;
-            this.btnMarkAsDoneHostel.Click += new System.EventHandler(this.btnMarkAsDoneHostel_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(618, 270);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(93, 37);
+            this.btnClose.TabIndex = 17;
+            this.btnClose.Text = "Close";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // frmFeeParent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 310);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.gbxAcdemicFee);
+            this.ClientSize = new System.Drawing.Size(714, 323);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -363,6 +381,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fee";
             this.Load += new System.EventHandler(this.frmFeeParent_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.gbxAcdemicFee.ResumeLayout(false);
             this.gbxAcdemicFee.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -373,11 +392,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox gbxAcdemicFee;
-        private System.Windows.Forms.Button btnMarkAsDone;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNoAcademicFee;
         private System.Windows.Forms.Label lblRemarks;
         private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.Label lblDate;
@@ -386,7 +403,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblNoAcademicFee;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnMarkAsDone;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblNoHostelFee;
         private System.Windows.Forms.Label lblRemarksHostel;
@@ -400,5 +419,6 @@
         private System.Windows.Forms.Label lblHostelC;
         private System.Windows.Forms.Label lblHostelS;
         private System.Windows.Forms.Button btnMarkAsDoneHostel;
+        private System.Windows.Forms.Button btnClose;
     }
 }
