@@ -715,8 +715,8 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                frmSecret secret = new frmSecret(0);
-                secret.ShowDialog();
+                frmNotification notification = new frmNotification();
+                notification.Show();
             }
             catch (Exception ex)
             {
@@ -798,5 +798,19 @@ namespace UniversityStudentDiaryManagementSystem
             }
         }
         #endregion
+
+        private void toolStripButton10_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmSecret secret = new frmSecret(0);
+                secret.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
     }
 }

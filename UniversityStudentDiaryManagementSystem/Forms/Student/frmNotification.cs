@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.DL;
 using UniversityStudentDiaryManagementSystem.BL;
+using UniversityStudentDiaryManagementSystem.Path;
+
 
 
 namespace UniversityStudentDiaryManagementSystem
@@ -24,6 +26,7 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
+                NotificationDL.loadRecordFromFile(FilePath.Notification);
                 List<Notification> notification = NotificationDL.getNotificationlist();
                 lblAcademic.Text = notification[0].AcademicFeeNotification;
                 lblHostel.Text = notification[0].HostelFeeNotification;

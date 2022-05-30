@@ -89,11 +89,18 @@ namespace UniversityStudentDiaryManagementSystem
             {
                 if (txtbxAmount.Text != String.Empty)
                 {
-                    string typeFund = cmbxType.SelectedItem.ToString();
-                    double amount = double.Parse(txtbxAmount.Text);
-                    string remarks = rctxbxObjective.Text;
-                    Fund fund = new Fund(typeFund, amount, remarks);
-                    return fund;
+                    if (!(double.Parse( txtbxAmount.Text)<0))
+                    {
+                        double amount = double.Parse(txtbxAmount.Text);
+                        string typeFund = cmbxType.SelectedItem.ToString();
+                        string remarks = rctxbxObjective.Text;
+                        Fund fund = new Fund(typeFund, amount, remarks);
+                        return fund;
+                    }
+                    else 
+                    {
+                        MessageBox.Show("Provide the coorect data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {

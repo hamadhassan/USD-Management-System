@@ -10,6 +10,7 @@ namespace UniversityStudentDiaryManagementSystem.DL
 {
     internal class AchivementDL
     {
+
         private static List<Achivement> achivementList=new List<Achivement>();
         public static bool setIntoAchivementsList(Achivement achivement)
         {
