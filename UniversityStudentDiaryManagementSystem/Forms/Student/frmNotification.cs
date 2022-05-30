@@ -22,8 +22,15 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmNotification_Load(object sender, EventArgs e)
         {
-            List<string> notifications = NotificationDL.getNotificationlist();
-            label1.Text = notifications[0];
+            List<Notification> notification = NotificationDL.getNotificationlist();
+            label1.Text = notification[0].AcademicFeeNotification;
+            label2.Text = notification[0].HostelFeeNotification;
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

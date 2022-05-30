@@ -47,13 +47,13 @@
             this.lblNoHostelFee = new System.Windows.Forms.Label();
             this.lblRemarksHostel = new System.Windows.Forms.Label();
             this.lblAmountHostel = new System.Windows.Forms.Label();
-            this.lblDueDataHostel = new System.Windows.Forms.Label();
-            this.lblHostelC = new System.Windows.Forms.Label();
+            this.lblDueDateHostel = new System.Windows.Forms.Label();
+            this.lblHostelChallanNo = new System.Windows.Forms.Label();
             this.lblSemesterHostel = new System.Windows.Forms.Label();
             this.lblHostelR = new System.Windows.Forms.Label();
             this.lblHostelD = new System.Windows.Forms.Label();
             this.lblHostelA = new System.Windows.Forms.Label();
-            this.lblChallanNoH = new System.Windows.Forms.Label();
+            this.lblHostelC = new System.Windows.Forms.Label();
             this.lblHostelS = new System.Windows.Forms.Label();
             this.btnMarkAsDoneHostel = new System.Windows.Forms.Button();
             this.gbxAcdemicFee.SuspendLayout();
@@ -216,13 +216,13 @@
             this.groupBox1.Controls.Add(this.lblNoHostelFee);
             this.groupBox1.Controls.Add(this.lblRemarksHostel);
             this.groupBox1.Controls.Add(this.lblAmountHostel);
-            this.groupBox1.Controls.Add(this.lblDueDataHostel);
-            this.groupBox1.Controls.Add(this.lblHostelC);
+            this.groupBox1.Controls.Add(this.lblDueDateHostel);
+            this.groupBox1.Controls.Add(this.lblHostelChallanNo);
             this.groupBox1.Controls.Add(this.lblSemesterHostel);
             this.groupBox1.Controls.Add(this.lblHostelR);
             this.groupBox1.Controls.Add(this.lblHostelD);
             this.groupBox1.Controls.Add(this.lblHostelA);
-            this.groupBox1.Controls.Add(this.lblChallanNoH);
+            this.groupBox1.Controls.Add(this.lblHostelC);
             this.groupBox1.Controls.Add(this.lblHostelS);
             this.groupBox1.Controls.Add(this.btnMarkAsDoneHostel);
             this.groupBox1.Location = new System.Drawing.Point(12, 142);
@@ -259,23 +259,23 @@
             this.lblAmountHostel.TabIndex = 10;
             this.lblAmountHostel.Text = "00000000";
             // 
-            // lblDueDataHostel
+            // lblDueDateHostel
             // 
-            this.lblDueDataHostel.AutoSize = true;
-            this.lblDueDataHostel.Location = new System.Drawing.Point(312, 62);
-            this.lblDueDataHostel.Name = "lblDueDataHostel";
-            this.lblDueDataHostel.Size = new System.Drawing.Size(71, 20);
-            this.lblDueDataHostel.TabIndex = 10;
-            this.lblDueDataHostel.Text = "12/12/12";
+            this.lblDueDateHostel.AutoSize = true;
+            this.lblDueDateHostel.Location = new System.Drawing.Point(312, 62);
+            this.lblDueDateHostel.Name = "lblDueDateHostel";
+            this.lblDueDateHostel.Size = new System.Drawing.Size(71, 20);
+            this.lblDueDateHostel.TabIndex = 10;
+            this.lblDueDateHostel.Text = "12/12/12";
             // 
-            // lblHostelC
+            // lblHostelChallanNo
             // 
-            this.lblHostelC.AutoSize = true;
-            this.lblHostelC.Location = new System.Drawing.Point(312, 30);
-            this.lblHostelC.Name = "lblHostelC";
-            this.lblHostelC.Size = new System.Drawing.Size(85, 20);
-            this.lblHostelC.TabIndex = 10;
-            this.lblHostelC.Text = "2021CS33";
+            this.lblHostelChallanNo.AutoSize = true;
+            this.lblHostelChallanNo.Location = new System.Drawing.Point(312, 30);
+            this.lblHostelChallanNo.Name = "lblHostelChallanNo";
+            this.lblHostelChallanNo.Size = new System.Drawing.Size(85, 20);
+            this.lblHostelChallanNo.TabIndex = 10;
+            this.lblHostelChallanNo.Text = "2021CS33";
             // 
             // lblSemesterHostel
             // 
@@ -316,14 +316,14 @@
             this.lblHostelA.TabIndex = 9;
             this.lblHostelA.Text = "Amount :";
             // 
-            // lblChallanNoH
+            // lblHostelC
             // 
-            this.lblChallanNoH.AutoSize = true;
-            this.lblChallanNoH.Location = new System.Drawing.Point(212, 30);
-            this.lblChallanNoH.Name = "lblChallanNoH";
-            this.lblChallanNoH.Size = new System.Drawing.Size(94, 20);
-            this.lblChallanNoH.TabIndex = 6;
-            this.lblChallanNoH.Text = "Challan No :";
+            this.lblHostelC.AutoSize = true;
+            this.lblHostelC.Location = new System.Drawing.Point(212, 30);
+            this.lblHostelC.Name = "lblHostelC";
+            this.lblHostelC.Size = new System.Drawing.Size(94, 20);
+            this.lblHostelC.TabIndex = 6;
+            this.lblHostelC.Text = "Challan No :";
             // 
             // lblHostelS
             // 
@@ -391,13 +391,13 @@
         private System.Windows.Forms.Label lblNoHostelFee;
         private System.Windows.Forms.Label lblRemarksHostel;
         private System.Windows.Forms.Label lblAmountHostel;
-        private System.Windows.Forms.Label lblDueDataHostel;
-        private System.Windows.Forms.Label lblHostelC;
+        private System.Windows.Forms.Label lblDueDateHostel;
+        private System.Windows.Forms.Label lblHostelChallanNo;
         private System.Windows.Forms.Label lblSemesterHostel;
         private System.Windows.Forms.Label lblHostelR;
         private System.Windows.Forms.Label lblHostelD;
         private System.Windows.Forms.Label lblHostelA;
-        private System.Windows.Forms.Label lblChallanNoH;
+        private System.Windows.Forms.Label lblHostelC;
         private System.Windows.Forms.Label lblHostelS;
         private System.Windows.Forms.Button btnMarkAsDoneHostel;
     }

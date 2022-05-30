@@ -23,8 +23,8 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmFeeParent_Load(object sender, EventArgs e)
         {
-            string messageAcademic = "The academic fee notification was readed ";
-            string messagHostel = "The Hostel fee notifcation was readed";
+            string messageAcademic = "The academic fee was readed ";
+            string messagHostel = "The Hostel fee was readed";
             Notification notification = new Notification(messageAcademic, messagHostel);
             NotificationDL.setIntoNotificationList(notification);
             NotificationDL.storeRecordIntoFile(notification, FilePath.Notification);
@@ -57,11 +57,26 @@ namespace UniversityStudentDiaryManagementSystem
             Fee hostelFee=FeeDL.getHostelFee();
             if (hostelFee != null)
             {
-
+                lblNoHostelFee.Visible = false;
+                lblSemesterHostel.Text=hostelFee.Semester;
+                lblAmountHostel.Text = hostelFee.Amount.ToString();
+                lblRemarksHostel.Text = hostelFee.Remarks;
+                lblHostelChallanNo.Text = hostelFee.ChallanNo;
+                lblDueDateHostel.Text = hostelFee.Date;
             }
             else
             {
-
+                lblNoHostelFee.Visible = true;
+                lblHostelA.Visible = false;
+                lblHostelC.Visible = false;
+                lblHostelD.Visible = false;
+                lblHostelR.Visible = false;
+                lblHostelS.Visible = false;
+                lblSemesterHostel.Visible = false;
+                lblAmountHostel.Visible = false;
+                lblHostelChallanNo.Visible = false;
+                lblDueDateHostel.Visible = false;
+                lblRemarksHostel.Visible = false;
             }
 
 
@@ -81,7 +96,6 @@ namespace UniversityStudentDiaryManagementSystem
             NotificationDL.storeAllRecordIntoFile(FilePath.Notification);
 
         }
-
         private void btnMarkAsDoneHostel_Click(object sender, EventArgs e)
         {
             string message = "The hostel fee was paid ";

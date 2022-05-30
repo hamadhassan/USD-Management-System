@@ -97,7 +97,7 @@ namespace UniversityStudentDiaryManagementSystem.DL
         public static void storeRecordIntoFile(Notification record, string path)
         {
             StreamWriter file = new StreamWriter(path, true);
-            file.WriteLine(record.AcademicFeeNotification + ","+ record.HostelFeeNotification);
+            file.WriteLine(record.AcademicFeeNotification + ","+ record.HostelFeeNotification+","+record.Id);
             file.Flush();
             file.Close();
 
@@ -107,7 +107,7 @@ namespace UniversityStudentDiaryManagementSystem.DL
             StreamWriter file = new StreamWriter(path);
             foreach (Notification record in notificationList)
             {
-                file.WriteLine(record.AcademicFeeNotification + "," + record.HostelFeeNotification);
+                file.WriteLine(record.AcademicFeeNotification + "," + record.HostelFeeNotification + "," + record.Id);
 
             }
             file.Flush();

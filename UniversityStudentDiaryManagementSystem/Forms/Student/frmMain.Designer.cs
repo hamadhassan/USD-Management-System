@@ -124,9 +124,9 @@
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
-            this.timerCurrentDateTime = new System.Windows.Forms.Timer(this.components);
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.timerCurrentDateTime = new System.Windows.Forms.Timer(this.components);
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip.SuspendLayout();
@@ -721,9 +721,9 @@
             this.toolStripSeparator9,
             this.toolStripButton14,
             this.toolStripSeparator10,
-            this.toolStripButton11,
+            this.toolStripButton12,
             this.toolStripSeparator11,
-            this.toolStripButton12});
+            this.toolStripButton11});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.Size = new System.Drawing.Size(958, 54);
@@ -935,11 +935,6 @@
             this.toolStripButton11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton11.Click += new System.EventHandler(this.toolStripButton11_Click);
             // 
-            // timerCurrentDateTime
-            // 
-            this.timerCurrentDateTime.Enabled = true;
-            this.timerCurrentDateTime.Tick += new System.EventHandler(this.timerCurrentDateTime_Tick);
-            // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
@@ -948,6 +943,7 @@
             // toolStripButton12
             // 
             this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
+            this.toolStripButton12.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton12.Name = "toolStripButton12";
             this.toolStripButton12.Size = new System.Drawing.Size(74, 51);
@@ -955,6 +951,11 @@
             this.toolStripButton12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripButton12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton12.Click += new System.EventHandler(this.toolStripButton12_Click);
+            // 
+            // timerCurrentDateTime
+            // 
+            this.timerCurrentDateTime.Enabled = true;
+            this.timerCurrentDateTime.Tick += new System.EventHandler(this.timerCurrentDateTime_Tick);
             // 
             // frmMain
             // 
