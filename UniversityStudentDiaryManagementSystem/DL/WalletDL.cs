@@ -5,11 +5,55 @@ using System.Text;
 using System.Threading.Tasks;
 using UniversityStudentDiaryManagementSystem.BL;
 using System.IO;
+using UniversityStudentDiaryManagementSystem.Path;
 
 namespace UniversityStudentDiaryManagementSystem.DL
 {
     internal class WalletDL
     {
+        public static double updateBalance()
+        {
+            FundDL.loadRecordFromFile(FilePath.Fund);
+            HelpingMaterialDL.loadRecordFromFile(FilePath.HelpingMaterial);
+            HostelExpenditureDL.loadRecordFromFile(FilePath.HostelExpenditure);
+            MealDL.loadRecordFromFile(FilePath.Meal);
+            PhoneDL.loadRecordFromFile(FilePath.Phone);
+            TransportDL.loadRecordFromFile(FilePath.Transport);
+            double fund=0;
+            double helpingMaterial = 0;
+            double hostelExpenditure = 0;
+            double meal = 0;
+            double phone = 0;
+            double transport = 0;
+            Wallet wallet = loadRecordFromFile(FilePath.Wallet);
+            double openingBalance = wallet.Amount;
+            foreach(Fund f in FundDL.getFundlist())
+            {
+                fund += f.Amount;
+            }
+            foreach(HelpingMaterial h in HelpingMaterialDL.getHelpingMateriallist())
+            {
+                helpingMaterial += h.Charges;
+            }
+            foreach(HostelExpenditure h in HostelExpenditureDL.getHostelExpenditurelist())
+            {
+                hostelExpenditure += h.Charges;
+            }
+            foreach(Meal m in MealDL.getMeallist())
+            {
+                meal += m.Charges;
+            }
+            foreach(Phone p in PhoneDL.getPhonelist())
+            {
+                phone += p.Amount;
+            }
+            foreach(Transport t in TransportDL.getTransportlist())
+            {
+                transport += t.Amount;
+            }
+            double closingBalance = openingBalance - fund - helpingMaterial - helpingMaterial - meal - phone - transport;
+            return closingBalance;
+        }
         public static string parseData(string record, int field)
         {
             int comma = 1;

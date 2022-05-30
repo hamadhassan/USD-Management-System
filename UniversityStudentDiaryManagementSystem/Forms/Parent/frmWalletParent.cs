@@ -22,41 +22,72 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            frmMainParent mainParent = new frmMainParent();
-            mainParent.Show();
-            Hide();
+            try
+            {
+                frmMainParent mainParent = new frmMainParent();
+                mainParent.Show();
+                Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void clearFields()
         {
-            txtbxBalance.Clear();
-            rctxtbxComments.Clear();
+            try
+            {
+                txtbxBalance.Clear();
+                rctxtbxComments.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtbxBalance.Text != String.Empty)
+            try
             {
-                double amount=double.Parse(txtbxBalance.Text);
-                string comment=rctxtbxComments.Text;
-                Wallet wallet = new Wallet(amount, comment);
-                WalletDL.storeRecordIntoFile(wallet, FilePath.Wallet);
-                MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clearFields();
+                if (txtbxBalance.Text != String.Empty)
+                {
+                    double amount = double.Parse(txtbxBalance.Text);
+                    string comment = rctxtbxComments.Text;
+                    Wallet wallet = new Wallet(amount, comment);
+                    WalletDL.storeRecordIntoFile(wallet, FilePath.Wallet);
+                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter the balance ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtbxBalance.Focus();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please enter the balance ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtbxBalance.Focus();
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 
         private void btnUploadImage_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-            if (open.ShowDialog() == DialogResult.OK)
+            try
             {
-                pictureBox1.Image = new Bitmap(open.FileName);
-                // textBox1.Text = open.FileName;
+                OpenFileDialog open = new OpenFileDialog();
+                open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox1.Image = new Bitmap(open.FileName);
+                    // textBox1.Text = open.FileName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
     }

@@ -75,6 +75,7 @@ namespace UniversityStudentDiaryManagementSystem.DL
         }
         public static bool loadRecordFromFile(string path)
         {
+           
             if (File.Exists(path))
             {
                 StreamReader fileVariable = new StreamReader(path);

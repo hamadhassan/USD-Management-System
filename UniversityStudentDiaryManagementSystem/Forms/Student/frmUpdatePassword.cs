@@ -21,74 +21,100 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void checkBxShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBxShowPassword.Checked)
+            try
             {
-                txtbxOldPassword.UseSystemPasswordChar = false;
-                txtbxNewPassword.UseSystemPasswordChar = false;
-                txtbxConfirmPassword.UseSystemPasswordChar = false;
+                if (checkBxShowPassword.Checked)
+                {
+                    txtbxOldPassword.UseSystemPasswordChar = false;
+                    txtbxNewPassword.UseSystemPasswordChar = false;
+                    txtbxConfirmPassword.UseSystemPasswordChar = false;
+                }
+                else
+                {
+                    txtbxOldPassword.UseSystemPasswordChar = true;
+                    txtbxNewPassword.UseSystemPasswordChar = true;
+                    txtbxConfirmPassword.UseSystemPasswordChar = true;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                txtbxOldPassword.UseSystemPasswordChar=true;
-                txtbxNewPassword.UseSystemPasswordChar = true;
-                txtbxConfirmPassword.UseSystemPasswordChar = true;
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           this.Close();
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            if (cmbxRole.SelectedIndex != 0)
+            try
             {
-                if (txtbxNewPassword.Text == txtbxConfirmPassword.Text)
+                if (cmbxRole.SelectedIndex != 0)
                 {
-                    if (CredentialDL.isUserNameExist(txtbxUserName.Text))
+                    if (txtbxNewPassword.Text == txtbxConfirmPassword.Text)
                     {
-                        if (CredentialDL.updatePassword(txtbxOldPassword.Text, txtbxNewPassword.Text, txtbxUserName.Text, cmbxRole.SelectedItem.ToString()))
+                        if (CredentialDL.isUserNameExist(txtbxUserName.Text))
                         {
+                            if (CredentialDL.updatePassword(txtbxOldPassword.Text, txtbxNewPassword.Text, txtbxUserName.Text, cmbxRole.SelectedItem.ToString()))
+                            {
 
-                            CredentialDL.storeAllRecordIntoFile(FilePath.Credential);
-                            MessageBox.Show("Password successfully changed", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            txtbxUserName.Clear();
-                            txtbxOldPassword.Clear();
-                            txtbxNewPassword.Clear();
-                            txtbxConfirmPassword.Clear();
-                            txtbxUserName.Focus();
-                            Close();
+                                CredentialDL.storeAllRecordIntoFile(FilePath.Credential);
+                                MessageBox.Show("Password successfully changed", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                txtbxUserName.Clear();
+                                txtbxOldPassword.Clear();
+                                txtbxNewPassword.Clear();
+                                txtbxConfirmPassword.Clear();
+                                txtbxUserName.Focus();
+                                Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Invalid username and password", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Invalid username and password", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Username not exit ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Username not exit ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+                        MessageBox.Show("Password not match", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        txtbxNewPassword.Clear();
+                        txtbxConfirmPassword.Clear();
+                        txtbxUserName.Focus();
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Password not match", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    txtbxNewPassword.Clear();
-                    txtbxConfirmPassword.Clear();
-                    txtbxUserName.Focus();
-                }
             }
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frmUpdatePassword_Load(object sender, EventArgs e)
         {
-            cmbxRole.SelectedIndex = 0;
-           CredentialDL.clearList();
-           CredentialDL.loadRecordFromFile(FilePath.Credential);
+            try
+            {
+                cmbxRole.SelectedIndex = 0;
+                CredentialDL.clearList();
+                CredentialDL.loadRecordFromFile(FilePath.Credential);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

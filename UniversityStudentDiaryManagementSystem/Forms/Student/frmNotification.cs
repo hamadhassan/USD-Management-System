@@ -22,15 +22,28 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmNotification_Load(object sender, EventArgs e)
         {
-            List<Notification> notification = NotificationDL.getNotificationlist();
-            label1.Text = notification[0].AcademicFeeNotification;
-            label2.Text = notification[0].HostelFeeNotification;
-
+            try
+            {
+                List<Notification> notification = NotificationDL.getNotificationlist();
+                lblAcademic.Text = notification[0].AcademicFeeNotification;
+                lblHostel.Text = notification[0].HostelFeeNotification;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

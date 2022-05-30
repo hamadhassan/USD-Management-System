@@ -20,84 +20,155 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            frmWalletParent walletParent=new frmWalletParent();
-            walletParent.ShowDialog();
+            try
+            {
+                frmWalletParent walletParent = new frmWalletParent();
+                walletParent.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            frmReport report = new frmReport();
-            report.ShowDialog();
+            try
+            {
+                frmReport report = new frmReport();
+                report.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            frmMessage message = new frmMessage();
-            message.ShowDialog();
+            try
+            {
+                frmMessage message = new frmMessage();
+                message.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void statusToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmWalletParent walletParent =new frmWalletParent();
-            walletParent.ShowDialog();
+            try
+            {
+                frmWalletParent walletParent = new frmWalletParent();
+                walletParent.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSignIn signIn = new frmSignIn();
-            signIn.Show();
-            this.Hide();
+            try
+            {
+                frmSignIn signIn = new frmSignIn();
+                signIn.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void frmMainParent_Load(object sender, EventArgs e)
         {
-            tolstplblCurentDate.Text = DateTime.Now.ToString("dddd dd/MM/yyyy");
-            tolstplblCurrentTime.Text = DateTime.Now.ToString("hh:mm:ss:tt");
+            try
+            {
+                tolstplblCurentDate.Text = DateTime.Now.ToString("dddd dd/MM/yyyy");
+                tolstplblCurrentTime.Text = DateTime.Now.ToString("hh:mm:ss:tt");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
-
-        private void dailyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void monthlyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void yearToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmAbout about = new frmAbout();
-            about.ShowDialog();
+            try
+            {
+                frmAbout about = new frmAbout();
+                about.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
 
         }
         #region Fee
         private void academicToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFeeParent feeParent = new frmFeeParent();
-            feeParent.ShowDialog();
+            try
+            {
+                frmFeeParent feeParent = new frmFeeParent();
+                feeParent.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void hostelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFeeParent feeParent = new frmFeeParent();
-            feeParent.ShowDialog();
+            try
+            {
+                frmFeeParent feeParent = new frmFeeParent();
+                feeParent.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
         #endregion
     }

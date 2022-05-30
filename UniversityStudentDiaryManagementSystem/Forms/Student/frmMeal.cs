@@ -31,42 +31,54 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmMeal_Load(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                cmbxTime.Text = previous.TypeMeal;
-                txtbxMenu.Text=previous.Menu;
-                txtbxCharges.Text=previous.Charges.ToString();
-                rctxtbxRemaks.Text=previous.Remakrs;
+                if (previous != null)
+                {
+                    cmbxTime.Text = previous.TypeMeal;
+                    txtbxMenu.Text = previous.Menu;
+                    txtbxCharges.Text = previous.Charges.ToString();
+                    rctxtbxRemaks.Text = previous.Remakrs;
+                }
+                else
+                {
+                    if (selectedIndex == 0)
+                    {
+                        cmbxTime.SelectedIndex = 0;
+                    }
+                    else if (selectedIndex == 1)
+                    {
+                        cmbxTime.SelectedIndex = 1;
+                    }
+                    else if (selectedIndex == 2)
+                    {
+                        cmbxTime.SelectedIndex = 2;
+                    }
+                    else if (selectedIndex == 3)
+                    {
+                        cmbxTime.SelectedIndex = 3;
+                    }
+                    else if (selectedIndex == 4)
+                    {
+                        cmbxTime.SelectedIndex = 4;
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                if (selectedIndex == 0)
-                {
-                    cmbxTime.SelectedIndex = 0;
-                }
-                else if (selectedIndex == 1)
-                {
-                    cmbxTime.SelectedIndex = 1;
-                }
-                else if (selectedIndex == 2)
-                {
-                    cmbxTime.SelectedIndex = 2;
-                }
-                else if (selectedIndex == 3)
-                {
-                    cmbxTime.SelectedIndex = 3;
-                }
-                else if (selectedIndex == 4)
-                {
-                    cmbxTime.SelectedIndex = 4;
-                }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
         }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            try
+            {
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void clearFields()
         {
@@ -104,34 +116,41 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                if (MealDL.EditFromMealList(previous, takeMealRecord()))
+                if (previous != null)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
-                    Close();
+                    if (MealDL.EditFromMealList(previous, takeMealRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    if (MealDL.setIntoMealList(takeMealRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MealDL.storeRecordIntoFile(takeMealRecord(), FilePath.Meal);
+                        MealDL.clearList();
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (MealDL.setIntoMealList(takeMealRecord()))
-                {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MealDL.storeRecordIntoFile(takeMealRecord(), FilePath.Meal);
-                    MealDL.clearList();
-                    clearFields();
-                }
-                else
-                {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
-                }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

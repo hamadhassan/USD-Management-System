@@ -24,65 +24,91 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (combxLoginAs.SelectedIndex != 0||txtbxPassword.Text!=String.Empty||txtbxUsername.Text!=String.Empty)
+            try
             {
-                string loginAs = combxLoginAs.SelectedItem.ToString();
-                string username = txtbxUsername.Text;
-                string password = txtbxPassword.Text;
-                Credential crediational = new Credential();
-               // CredentialDL.setIntoListCrediantialList(crediational);
-                bool checkCondition = crediational.checkUser(loginAs, username, password, CredentialDL.getCrediationalList());
-                if (checkCondition)
+                if (combxLoginAs.SelectedIndex != 0 || txtbxPassword.Text != String.Empty || txtbxUsername.Text != String.Empty)
                 {
-                    string role=crediational.checkRole(loginAs, username, password, CredentialDL.getCrediationalList());
-                    if (role == "Student")
+                    string loginAs = combxLoginAs.SelectedItem.ToString();
+                    string username = txtbxUsername.Text;
+                    string password = txtbxPassword.Text;
+                    Credential crediational = new Credential();
+                    // CredentialDL.setIntoListCrediantialList(crediational);
+                    bool checkCondition = crediational.checkUser(loginAs, username, password, CredentialDL.getCrediationalList());
+                    if (checkCondition)
                     {
-                        frmMain main = new frmMain();
-                        main.Show();
-                        this.Hide();
+                        string role = crediational.checkRole(loginAs, username, password, CredentialDL.getCrediationalList());
+                        if (role == "Student")
+                        {
+                            frmMain main = new frmMain();
+                            main.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            frmMainParent mainParent = new frmMainParent();
+                            mainParent.Show();
+                            Hide();
+                        }
+
                     }
                     else
                     {
-                        frmMainParent mainParent = new frmMainParent();
-                        mainParent.Show();
-                        Hide();
+                        MessageBox.Show("Invalid username and password", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                     }
-                  
+                    combxLoginAs.SelectedIndex = 0;
+                    txtbxUsername.Clear();
+                    txtbxPassword.Clear();
                 }
                 else
                 {
-                    MessageBox.Show("Invalid username and password", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+                    MessageBox.Show("Please select the type ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    combxLoginAs.Focus();
                 }
-                combxLoginAs.SelectedIndex=0;
-                txtbxUsername.Clear();
-                txtbxPassword.Clear();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please select the type ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                combxLoginAs.Focus();
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-
         }
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            frmCreateAccount f = new frmCreateAccount();
-            f.ShowDialog();
+            try
+            {
+                frmCreateAccount f = new frmCreateAccount();
+                f.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frmSignIn_Load(object sender, EventArgs e)
         {
-            combxLoginAs.SelectedIndex = 0;
-            CredentialDL.clearList();
-            CredentialDL.loadRecordFromFile(FilePath.Credential);
+            try
+            {
+                combxLoginAs.SelectedIndex = 0;
+                CredentialDL.clearList();
+                CredentialDL.loadRecordFromFile(FilePath.Credential);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

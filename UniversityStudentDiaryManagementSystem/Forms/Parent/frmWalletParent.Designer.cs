@@ -36,10 +36,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSaveImage = new System.Windows.Forms.Button();
             this.btnUploadImage = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblUserName = new System.Windows.Forms.Label();
-            this.btnSaveImage = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -120,6 +120,19 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // btnSaveImage
+            // 
+            this.btnSaveImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveImage.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveImage.Image")));
+            this.btnSaveImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveImage.Location = new System.Drawing.Point(172, 335);
+            this.btnSaveImage.Name = "btnSaveImage";
+            this.btnSaveImage.Size = new System.Drawing.Size(140, 31);
+            this.btnSaveImage.TabIndex = 3;
+            this.btnSaveImage.Text = "Save Image";
+            this.btnSaveImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSaveImage.UseVisualStyleBackColor = true;
+            // 
             // btnUploadImage
             // 
             this.btnUploadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -155,19 +168,6 @@
             this.lblUserName.Size = new System.Drawing.Size(64, 20);
             this.lblUserName.TabIndex = 0;
             this.lblUserName.Text = "Hassan";
-            // 
-            // btnSaveImage
-            // 
-            this.btnSaveImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveImage.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveImage.Image")));
-            this.btnSaveImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveImage.Location = new System.Drawing.Point(172, 335);
-            this.btnSaveImage.Name = "btnSaveImage";
-            this.btnSaveImage.Size = new System.Drawing.Size(140, 31);
-            this.btnSaveImage.TabIndex = 3;
-            this.btnSaveImage.Text = "Save Image";
-            this.btnSaveImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveImage.UseVisualStyleBackColor = true;
             // 
             // frmWalletParent
             // 

@@ -31,31 +31,44 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            try
+            {
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
         private void frmHelpingMaterial_Load(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                cmbxType.Text = previous.TypeHelpingMaterial;
-                txtbxCharges.Text=previous.Charges.ToString();
-                rhtextbxRemaks.Text=previous.Remarks;
+                if (previous != null)
+                {
+                    cmbxType.Text = previous.TypeHelpingMaterial;
+                    txtbxCharges.Text = previous.Charges.ToString();
+                    rhtextbxRemaks.Text = previous.Remarks;
+                }
+                else
+                {
+                    if (selectedIndex == 1)
+                    {
+                        cmbxType.SelectedIndex = 1;
+                    }
+                    else if (selectedIndex == 2)
+                    {
+                        cmbxType.SelectedIndex = 2;
+                    }
+                    else if (selectedIndex == 3)
+                    {
+                        cmbxType.SelectedIndex = 3;
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                if (selectedIndex == 1)
-                {
-                    cmbxType.SelectedIndex = 1;
-                }
-                else if (selectedIndex == 2)
-                {
-                    cmbxType.SelectedIndex = 2;
-                }
-                else if (selectedIndex == 3)
-                {
-                    cmbxType.SelectedIndex = 3;
-                }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void clearFields()
@@ -93,34 +106,41 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                if (HelpingMaterialDL.EditFromhelpingMaterialList(previous, takeHelpingMaterialRecord()))
+                if (previous != null)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
-                    Close();
+                    if (HelpingMaterialDL.EditFromhelpingMaterialList(previous, takeHelpingMaterialRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    if (HelpingMaterialDL.setIntoHelpingMaterialList(takeHelpingMaterialRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        HelpingMaterialDL.storeRecordIntoFile(takeHelpingMaterialRecord(), FilePath.HelpingMaterial);
+                        HelpingMaterialDL.clearList();
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (HelpingMaterialDL.setIntoHelpingMaterialList(takeHelpingMaterialRecord()))
-                {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HelpingMaterialDL.storeRecordIntoFile(takeHelpingMaterialRecord(), FilePath.HelpingMaterial);
-                    HelpingMaterialDL.clearList();
-                    clearFields();
-                }
-                else
-                {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
-                }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

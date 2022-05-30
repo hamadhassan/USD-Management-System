@@ -37,8 +37,8 @@
             this.btnUploadImage = new System.Windows.Forms.Button();
             this.btnSaveImage = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtbxBalance = new System.Windows.Forms.TextBox();
             this.rctxtbxComments = new System.Windows.Forms.RichTextBox();
+            this.txtbxBalance = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +119,7 @@
             this.btnSaveImage.Text = "Save";
             this.btnSaveImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSaveImage.UseVisualStyleBackColor = true;
+            this.btnSaveImage.Click += new System.EventHandler(this.btnSaveImage_Click);
             // 
             // groupBox1
             // 
@@ -138,14 +139,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Wallet";
             // 
-            // txtbxBalance
-            // 
-            this.txtbxBalance.Enabled = false;
-            this.txtbxBalance.Location = new System.Drawing.Point(110, 204);
-            this.txtbxBalance.Name = "txtbxBalance";
-            this.txtbxBalance.Size = new System.Drawing.Size(202, 26);
-            this.txtbxBalance.TabIndex = 8;
-            // 
             // rctxtbxComments
             // 
             this.rctxtbxComments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -155,6 +148,14 @@
             this.rctxtbxComments.Size = new System.Drawing.Size(202, 96);
             this.rctxtbxComments.TabIndex = 9;
             this.rctxtbxComments.Text = "";
+            // 
+            // txtbxBalance
+            // 
+            this.txtbxBalance.Enabled = false;
+            this.txtbxBalance.Location = new System.Drawing.Point(110, 204);
+            this.txtbxBalance.Name = "txtbxBalance";
+            this.txtbxBalance.Size = new System.Drawing.Size(202, 26);
+            this.txtbxBalance.TabIndex = 8;
             // 
             // frmWallet
             // 

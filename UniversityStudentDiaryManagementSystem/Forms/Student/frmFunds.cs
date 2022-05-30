@@ -30,6 +30,14 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmFunds_Load(object sender, EventArgs e)
         {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             if (previous != null)
             {
                 cmbxType.Text = previous.TypeFund;
@@ -59,7 +67,14 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            try
+            {
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void clearFields()
         {
@@ -95,34 +110,41 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                if (FundDL.EditFromFundList(previous, takeFund()))
+                if (previous != null)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
-                    Close();
+                    if (FundDL.EditFromFundList(previous, takeFund()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    if (FundDL.setIntoFundList(takeFund()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FundDL.storeRecordIntoFile(takeFund(), FilePath.Fund);
+                        FundDL.clearList();
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (FundDL.setIntoFundList(takeFund()))
-                {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FundDL.storeRecordIntoFile(takeFund(), FilePath.Fund);
-                    FundDL.clearList();
-                    clearFields();
-                }
-                else
-                {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
-                }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

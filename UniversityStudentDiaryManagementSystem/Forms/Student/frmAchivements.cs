@@ -30,26 +30,40 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            try
+            {
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frmAchivements_Load(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                cmbxType.Text = previous.TypeAchivement;
-                txtbxPresentedBy.Text = previous.PresentedBy;
-                rctxtbxRemarks.Text = previous.Remakrks;
+                if (previous != null)
+                {
+                    cmbxType.Text = previous.TypeAchivement;
+                    txtbxPresentedBy.Text = previous.PresentedBy;
+                    rctxtbxRemarks.Text = previous.Remakrks;
+                }
+                if (selectedIndex == 1)
+                {
+                    cmbxType.SelectedIndex = 1;
+                }
+                else if (selectedIndex == 2)
+                {
+                    cmbxType.SelectedIndex = 2;
+                }
             }
-            if (selectedIndex == 1)
+            catch (Exception ex)
             {
-                cmbxType.SelectedIndex = 1;
-            }
-            else if (selectedIndex == 2)
-            {
-                cmbxType.SelectedIndex = 2;
-            }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
         }
         private void clearFields()
         {
@@ -86,36 +100,43 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                if (AchivementDL.EditFromAchivementsList(previous, saveRecord()))
+                if (previous != null)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
-                    Close();
+                    if (AchivementDL.EditFromAchivementsList(previous, saveRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    if (AchivementDL.setIntoAchivementsList(saveRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        AchivementDL.storeRecordIntoFile(saveRecord(), FilePath.Achivement);
+                        AchivementDL.clearList();
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (AchivementDL.setIntoAchivementsList(saveRecord()))
-                {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    AchivementDL.storeRecordIntoFile(saveRecord(), FilePath.Achivement);
-                    AchivementDL.clearList();
-                    clearFields();
-                }
-                else
-                {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
-                }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
-           
         }
     }
 }

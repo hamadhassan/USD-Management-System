@@ -27,50 +27,61 @@ namespace UniversityStudentDiaryManagementSystem
             InitializeComponent();
             this.previous = previous;
         }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
         private void frmHostelExpenditure_Load(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                cmbxType.Text =previous.TypeHostelExpenditure;
-                cmbxMonth.Text = previous.Month;
-                txbxCharges.Text=previous.Charges.ToString();
-                rctxtbxRemaks.Text=previous.Remarks;
+                if (previous != null)
+                {
+                    cmbxType.Text = previous.TypeHostelExpenditure;
+                    cmbxMonth.Text = previous.Month;
+                    txbxCharges.Text = previous.Charges.ToString();
+                    rctxtbxRemaks.Text = previous.Remarks;
+                }
+                else
+                {
+                    cmbxMonth.SelectedIndex = 0;
+                    if (selectedIndex == 0)
+                    {
+                        cmbxType.SelectedIndex = 0;
+                    }
+                    else if (selectedIndex == 1)
+                    {
+                        cmbxType.SelectedIndex = 1;
+                    }
+                    else if (selectedIndex == 2)
+                    {
+                        cmbxType.SelectedIndex = 2;
+                    }
+                    else if (selectedIndex == 3)
+                    {
+                        cmbxType.SelectedIndex = 3;
+                    }
+                    else if (selectedIndex == 4)
+                    {
+                        cmbxType.SelectedIndex = 4;
+                    }
+                    else if (selectedIndex == 5)
+                    {
+                        cmbxType.SelectedIndex = 5;
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                cmbxMonth.SelectedIndex = 0;
-                if (selectedIndex == 0)
-                {
-                    cmbxType.SelectedIndex = 0;
-                }
-                else if (selectedIndex == 1)
-                {
-                    cmbxType.SelectedIndex = 1;
-                }
-                else if (selectedIndex == 2)
-                {
-                    cmbxType.SelectedIndex = 2;
-                }
-                else if (selectedIndex == 3)
-                {
-                    cmbxType.SelectedIndex = 3;
-                }
-                else if (selectedIndex == 4)
-                {
-                    cmbxType.SelectedIndex = 4;
-                }
-                else if (selectedIndex == 5)
-                {
-                    cmbxType.SelectedIndex = 5;
-                }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-         
         }
         private void clearFields()
         {
@@ -118,36 +129,42 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                if (HostelExpenditureDL.EditFromHostelExpenditureList(previous, takeHostelExpenditureRecord()))
+                if (previous != null)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
-                    Close();
+                    if (HostelExpenditureDL.EditFromHostelExpenditureList(previous, takeHostelExpenditureRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    if (HostelExpenditureDL.setIntoHostelExpenditureList(takeHostelExpenditureRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        HostelExpenditureDL.storeRecordIntoFile(takeHostelExpenditureRecord(), FilePath.HostelExpenditure);
+                        HostelExpenditureDL.clearList();
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (HostelExpenditureDL.setIntoHostelExpenditureList(takeHostelExpenditureRecord()))
-                {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HostelExpenditureDL.storeRecordIntoFile(takeHostelExpenditureRecord(), FilePath.HostelExpenditure);
-                    HostelExpenditureDL.clearList();
-                    clearFields();
-                }
-                else
-                {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
-                }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
         }
     }
 }

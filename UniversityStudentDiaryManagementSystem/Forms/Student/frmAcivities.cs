@@ -31,24 +31,39 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
-        }
+            try
+            {
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+        }
         private void frmAcivities_Load(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                cmbxType.Text = previous.TypeAcitivity;
-                txtbxMinutes.Text = previous.Minutes;
-                rctxtbxRemarks.Text = previous.Remarks;
+                if (previous != null)
+                {
+                    cmbxType.Text = previous.TypeAcitivity;
+                    txtbxMinutes.Text = previous.Minutes;
+                    rctxtbxRemarks.Text = previous.Remarks;
+                }
+                if (selectedIndex == 1)
+                {
+                    cmbxType.SelectedIndex = 1;
+                }
+                else if (selectedIndex == 2)
+                {
+                    cmbxType.SelectedIndex = 2;
+                }
             }
-            if (selectedIndex == 1)
+            catch (Exception ex)
             {
-                cmbxType.SelectedIndex = 1;
-            }
-            else if (selectedIndex == 2)
-            {
-                cmbxType.SelectedIndex = 2;
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
         private void clearFields()
@@ -86,34 +101,42 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                if (ActivitiesDL.EditFromActivitiesList(previous, saveRecord()))
+                if (previous != null)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
-                    Close();
+                    if (ActivitiesDL.EditFromActivitiesList(previous, saveRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    if (ActivitiesDL.setIntoActivitiesList(saveRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ActivitiesDL.storeRecordIntoFile(saveRecord(), FilePath.Activities);
+                        ActivitiesDL.clearList();
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (ActivitiesDL.setIntoActivitiesList(saveRecord()))
-                {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ActivitiesDL.storeRecordIntoFile(saveRecord(), FilePath.Activities);
-                    ActivitiesDL.clearList();
-                    clearFields();
-                }
-                else
-                {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
-                }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
     }

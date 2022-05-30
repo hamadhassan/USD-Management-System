@@ -30,30 +30,44 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnAcademicClose_Click(object sender, EventArgs e)
         {
-            Close();
+            try
+            {
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void frmFee_Load(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                cmbxType.Text=previous.FeeType;
-                cmbxSemester.Text=previous.Semester;
-                txtbxChallanNo.Text=previous.ChallanNo;
-                txtbxAmount.Text=previous.Amount.ToString();
-                rchtxtbxRemarks.Text=previous.Remarks;
-                dateTimePicker.Text = previous.Date;
+                if (previous != null)
+                {
+                    cmbxType.Text = previous.FeeType;
+                    cmbxSemester.Text = previous.Semester;
+                    txtbxChallanNo.Text = previous.ChallanNo;
+                    txtbxAmount.Text = previous.Amount.ToString();
+                    rchtxtbxRemarks.Text = previous.Remarks;
+                    dateTimePicker.Text = previous.Date;
+                }
+                else
+                {
+                    cmbxSemester.SelectedIndex = 0;
+                    if (selectedIndex == 1)
+                    {
+                        cmbxType.SelectedIndex = 1;
+                    }
+                    else if (selectedIndex == 2)
+                    {
+                        cmbxType.SelectedIndex = 2;
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                cmbxSemester.SelectedIndex = 0;
-                if (selectedIndex == 1)
-                {
-                    cmbxType.SelectedIndex = 1;
-                }
-                else if (selectedIndex == 2)
-                {
-                    cmbxType.SelectedIndex = 2;
-                }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void clearFields()
@@ -105,40 +119,43 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSaveAcademic_Click(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                if (FeeDL.EditFromFeeList(previous, takeFee()))
+                if (previous != null)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
-                    Close();
+                    if (FeeDL.EditFromFeeList(previous, takeFee()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    if (FeeDL.setIntoFeeList(takeFee()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FeeDL.storeRecordIntoFile(takeFee(), FilePath.Fee);
+                        FeeDL.clearList();
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
             }
-            else
+            catch(Exception ex)
             {
-                if (FeeDL.setIntoFeeList(takeFee()))
-                {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FeeDL.storeRecordIntoFile(takeFee(), FilePath.Fee);
-                    FeeDL.clearList();
-                    clearFields();
-                }
-                else
-                {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
-                }
-            }
-          
-             
-         
-        }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-      
+            }
+        }
     }
 }

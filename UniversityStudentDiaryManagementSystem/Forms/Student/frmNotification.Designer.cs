@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNotification));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblAcademic = new System.Windows.Forms.Label();
+            this.lblHostel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblAcademic
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Academic";
+            this.lblAcademic.AutoSize = true;
+            this.lblAcademic.Location = new System.Drawing.Point(6, 33);
+            this.lblAcademic.Name = "lblAcademic";
+            this.lblAcademic.Size = new System.Drawing.Size(79, 20);
+            this.lblAcademic.TabIndex = 0;
+            this.lblAcademic.Text = "Academic";
             // 
-            // label2
+            // lblHostel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Hostel";
+            this.lblHostel.AutoSize = true;
+            this.lblHostel.Location = new System.Drawing.Point(6, 63);
+            this.lblHostel.Name = "lblHostel";
+            this.lblHostel.Size = new System.Drawing.Size(55, 20);
+            this.lblHostel.TabIndex = 0;
+            this.lblHostel.Text = "Hostel";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lblAcademic);
+            this.groupBox1.Controls.Add(this.lblHostel);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(521, 100);
@@ -101,8 +101,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblAcademic;
+        private System.Windows.Forms.Label lblHostel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnClose;
     }

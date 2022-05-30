@@ -23,26 +23,52 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmWallet_Load(object sender, EventArgs e)
         {
-            Wallet wallet = WalletDL.loadRecordFromFile(FilePath.Wallet);
-            txtbxBalance.Text =Convert.ToString(wallet.Amount);
-            rctxtbxComments.Text = wallet.Comments;
-
+            try
+            {
+                Wallet wallet = WalletDL.loadRecordFromFile(FilePath.Wallet);
+                rctxtbxComments.Text = wallet.Comments;
+                txtbxBalance.Text = WalletDL.updateBalance().ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnUploadImage_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-            if (open.ShowDialog() == DialogResult.OK)
+            try
             {
-                pictureBox1.Image = new Bitmap(open.FileName);
-               // textBox1.Text = open.FileName;
+                OpenFileDialog open = new OpenFileDialog();
+                open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox1.Image = new Bitmap(open.FileName);
+                    // textBox1.Text = open.FileName;
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-           this.Close();
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSaveImage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

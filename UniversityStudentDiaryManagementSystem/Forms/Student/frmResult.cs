@@ -28,17 +28,31 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frmResult_Load(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                txtbxSemester.Text = previous.Semester;
-                txtbxGPA.Text = previous.Gpa;
-                txtbxCGPA.Text = previous.Cgpa;
-                rctxtbxRemarks.Text = previous.Remarks;
+                if (previous != null)
+                {
+                    txtbxSemester.Text = previous.Semester;
+                    txtbxGPA.Text = previous.Gpa;
+                    txtbxCGPA.Text = previous.Cgpa;
+                    rctxtbxRemarks.Text = previous.Remarks;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void clearFields()
@@ -77,36 +91,42 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                if (ResultDL.EditFromResultlList(previous, takeResultRecord()))
+                if (previous != null)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
-                    Close();
+                    if (ResultDL.EditFromResultlList(previous, takeResultRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    if (ResultDL.setIntoResultList(takeResultRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ResultDL.storeRecordIntoFile(takeResultRecord(), FilePath.Result);
+                        ResultDL.clearList();
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (ResultDL.setIntoResultList(takeResultRecord()))
-                {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ResultDL.storeRecordIntoFile(takeResultRecord(), FilePath.Result);
-                    ResultDL.clearList();
-                    clearFields();
-                }
-                else
-                {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
-                }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }

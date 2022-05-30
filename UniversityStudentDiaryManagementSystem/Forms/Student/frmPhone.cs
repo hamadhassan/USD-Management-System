@@ -28,14 +28,28 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            try
+            {
+                 Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void frmPhone_Load(object sender, EventArgs e)
         {
-            if(previous != null)
+            try
             {
-                txtbxAmount.Text=previous.Amount.ToString();
-                rctxtbxRemarks.Text=previous.Remarks;
+                if (previous != null)
+                {
+                    txtbxAmount.Text = previous.Amount.ToString();
+                    rctxtbxRemarks.Text = previous.Remarks;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void clearFields()
@@ -43,7 +57,6 @@ namespace UniversityStudentDiaryManagementSystem
             txtbxAmount.Clear();
             rctxtbxRemarks.Clear();
             txtbxAmount.Focus();
-
         }
         private Phone takePhoneRecord()
         {
@@ -63,34 +76,41 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                if (PhoneDL.EditFromPhoneList(previous,takePhoneRecord()))
+                if (previous != null)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
-                    Close();
+                    if (PhoneDL.EditFromPhoneList(previous, takePhoneRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    if (PhoneDL.setIntoPhoneList(takePhoneRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        PhoneDL.storeRecordIntoFile(takePhoneRecord(), FilePath.Phone);
+                        PhoneDL.clearList();
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (PhoneDL.setIntoPhoneList(takePhoneRecord()))
-                {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    PhoneDL.storeRecordIntoFile(takePhoneRecord(), FilePath.Phone);
-                    PhoneDL.clearList();
-                    clearFields();
-                }
-                else
-                {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
-                }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

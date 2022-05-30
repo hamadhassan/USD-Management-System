@@ -19,41 +19,83 @@ namespace UniversityStudentDiaryManagementSystem
         #region DataTime
         private void timerCurrentDateTime_Tick(object sender, EventArgs e)
         {
-            tolstplblCurentDate.Text = DateTime.Now.ToString("dddd dd/MM/yyyy");
-            tolstplblCurrentTime.Text = DateTime.Now.ToString("hh:mm:ss:tt");
+            try
+            {
+                tolstplblCurentDate.Text = DateTime.Now.ToString("dddd dd/MM/yyyy");
+                tolstplblCurrentTime.Text = DateTime.Now.ToString("hh:mm:ss:tt");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
         #region Credientail
         private void createAUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCreateAccount frmCreateAccount = new frmCreateAccount();
-            frmCreateAccount.ShowDialog();
+            try
+            {
+                frmCreateAccount frmCreateAccount = new frmCreateAccount();
+                frmCreateAccount.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUpdatePassword updatePassword = new frmUpdatePassword();
-            updatePassword.ShowDialog();
+            try
+            {
+                frmUpdatePassword updatePassword = new frmUpdatePassword();
+                updatePassword.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            frmSignIn signIn = new frmSignIn();
-            signIn.Show();
-            this.Hide();
+            try
+            {
+                frmSignIn signIn = new frmSignIn();
+                signIn.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
         #region Wallet
         private void statusToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmWallet wallet= new frmWallet();
-            wallet.ShowDialog();
+            try
+            {
+                frmWallet wallet = new frmWallet();
+                wallet.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #endregion
@@ -61,91 +103,190 @@ namespace UniversityStudentDiaryManagementSystem
         #region Fee
         private void academicToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFee acdemicFee = new frmFee(1);
-            acdemicFee.ShowDialog();
+            try
+            {
+                frmFee acdemicFee = new frmFee(1);
+                acdemicFee.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void hostelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFee acdemicFee = new frmFee(2);
-            acdemicFee.ShowDialog();
+            try
+            {
+                frmFee acdemicFee = new frmFee(2);
+                acdemicFee.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
         #region Report
         private void dailyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmReport report=new frmReport();
-            report.ShowDialog();
+            try
+            {
+                frmReport report = new frmReport();
+                report.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void monthlyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmReport report = new frmReport();
-            report.ShowDialog();
+            try
+            {
+                frmReport report = new frmReport();
+                report.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void yearToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmReport report = new frmReport();
-            report.ShowDialog();
+            try
+            {
+                frmReport report = new frmReport();
+                report.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
         #endregion
 
         #region Meal
         private void breakfastToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMeal meal=new frmMeal(1);
-            meal.ShowDialog();
+            try
+            {
+                frmMeal meal = new frmMeal(1);
+                meal.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void lunchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMeal meal = new frmMeal(2);
-            meal.ShowDialog();
+            try
+            {
+                frmMeal meal = new frmMeal(2);
+                meal.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void dinnerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMeal meal = new frmMeal(3);
-            meal.ShowDialog();
+            try
+            {
+                frmMeal meal = new frmMeal(3);
+                meal.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void hangOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMeal meal = new frmMeal(4);
-            meal.ShowDialog();
+            try
+            {
+                frmMeal meal = new frmMeal(4);
+                meal.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
         #region Expebditure
         private void messMealToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHostelExpenditure hostelExpenditure=new frmHostelExpenditure(1);
-            hostelExpenditure.ShowDialog();
+            try
+            {
+                frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(1);
+                hostelExpenditure.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void serviceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(2);
-            hostelExpenditure.ShowDialog();
+            try
+            {
+                frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(2);
+                hostelExpenditure.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void roomRenovationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(3);
-            hostelExpenditure.ShowDialog();
+            try
+            {
+                frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(3);
+                hostelExpenditure.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void laundaryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(4);
-            hostelExpenditure.ShowDialog();
+            try
+            {
+                frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(4);
+                hostelExpenditure.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void barberToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(5);
-            hostelExpenditure.ShowDialog();
+            try
+            {
+                frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(5);
+                hostelExpenditure.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #endregion
@@ -153,54 +294,110 @@ namespace UniversityStudentDiaryManagementSystem
         #region Helping material
         private void printingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHelpingMaterial helpingMaterial=new frmHelpingMaterial(1);
-            helpingMaterial.ShowDialog();
+            try
+            {
+                frmHelpingMaterial helpingMaterial = new frmHelpingMaterial(1);
+                helpingMaterial.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void copyingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHelpingMaterial helpingMaterial = new frmHelpingMaterial(2);
-            helpingMaterial.ShowDialog();
+            try
+            {
+                frmHelpingMaterial helpingMaterial = new frmHelpingMaterial(2);
+                helpingMaterial.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
         #region Fund
         private void classToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFunds funds=new frmFunds(1);
-            funds.ShowDialog();
+            try
+            {
+                frmFunds funds=new frmFunds(1);
+                funds.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void socitiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFunds funds = new frmFunds(2);
-            funds.ShowDialog();
+            try
+            {
+                frmFunds funds = new frmFunds(2);
+                funds.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void socialWorkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFunds funds = new frmFunds(3);
-            funds.ShowDialog();
+            try
+            {
+                frmFunds funds = new frmFunds(3);
+                funds.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
         #region Goals
         private void dailyToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmGoals frmGoals = new frmGoals();
-            frmGoals.ShowDialog();
+            try
+            {
+                frmGoals frmGoals = new frmGoals();
+                frmGoals.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void quatilyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmGoals frmGoals = new frmGoals();
-            frmGoals.ShowDialog();
+            try
+            {
+                frmGoals frmGoals = new frmGoals();
+                frmGoals.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void yearlyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmGoals frmGoals = new frmGoals();
-            frmGoals.ShowDialog();
+            try
+            {
+                frmGoals frmGoals = new frmGoals();
+                frmGoals.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #endregion 
@@ -208,179 +405,367 @@ namespace UniversityStudentDiaryManagementSystem
         #region Package 
         private void packagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPhone phone = new frmPhone();
-            phone.ShowDialog();
+            try
+            {
+                frmPhone phone = new frmPhone();
+                phone.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
        
         #region Book
         private void borrowToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBooks books = new frmBooks(1);
-            books.ShowDialog();
+            try
+            {
+                frmBooks books = new frmBooks(1);
+                books.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void purchaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBooks books = new frmBooks(2);
-            books.ShowDialog();
+            try
+            {
+                frmBooks books = new frmBooks(2);
+                books.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
         #region Trasport
         private void busToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmTransport transport = new frmTransport(1);
-            transport.ShowDialog();
+            try
+            {
+                frmTransport transport = new frmTransport(1);
+                transport.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void otherToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmTransport transport = new frmTransport(2);
-            transport.ShowDialog();
+            try
+            {
+                frmTransport transport = new frmTransport(2);
+                transport.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
         #region activities
         private void sportiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAcivities acivities = new frmAcivities(1);
-            acivities.ShowDialog();
+            try
+            {
+                frmAcivities acivities = new frmAcivities(1);
+                acivities.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void socialToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAcivities acivities = new frmAcivities(2);
-            acivities.ShowDialog();
+            try
+            {
+                frmAcivities acivities = new frmAcivities(2);
+                acivities.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
         #region Secret
         private void quotesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSecret secret = new frmSecret(1);
-            secret.ShowDialog();
+            try
+            {
+                frmSecret secret = new frmSecret(1);
+                secret.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void eventToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSecret secret = new frmSecret(2);
-            secret.ShowDialog();
+            try
+            {
+                frmSecret secret = new frmSecret(2);
+                secret.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
         private void notesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSecret secret = new frmSecret(3);
-            secret.ShowDialog();
+            try
+            {
+                frmSecret secret = new frmSecret(3);
+                secret.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
         #region Achivements
         private void coToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAchivements achivements = new frmAchivements(1);
-            achivements.ShowDialog();
+            try
+            {
+                frmAchivements achivements = new frmAchivements(1);
+                achivements.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            frmAchivements achivements = new frmAchivements(2);
-            achivements.ShowDialog();
+            try
+            {
+                frmAchivements achivements = new frmAchivements(2);
+                achivements.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void resultToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmResult result = new frmResult();
-            result.ShowDialog();
+            try
+            {
+                frmResult result = new frmResult();
+                result.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
         #region Tool Srip Button 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            frmWallet wallet= new frmWallet();
-            wallet.ShowDialog();
+            try
+            {
+                frmWallet wallet = new frmWallet();
+                wallet.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            frmReport report= new frmReport();
-            report.ShowDialog();    
+            try
+            {
+                frmReport report = new frmReport();
+                report.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
-            frmGoals goals =new frmGoals();
-            goals.ShowDialog();
+            try
+            {
+                frmGoals goals = new frmGoals();
+                goals.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmAbout about = new frmAbout();
-            about.ShowDialog();
+            try
+            {
+                frmAbout about = new frmAbout();
+                about.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            frmMeal meal = new frmMeal(0);
-            meal.ShowDialog();
+            try
+            {
+                frmMeal meal = new frmMeal(0);
+                meal.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(0);
-            hostelExpenditure.ShowDialog();
+            try
+            {
+                frmHostelExpenditure hostelExpenditure = new frmHostelExpenditure(0);
+                hostelExpenditure.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void toolStripButton9_Click(object sender, EventArgs e)
         {
-            frmHelpingMaterial helpingMaterial = new frmHelpingMaterial(1);
-            helpingMaterial.ShowDialog();
+            try
+            {
+                frmHelpingMaterial helpingMaterial = new frmHelpingMaterial(1);
+                helpingMaterial.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
-            frmHelpingMaterial helpingMaterial = new frmHelpingMaterial(2);
-            helpingMaterial.ShowDialog();
+            try
+            {
+                frmHelpingMaterial helpingMaterial = new frmHelpingMaterial(2);
+                helpingMaterial.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
-            frmFunds funds = new frmFunds(0);
-            funds.ShowDialog();
+            try
+            {
+                frmFunds funds = new frmFunds(0);
+                funds.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            frmPhone phone = new frmPhone();
-            phone.ShowDialog();
+            try
+            {
+                frmPhone phone = new frmPhone();
+                phone.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void toolStripButton14_Click(object sender, EventArgs e)
         {
-            frmSecret secret = new frmSecret(0);
-            secret.ShowDialog();    
+            try
+            {
+                frmSecret secret = new frmSecret(0);
+                secret.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
         #region File
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUserFile file = new frmUserFile();
-            file.Show();
-            this.Hide();
+            try
+            {
+                frmUserFile file = new frmUserFile();
+                file.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUserFile file = new frmUserFile();
-            file.Show();
-            this.Hide();
+            try
+            {
+                frmUserFile file = new frmUserFile();
+                file.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUserFile file = new frmUserFile();
-            file.Show();
-            this.Hide();
+            try
+            {
+                frmUserFile file = new frmUserFile();
+                file.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
@@ -388,14 +773,30 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void toolStripButton11_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
+        #region Notification
         private void toolStripButton12_Click(object sender, EventArgs e)
         {
-            frmNotification notification = new frmNotification();
-            notification.ShowDialog();
+            try
+            {
+                frmNotification notification = new frmNotification();
+                notification.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+        #endregion
     }
 }

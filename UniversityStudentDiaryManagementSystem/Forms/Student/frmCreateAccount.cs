@@ -23,70 +23,90 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            if(cmbxRole.SelectedIndex != 0)
+            try
             {
-                if (txtbxFirstName.Text != String.Empty)
+                if (cmbxRole.SelectedIndex != 0)
                 {
-                    if(txtbxLastName.Text != String.Empty)
+                    if (txtbxFirstName.Text != String.Empty)
                     {
-                        if (txtbxPassword.Text != String.Empty)
+                        if (txtbxLastName.Text != String.Empty)
                         {
-                            if (txtbxUsername.Text != String.Empty)
+                            if (txtbxPassword.Text != String.Empty)
                             {
-                                string firstName = txtbxFirstName.Text;
-                                string lastName = txtbxLastName.Text;
-                                string username = txtbxUsername.Text;
-                                string password = txtbxPassword.Text;
-                                string role = cmbxRole.SelectedItem.ToString();
-                                Credential newUser = new Credential(firstName, lastName, username, password, role);
-                                CredentialDL.setIntoListCrediantialList(newUser);
-                                CredentialDL.storeRecordIntoFile(newUser, FilePath.Credential);
-                                txtbxFirstName.Clear();
-                                txtbxLastName.Clear();
-                                txtbxPassword.Clear();
-                                txtbxUsername.Clear();
-                                MessageBox.Show("Account Created", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.Close();
+                                if (txtbxUsername.Text != String.Empty)
+                                {
+                                    string firstName = txtbxFirstName.Text;
+                                    string lastName = txtbxLastName.Text;
+                                    string username = txtbxUsername.Text;
+                                    string password = txtbxPassword.Text;
+                                    string role = cmbxRole.SelectedItem.ToString();
+                                    Credential newUser = new Credential(firstName, lastName, username, password, role);
+                                    CredentialDL.setIntoListCrediantialList(newUser);
+                                    CredentialDL.storeRecordIntoFile(newUser, FilePath.Credential);
+                                    txtbxFirstName.Clear();
+                                    txtbxLastName.Clear();
+                                    txtbxPassword.Clear();
+                                    txtbxUsername.Clear();
+                                    MessageBox.Show("Account Created", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    txtbxUsername.Focus();
+                                }
                             }
                             else
                             {
                                 MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                txtbxUsername.Focus();
+                                txtbxPassword.Focus();
                             }
                         }
                         else
                         {
                             MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            txtbxPassword.Focus();
+                            txtbxLastName.Focus();
                         }
                     }
                     else
                     {
                         MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtbxLastName.Focus();
+                        txtbxFirstName.Focus();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtbxFirstName.Focus();
+                    MessageBox.Show("Please select the role ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbxRole.Focus();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please select the role ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cmbxRole.Focus();
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frmCreateAccount_Load(object sender, EventArgs e)
         {
-            cmbxRole.SelectedIndex = 0;
+            try
+            { 
+                 cmbxRole.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

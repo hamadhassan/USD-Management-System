@@ -31,31 +31,45 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void frmTransport_Load(object sender, EventArgs e)
         {
-            cmbxType.SelectedIndex = 0;
-            if(previous != null)
+            try
             {
-                cmbxType.Text=previous.TypeTransport;
-                txtbxAmount.Text=previous.Amount.ToString();
-                txtbxDestination.Text=previous.Destination;
-                txtbxPickupLocation.Text=previous.PickupLocation;
-                rctxbxReamarks.Text=previous.Remarks;
+                cmbxType.SelectedIndex = 0;
+                if (previous != null)
+                {
+                    cmbxType.Text = previous.TypeTransport;
+                    txtbxAmount.Text = previous.Amount.ToString();
+                    txtbxDestination.Text = previous.Destination;
+                    txtbxPickupLocation.Text = previous.PickupLocation;
+                    rctxbxReamarks.Text = previous.Remarks;
+                }
+                else
+                {
+                    if (selectedIndex == 1)
+                    {
+                        cmbxType.SelectedIndex = 1;
+                    }
+                    else if (selectedIndex == 2)
+                    {
+                        cmbxType.SelectedIndex = 2;
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                if (selectedIndex == 1)
-                {
-                    cmbxType.SelectedIndex = 1;
-                }
-                else if (selectedIndex == 2)
-                {
-                    cmbxType.SelectedIndex = 2;
-                }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            try
+            {
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void clearFields()
         {
@@ -102,34 +116,41 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (previous != null)
+            try
             {
-                if (TransportDL.EditFromTransportList(previous, takeTransportRecord()))
+                if (previous != null)
                 {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearFields();
-                    Close();
+                    if (TransportDL.EditFromTransportList(previous, takeTransportRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
+                    if (TransportDL.setIntoTransportList(takeTransportRecord()))
+                    {
+                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        TransportDL.storeRecordIntoFile(takeTransportRecord(), FilePath.Transport);
+                        TransportDL.clearList();
+                        clearFields();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearFields();
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (TransportDL.setIntoTransportList(takeTransportRecord()))
-                {
-                    MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    TransportDL.storeRecordIntoFile(takeTransportRecord(), FilePath.Transport);
-                    TransportDL.clearList();
-                    clearFields();
-                }
-                else
-                {
-                    MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearFields();
-                }
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
