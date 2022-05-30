@@ -43,7 +43,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnMarkAsDone = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblNoHostelFee = new System.Windows.Forms.Label();
+            this.lblRemarksHostel = new System.Windows.Forms.Label();
+            this.lblAmountHostel = new System.Windows.Forms.Label();
+            this.lblDueDataHostel = new System.Windows.Forms.Label();
+            this.lblHostelC = new System.Windows.Forms.Label();
+            this.lblSemesterHostel = new System.Windows.Forms.Label();
+            this.lblHostelR = new System.Windows.Forms.Label();
+            this.lblHostelD = new System.Windows.Forms.Label();
+            this.lblHostelA = new System.Windows.Forms.Label();
+            this.lblChallanNoH = new System.Windows.Forms.Label();
+            this.lblHostelS = new System.Windows.Forms.Label();
+            this.btnMarkAsDoneHostel = new System.Windows.Forms.Button();
             this.gbxAcdemicFee.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
@@ -51,7 +65,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(599, 294);
+            this.btnClose.Location = new System.Drawing.Point(617, 272);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(85, 31);
             this.btnClose.TabIndex = 5;
@@ -197,11 +211,149 @@
             this.btnMarkAsDone.UseVisualStyleBackColor = true;
             this.btnMarkAsDone.Click += new System.EventHandler(this.btnMarkAsDone_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblNoHostelFee);
+            this.groupBox1.Controls.Add(this.lblRemarksHostel);
+            this.groupBox1.Controls.Add(this.lblAmountHostel);
+            this.groupBox1.Controls.Add(this.lblDueDataHostel);
+            this.groupBox1.Controls.Add(this.lblHostelC);
+            this.groupBox1.Controls.Add(this.lblSemesterHostel);
+            this.groupBox1.Controls.Add(this.lblHostelR);
+            this.groupBox1.Controls.Add(this.lblHostelD);
+            this.groupBox1.Controls.Add(this.lblHostelA);
+            this.groupBox1.Controls.Add(this.lblChallanNoH);
+            this.groupBox1.Controls.Add(this.lblHostelS);
+            this.groupBox1.Controls.Add(this.btnMarkAsDoneHostel);
+            this.groupBox1.Location = new System.Drawing.Point(12, 142);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(690, 124);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Hostel Fee";
+            // 
+            // lblNoHostelFee
+            // 
+            this.lblNoHostelFee.AutoSize = true;
+            this.lblNoHostelFee.Location = new System.Drawing.Point(216, 50);
+            this.lblNoHostelFee.Name = "lblNoHostelFee";
+            this.lblNoHostelFee.Size = new System.Drawing.Size(157, 20);
+            this.lblNoHostelFee.TabIndex = 11;
+            this.lblNoHostelFee.Text = "No Hostel Fee is due";
+            // 
+            // lblRemarksHostel
+            // 
+            this.lblRemarksHostel.AutoSize = true;
+            this.lblRemarksHostel.Location = new System.Drawing.Point(92, 90);
+            this.lblRemarksHostel.Name = "lblRemarksHostel";
+            this.lblRemarksHostel.Size = new System.Drawing.Size(24, 20);
+            this.lblRemarksHostel.TabIndex = 10;
+            this.lblRemarksHostel.Text = "nil";
+            // 
+            // lblAmountHostel
+            // 
+            this.lblAmountHostel.AutoSize = true;
+            this.lblAmountHostel.Location = new System.Drawing.Point(92, 61);
+            this.lblAmountHostel.Name = "lblAmountHostel";
+            this.lblAmountHostel.Size = new System.Drawing.Size(81, 20);
+            this.lblAmountHostel.TabIndex = 10;
+            this.lblAmountHostel.Text = "00000000";
+            // 
+            // lblDueDataHostel
+            // 
+            this.lblDueDataHostel.AutoSize = true;
+            this.lblDueDataHostel.Location = new System.Drawing.Point(312, 62);
+            this.lblDueDataHostel.Name = "lblDueDataHostel";
+            this.lblDueDataHostel.Size = new System.Drawing.Size(71, 20);
+            this.lblDueDataHostel.TabIndex = 10;
+            this.lblDueDataHostel.Text = "12/12/12";
+            // 
+            // lblHostelC
+            // 
+            this.lblHostelC.AutoSize = true;
+            this.lblHostelC.Location = new System.Drawing.Point(312, 30);
+            this.lblHostelC.Name = "lblHostelC";
+            this.lblHostelC.Size = new System.Drawing.Size(85, 20);
+            this.lblHostelC.TabIndex = 10;
+            this.lblHostelC.Text = "2021CS33";
+            // 
+            // lblSemesterHostel
+            // 
+            this.lblSemesterHostel.AutoSize = true;
+            this.lblSemesterHostel.Location = new System.Drawing.Point(92, 30);
+            this.lblSemesterHostel.Name = "lblSemesterHostel";
+            this.lblSemesterHostel.Size = new System.Drawing.Size(34, 20);
+            this.lblSemesterHostel.TabIndex = 10;
+            this.lblSemesterHostel.Text = "Fall";
+            // 
+            // lblHostelR
+            // 
+            this.lblHostelR.AutoSize = true;
+            this.lblHostelR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHostelR.Location = new System.Drawing.Point(11, 90);
+            this.lblHostelR.Name = "lblHostelR";
+            this.lblHostelR.Size = new System.Drawing.Size(81, 20);
+            this.lblHostelR.TabIndex = 7;
+            this.lblHostelR.Text = "Remarks :";
+            // 
+            // lblHostelD
+            // 
+            this.lblHostelD.AutoSize = true;
+            this.lblHostelD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHostelD.Location = new System.Drawing.Point(212, 61);
+            this.lblHostelD.Name = "lblHostelD";
+            this.lblHostelD.Size = new System.Drawing.Size(86, 20);
+            this.lblHostelD.TabIndex = 8;
+            this.lblHostelD.Text = "Due Date :";
+            // 
+            // lblHostelA
+            // 
+            this.lblHostelA.AutoSize = true;
+            this.lblHostelA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHostelA.Location = new System.Drawing.Point(11, 61);
+            this.lblHostelA.Name = "lblHostelA";
+            this.lblHostelA.Size = new System.Drawing.Size(73, 20);
+            this.lblHostelA.TabIndex = 9;
+            this.lblHostelA.Text = "Amount :";
+            // 
+            // lblChallanNoH
+            // 
+            this.lblChallanNoH.AutoSize = true;
+            this.lblChallanNoH.Location = new System.Drawing.Point(212, 30);
+            this.lblChallanNoH.Name = "lblChallanNoH";
+            this.lblChallanNoH.Size = new System.Drawing.Size(94, 20);
+            this.lblChallanNoH.TabIndex = 6;
+            this.lblChallanNoH.Text = "Challan No :";
+            // 
+            // lblHostelS
+            // 
+            this.lblHostelS.AutoSize = true;
+            this.lblHostelS.Location = new System.Drawing.Point(6, 30);
+            this.lblHostelS.Name = "lblHostelS";
+            this.lblHostelS.Size = new System.Drawing.Size(86, 20);
+            this.lblHostelS.TabIndex = 6;
+            this.lblHostelS.Text = "Semester :";
+            // 
+            // btnMarkAsDoneHostel
+            // 
+            this.btnMarkAsDoneHostel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarkAsDoneHostel.Image = ((System.Drawing.Image)(resources.GetObject("btnMarkAsDoneHostel.Image")));
+            this.btnMarkAsDoneHostel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMarkAsDoneHostel.Location = new System.Drawing.Point(521, 45);
+            this.btnMarkAsDoneHostel.Name = "btnMarkAsDoneHostel";
+            this.btnMarkAsDoneHostel.Size = new System.Drawing.Size(151, 31);
+            this.btnMarkAsDoneHostel.TabIndex = 5;
+            this.btnMarkAsDoneHostel.Text = "Mark As Done";
+            this.btnMarkAsDoneHostel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMarkAsDoneHostel.UseVisualStyleBackColor = true;
+            this.btnMarkAsDoneHostel.Click += new System.EventHandler(this.btnMarkAsDoneHostel_Click);
+            // 
             // frmFeeParent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 376);
+            this.ClientSize = new System.Drawing.Size(714, 310);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.gbxAcdemicFee);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -213,6 +365,8 @@
             this.Load += new System.EventHandler(this.frmFeeParent_Load);
             this.gbxAcdemicFee.ResumeLayout(false);
             this.gbxAcdemicFee.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -233,5 +387,18 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblNoAcademicFee;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblNoHostelFee;
+        private System.Windows.Forms.Label lblRemarksHostel;
+        private System.Windows.Forms.Label lblAmountHostel;
+        private System.Windows.Forms.Label lblDueDataHostel;
+        private System.Windows.Forms.Label lblHostelC;
+        private System.Windows.Forms.Label lblSemesterHostel;
+        private System.Windows.Forms.Label lblHostelR;
+        private System.Windows.Forms.Label lblHostelD;
+        private System.Windows.Forms.Label lblHostelA;
+        private System.Windows.Forms.Label lblChallanNoH;
+        private System.Windows.Forms.Label lblHostelS;
+        private System.Windows.Forms.Button btnMarkAsDoneHostel;
     }
 }

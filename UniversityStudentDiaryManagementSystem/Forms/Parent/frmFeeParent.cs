@@ -23,8 +23,11 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmFeeParent_Load(object sender, EventArgs e)
         {
-            string message = "The academic fee was readed ";
-            NotificationDL.setIntoNotificationList(message);
+            string messageAcademic = "The academic fee notification was readed ";
+            string messagHostel = "The Hostel fee notifcation was readed";
+            Notification notification = new Notification(messageAcademic, messagHostel);
+            NotificationDL.setIntoNotificationList(notification);
+            NotificationDL.storeRecordIntoFile(notification, FilePath.Notification);
             FeeDL.loadRecordFromFile(FilePath.Fee);
             Fee academicFee=FeeDL.getAcademicFee();
             if (academicFee != null)
@@ -51,6 +54,16 @@ namespace UniversityStudentDiaryManagementSystem
                 lblDate.Visible = false;
 
             }
+            Fee hostelFee=FeeDL.getHostelFee();
+            if (hostelFee != null)
+            {
+
+            }
+            else
+            {
+
+            }
+
 
         }
 
@@ -64,8 +77,16 @@ namespace UniversityStudentDiaryManagementSystem
         private void btnMarkAsDone_Click(object sender, EventArgs e)
         {
             string message = "The academic fee was paid ";
-            NotificationDL.clearList();
-            NotificationDL.setIntoNotificationList(message);
+            NotificationDL.updateMessageAcademicFee(message);
+            NotificationDL.storeAllRecordIntoFile(FilePath.Notification);
+
+        }
+
+        private void btnMarkAsDoneHostel_Click(object sender, EventArgs e)
+        {
+            string message = "The hostel fee was paid ";
+            NotificationDL.updateMessageHostelFee(message);
+            NotificationDL.storeAllRecordIntoFile(FilePath.Notification);
         }
     }
 }

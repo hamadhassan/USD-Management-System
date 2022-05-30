@@ -10,103 +10,108 @@ namespace UniversityStudentDiaryManagementSystem.DL
 {
     internal class NotificationDL
     {
-        private static List<string> notificationList = new List<string>();
-        public static bool setIntoNotificationList(string notification)
+        private static List<Notification> notificationList = new List<Notification>();
+        public static bool setIntoNotificationList(Notification notification)
         {
             notificationList.Add(notification);
             return true;
         }
-        public static List<string> getNotificationlist()
+        public static List<Notification> getNotificationlist()
         {
             return notificationList;
         }
-        //public static void deleteFromNotificationlList(Meal meal)
-        //{
-        //    for (int index = 0; index < mealList.Count; index++)
-        //    {
-        //        if (mealList[index].TypeMeal == meal.TypeMeal && mealList[index].Menu == meal.Menu && mealList[index].Charges == meal.Charges && mealList[index].Remakrs == meal.Remakrs)
-        //        {
-        //            mealList.RemoveAt(index);
-
-        //        }
-        //    }
-        //}
-        //public static bool EditFromMealList(Meal previous, Meal updated)
-        //{
-        //    foreach (Meal a in mealList)
-        //    {
-        //        if (a.TypeMeal == previous.TypeMeal && a.Menu == previous.Menu && a.Charges == previous.Charges && a.Remakrs == previous.Remakrs)
-        //        {
-        //            a.TypeMeal = updated.TypeMeal;
-        //            a.Menu = updated.Menu;
-        //            a.Charges = updated.Charges;
-        //            a.Remakrs = updated.Remakrs;
-        //            return true;
-        //        }
-        //    }
-        //    return false;
-        //}
-        public static void clearList()
+        public static void removeAt(int index)
         {
-            notificationList.Clear();
+            notificationList.RemoveAt(index);
         }
-        //public static string parseData(string record, int field)
-        //{
-        //    int comma = 1;
-        //    string item = "";
-        //    for (int x = 0; x < record.Length; x++)
-        //    {
-        //        if (record[x] == ',')
-        //        {
-        //            comma++;
-        //        }
-        //        else if (comma == field)
-        //        {
-        //            item = item + record[x];
-        //        }
-        //    }
-        //    return item;
-        //}
-        //public static bool loadRecordFromFile(string path)
-        //{
-        //    if (File.Exists(path))
-        //    {
-        //        StreamReader fileVariable = new StreamReader(path);
-        //        string record;
-        //        while ((record = fileVariable.ReadLine()) != null)
-        //        {
-        //            string typeMeal = parseData(record, 1);
-        //            string menu = parseData(record, 2);
-        //            double charges = double.Parse(parseData(record, 3));
-        //            string remakrs = parseData(record, 4);
-        //            Meal meal = new Meal(typeMeal, menu, charges, remakrs);
-        //            mealList.Add(meal);
-        //        }
-        //        fileVariable.Close();
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
-        //public static void storeRecordIntoFile(Meal record, string path)
-        //{
-        //    StreamWriter file = new StreamWriter(path, true);
-        //    file.WriteLine(record.TypeMeal + "," + record.Menu + "," + record.Charges + "," + record.Remakrs);
-        //    file.Flush();
-        //    file.Close();
+        public static  void updateMessageAcademicFee(string newMessage)
+        {
+            int index=0;
+            foreach(Notification n in notificationList)
+            {
+                if (n.Id == 0)
+                {
+                    notificationList.RemoveAt(index);
+                    string academicFeeNotification=newMessage;
+                    string hostelFeeNotification=n.HostelFeeNotification;
+                    Notification notification = new Notification(academicFeeNotification, hostelFeeNotification);
+                    notificationList.Add(notification);
+                }
+                index++;
+            }
+        }
+        public static void updateMessageHostelFee(string newMessage)
+        {
+            int index = 0;
+            foreach (Notification n in notificationList)
+            {
+                if (n.Id == 0)
+                {
+                    notificationList.RemoveAt(index);
+                    string academicFeeNotification = n.AcademicFeeNotification;
+                    string hostelFeeNotification = newMessage;
+                    Notification notification = new Notification(academicFeeNotification, hostelFeeNotification);
+                    notificationList.Add(notification);
+                }
+                index++;
+            }
+        }
+        public static string parseData(string record, int field)
+        {
+            int comma = 1;
+            string item = "";
+            for (int x = 0; x < record.Length; x++)
+            {
+                if (record[x] == ',')
+                {
+                    comma++;
+                }
+                else if (comma == field)
+                {
+                    item = item + record[x];
+                }
+            }
+            return item;
+        }
+        public static bool loadRecordFromFile(string path)
+        {
+            if (File.Exists(path))
+            {
+                StreamReader fileVariable = new StreamReader(path);
+                string record;
+                while ((record = fileVariable.ReadLine()) != null)
+                {
+                    string academicFeeNotification = parseData(record, 1);
+                    string hostelFeeNotification = parseData(record, 2);
+                    Notification notification=new Notification(academicFeeNotification, hostelFeeNotification);
+                    notificationList.Add(notification);
+                }
+                fileVariable.Close();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static void storeRecordIntoFile(Notification record, string path)
+        {
+            StreamWriter file = new StreamWriter(path, true);
+            file.WriteLine(record.AcademicFeeNotification + ","+ record.HostelFeeNotification);
+            file.Flush();
+            file.Close();
 
-        //}
-        //public static void storeAllRecordIntoFile(string path)
-        //{
-        //    StreamWriter file = new StreamWriter(path);
-        //    foreach (Meal record in mealList)
-        //    {
-        //        file.WriteLine(record.TypeMeal + "," + record.Menu + "," + record.Charges + "," + record.Remakrs);
-        //    }
-        //    file.Flush();
-        //    file.Close();
-        //}
+        }
+        public static void storeAllRecordIntoFile(string path)
+        {
+            StreamWriter file = new StreamWriter(path);
+            foreach (Notification record in notificationList)
+            {
+                file.WriteLine(record.AcademicFeeNotification + "," + record.HostelFeeNotification);
+
+            }
+            file.Flush();
+            file.Close();
+        }
     }
 }
