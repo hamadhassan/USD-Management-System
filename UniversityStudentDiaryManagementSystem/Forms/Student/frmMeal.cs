@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
-using UniversityStudentDiaryManagementSystem.Path;
+using UniversityStudentDiaryManagementSystem.Paths;
 
 
 namespace UniversityStudentDiaryManagementSystem
@@ -137,7 +137,7 @@ namespace UniversityStudentDiaryManagementSystem
                     if (MealDL.setIntoMealList(takeMealRecord()))
                     {
                         MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        MealDL.storeRecordIntoFile(takeMealRecord(), FilePath.Meal);
+                        MealDL.storeRecordIntoFile(takeMealRecord(), PathFile.Meal);
                         MealDL.clearList();
                         clearFields();
                     }
@@ -152,6 +152,11 @@ namespace UniversityStudentDiaryManagementSystem
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

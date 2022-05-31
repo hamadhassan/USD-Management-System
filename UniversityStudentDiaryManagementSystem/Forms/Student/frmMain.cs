@@ -128,47 +128,6 @@ namespace UniversityStudentDiaryManagementSystem
         }
         #endregion
 
-        #region Report
-        private void dailyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                frmReport report = new frmReport();
-                report.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void monthlyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                frmReport report = new frmReport();
-                report.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void yearToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                frmReport report = new frmReport();
-                report.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
-        }
-        #endregion
 
         #region Meal
         private void breakfastToolStripMenuItem_Click(object sender, EventArgs e)
@@ -585,31 +544,6 @@ namespace UniversityStudentDiaryManagementSystem
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void toolStripButton3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                frmReport report = new frmReport();
-                report.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void toolStripButton6_Click(object sender, EventArgs e)
-        {
-            try
-            {
-               
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             try
@@ -800,6 +734,11 @@ namespace UniversityStudentDiaryManagementSystem
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

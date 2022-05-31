@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
-using UniversityStudentDiaryManagementSystem.Path;
-
+using UniversityStudentDiaryManagementSystem.Paths;
+using System.IO;
 
 namespace UniversityStudentDiaryManagementSystem
 {
     public partial class frmWallet : Form
     {
+        private static string pathImage;
         public frmWallet()
         {
             InitializeComponent();
@@ -25,7 +26,8 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                Wallet wallet = WalletDL.loadRecordFromFile(FilePath.Wallet);
+                lblUserName.Text = frmSignIn.Name;
+                Wallet wallet = WalletDL.loadRecordFromFile(PathFile.Wallet);
                 rctxtbxComments.Text = wallet.Comments;
                 txtbxBalance.Text = WalletDL.updateBalance().ToString();
             }
@@ -44,7 +46,7 @@ namespace UniversityStudentDiaryManagementSystem
                 if (open.ShowDialog() == DialogResult.OK)
                 {
                     pictureBox1.Image = new Bitmap(open.FileName);
-                    // textBox1.Text = open.FileName;
+                    pathImage = open.FileName;
                 }
             }
             catch (Exception ex)
@@ -68,6 +70,7 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void btnSaveImage_Click(object sender, EventArgs e)
         {
+            File.Copy(pathImage, Path.Combine(@"D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\UserProviedImage\") + Path.GetFileName(pathImage), true);
 
         }
     }

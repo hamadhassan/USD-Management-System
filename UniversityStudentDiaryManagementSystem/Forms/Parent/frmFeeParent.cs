@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.DL;
 using UniversityStudentDiaryManagementSystem.BL;
-using UniversityStudentDiaryManagementSystem.Path;
+using UniversityStudentDiaryManagementSystem.Paths;
 
 
 namespace UniversityStudentDiaryManagementSystem
@@ -25,8 +25,7 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                //NotificationDL.loadRecordFromFile(FilePath.Notification);
-                FeeDL.loadRecordFromFile(FilePath.Fee);
+                FeeDL.loadRecordFromFile(PathFile.Fee);
                 Fee academicFee = FeeDL.getAcademicFee();
                 if (academicFee != null)
                 {
@@ -34,7 +33,7 @@ namespace UniversityStudentDiaryManagementSystem
                     Notification notification = new Notification(messageAcademic, 1);
                     NotificationDL.clearListAtID(1);
                     NotificationDL.setIntoNotificationList(notification);
-                    NotificationDL.storeAllRecordIntoFile(FilePath.Notification);
+                    NotificationDL.storeAllRecordIntoFile(PathFile.Notification);
                     lblNoAcademicFee.Visible = false;
                     lblSemester.Text = academicFee.Semester;
                     lblAmount.Text = academicFee.Amount.ToString();
@@ -64,7 +63,7 @@ namespace UniversityStudentDiaryManagementSystem
                     Notification notification = new Notification(messagHostel, 2);
                     NotificationDL.clearListAtID(2);
                     NotificationDL.setIntoNotificationList(notification);
-                    NotificationDL.storeAllRecordIntoFile(FilePath.Notification);
+                    NotificationDL.storeAllRecordIntoFile(PathFile.Notification);
                     lblNoHostelFee.Visible = false;
                     lblSemesterHostel.Text = hostelFee.Semester;
                     lblAmountHostel.Text = hostelFee.Amount.ToString();
@@ -87,7 +86,7 @@ namespace UniversityStudentDiaryManagementSystem
                     lblRemarksHostel.Visible = false;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -113,9 +112,10 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
+                NotificationDL.loadRecordFromFile(PathFile.Notification);
                 string message = "The academic fee was paid ";
-                NotificationDL.updateMessageAcademicFee(message);
-                NotificationDL.storeAllRecordIntoFile(FilePath.Notification);
+                NotificationDL.updateMessage(1,message);
+                NotificationDL.storeAllRecordIntoFile(PathFile.Notification);
             }
             catch (Exception ex)
             {
@@ -127,9 +127,12 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
+                
                 string message = "The hostel fee was paid ";
-                NotificationDL.updateMessageHostelFee(message);
-                NotificationDL.storeAllRecordIntoFile(FilePath.Notification);
+                NotificationDL.loadRecordFromFile(PathFile.Notification);
+                NotificationDL.updateMessage(2, message);
+                NotificationDL.storeAllRecordIntoFile(PathFile.Notification);
+
             }
             catch (Exception ex)
             {

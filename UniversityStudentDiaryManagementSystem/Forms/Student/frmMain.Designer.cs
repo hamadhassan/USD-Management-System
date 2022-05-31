@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminstrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,10 +44,6 @@
             this.feeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.academicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hostelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.expensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dailyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.monthlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hostelToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mealToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.breakfastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,8 +94,6 @@
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -134,7 +127,6 @@
             this.adminstrationToolStripMenuItem,
             this.walletToolStripMenuItem,
             this.feeToolStripMenuItem,
-            this.expensesToolStripMenuItem,
             this.hostelToolStripMenuItem1,
             this.helpingMaterialToolStripMenuItem,
             this.fundToolStripMenuItem,
@@ -148,26 +140,18 @@
             this.toolStripMenuItem1});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(958, 24);
+            this.menuStrip.Size = new System.Drawing.Size(826, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.searchToolStripMenuItem,
             this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
-            // 
-            // searchToolStripMenuItem
-            // 
-            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
-            this.searchToolStripMenuItem.Text = "Search";
-            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
             // updateToolStripMenuItem
             // 
@@ -260,37 +244,6 @@
             this.hostelToolStripMenuItem.Text = "Hostel";
             this.hostelToolStripMenuItem.Click += new System.EventHandler(this.hostelToolStripMenuItem_Click);
             // 
-            // expensesToolStripMenuItem
-            // 
-            this.expensesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dailyToolStripMenuItem,
-            this.monthlyToolStripMenuItem,
-            this.yearToolStripMenuItem});
-            this.expensesToolStripMenuItem.Name = "expensesToolStripMenuItem";
-            this.expensesToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.expensesToolStripMenuItem.Text = "Report";
-            // 
-            // dailyToolStripMenuItem
-            // 
-            this.dailyToolStripMenuItem.Name = "dailyToolStripMenuItem";
-            this.dailyToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.dailyToolStripMenuItem.Text = "Today";
-            this.dailyToolStripMenuItem.Click += new System.EventHandler(this.dailyToolStripMenuItem_Click);
-            // 
-            // monthlyToolStripMenuItem
-            // 
-            this.monthlyToolStripMenuItem.Name = "monthlyToolStripMenuItem";
-            this.monthlyToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.monthlyToolStripMenuItem.Text = "Quarterly";
-            this.monthlyToolStripMenuItem.Click += new System.EventHandler(this.monthlyToolStripMenuItem_Click);
-            // 
-            // yearToolStripMenuItem
-            // 
-            this.yearToolStripMenuItem.Name = "yearToolStripMenuItem";
-            this.yearToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.yearToolStripMenuItem.Text = "Yearly";
-            this.yearToolStripMenuItem.Click += new System.EventHandler(this.yearToolStripMenuItem_Click);
-            // 
             // hostelToolStripMenuItem1
             // 
             this.hostelToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -312,7 +265,7 @@
             this.dinnerToolStripMenuItem,
             this.hangOutToolStripMenuItem});
             this.mealToolStripMenuItem.Name = "mealToolStripMenuItem";
-            this.mealToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.mealToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mealToolStripMenuItem.Text = "Meal";
             // 
             // breakfastToolStripMenuItem
@@ -346,35 +299,35 @@
             // messMealToolStripMenuItem
             // 
             this.messMealToolStripMenuItem.Name = "messMealToolStripMenuItem";
-            this.messMealToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.messMealToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.messMealToolStripMenuItem.Text = "Mess Meal";
             this.messMealToolStripMenuItem.Click += new System.EventHandler(this.messMealToolStripMenuItem_Click);
             // 
             // serviceToolStripMenuItem
             // 
             this.serviceToolStripMenuItem.Name = "serviceToolStripMenuItem";
-            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.serviceToolStripMenuItem.Text = "Room Service ";
             this.serviceToolStripMenuItem.Click += new System.EventHandler(this.serviceToolStripMenuItem_Click);
             // 
             // roomRenovationToolStripMenuItem
             // 
             this.roomRenovationToolStripMenuItem.Name = "roomRenovationToolStripMenuItem";
-            this.roomRenovationToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.roomRenovationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.roomRenovationToolStripMenuItem.Text = "Room Renovation";
             this.roomRenovationToolStripMenuItem.Click += new System.EventHandler(this.roomRenovationToolStripMenuItem_Click);
             // 
             // laundaryToolStripMenuItem
             // 
             this.laundaryToolStripMenuItem.Name = "laundaryToolStripMenuItem";
-            this.laundaryToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.laundaryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.laundaryToolStripMenuItem.Text = "Laundry";
             this.laundaryToolStripMenuItem.Click += new System.EventHandler(this.laundaryToolStripMenuItem_Click);
             // 
             // solonToolStripMenuItem
             // 
             this.solonToolStripMenuItem.Name = "solonToolStripMenuItem";
-            this.solonToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.solonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.solonToolStripMenuItem.Text = "Solon";
             this.solonToolStripMenuItem.Click += new System.EventHandler(this.barberToolStripMenuItem_Click);
             // 
@@ -443,7 +396,7 @@
             // packagesToolStripMenuItem
             // 
             this.packagesToolStripMenuItem.Name = "packagesToolStripMenuItem";
-            this.packagesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.packagesToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.packagesToolStripMenuItem.Text = "Package";
             this.packagesToolStripMenuItem.Click += new System.EventHandler(this.packagesToolStripMenuItem_Click);
             // 
@@ -617,7 +570,7 @@
             this.tolstplblCurrentTime});
             this.statusStrip1.Location = new System.Drawing.Point(0, 411);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(958, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(826, 25);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -664,8 +617,6 @@
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton2,
             this.toolStripSeparator1,
-            this.toolStripButton3,
-            this.toolStripSeparator3,
             this.toolStripButton4,
             this.toolStripSeparator2,
             this.toolStripButton1,
@@ -687,7 +638,7 @@
             this.toolStripButton11});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(958, 54);
+            this.toolStrip.Size = new System.Drawing.Size(826, 54);
             this.toolStrip.TabIndex = 2;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -708,25 +659,6 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 54);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(58, 51);
-            this.toolStripButton3.Text = "  Report  ";
-            this.toolStripButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 54);
             // 
             // toolStripButton4
             // 
@@ -904,23 +836,22 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95.61587F));
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 78);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(958, 333);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 97.5976F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.402402F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(826, 333);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 436);
+            this.ClientSize = new System.Drawing.Size(826, 436);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.statusStrip1);
@@ -932,6 +863,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -950,10 +882,6 @@
         private System.Windows.Forms.ToolStripMenuItem feeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem academicToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hostelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem expensesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dailyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem monthlyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem yearToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hostelToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem mealToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem breakfastToolStripMenuItem;
@@ -1001,8 +929,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
@@ -1027,7 +953,6 @@
         private System.Windows.Forms.ToolStripMenuItem coToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButton10;

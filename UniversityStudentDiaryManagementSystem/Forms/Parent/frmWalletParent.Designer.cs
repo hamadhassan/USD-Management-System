@@ -132,6 +132,7 @@
             this.btnSaveImage.Text = "Save Image";
             this.btnSaveImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSaveImage.UseVisualStyleBackColor = true;
+            this.btnSaveImage.Click += new System.EventHandler(this.btnSaveImage_Click);
             // 
             // btnUploadImage
             // 
@@ -181,6 +182,7 @@
             this.Name = "frmWalletParent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wallet";
+            this.Load += new System.EventHandler(this.frmWalletParent_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

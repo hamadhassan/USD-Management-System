@@ -26,5 +26,10 @@ namespace UniversityStudentDiaryManagementSystem
         {
 
         }
+
+        private void frmAbout_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

@@ -9,19 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
-using UniversityStudentDiaryManagementSystem.Path;
-
-
-
+using UniversityStudentDiaryManagementSystem.Paths;
 namespace UniversityStudentDiaryManagementSystem
 {
     public partial class frmSignIn : Form
     {
+        private static string name;
+        public static string Name { get => name; set => name = value; }
+
         public frmSignIn()
         {
             InitializeComponent();
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
@@ -36,20 +35,22 @@ namespace UniversityStudentDiaryManagementSystem
                     bool checkCondition = crediational.checkUser(loginAs, username, password, CredentialDL.getCrediationalList());
                     if (checkCondition)
                     {
-                        string role = crediational.checkRole(loginAs, username, password, CredentialDL.getCrediationalList());
-                        if (role == "Student")
+                        Credential obj = crediational.checkRole(loginAs, username, password, CredentialDL.getCrediationalList());
+                        if (obj.Role == "Student")
                         {
+                            Name = obj.FirstName + " " + obj.LastName;
                             frmMain main = new frmMain();
                             main.Show();
-                            this.Hide();
+                            Hide();
                         }
-                        else
+                        else if(obj.Role== "Parent")
                         {
+                            Name = obj.FirstName + " " + obj.LastName;
                             frmMainParent mainParent = new frmMainParent();
                             mainParent.Show();
                             Hide();
-                        }
 
+                        }
                     }
                     else
                     {
@@ -103,7 +104,7 @@ namespace UniversityStudentDiaryManagementSystem
             {
                 combxLoginAs.SelectedIndex = 0;
                 CredentialDL.clearList();
-                CredentialDL.loadRecordFromFile(FilePath.Credential);
+                CredentialDL.loadRecordFromFile(PathFile.Credential);
             }
             catch (Exception ex)
             {

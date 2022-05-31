@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
-using UniversityStudentDiaryManagementSystem.Path;
+using UniversityStudentDiaryManagementSystem.Paths;
 
 
 namespace UniversityStudentDiaryManagementSystem
@@ -122,7 +122,7 @@ namespace UniversityStudentDiaryManagementSystem
                     if (ActivitiesDL.setIntoActivitiesList(saveRecord()))
                     {
                         MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ActivitiesDL.storeRecordIntoFile(saveRecord(), FilePath.Activities);
+                        ActivitiesDL.storeRecordIntoFile(saveRecord(), PathFile.Activities);
                         ActivitiesDL.clearList();
                         clearFields();
                     }

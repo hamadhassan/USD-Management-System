@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.DL;
 using UniversityStudentDiaryManagementSystem.BL;
-using UniversityStudentDiaryManagementSystem.Path;
+using UniversityStudentDiaryManagementSystem.Paths;
 
 
 
@@ -24,7 +24,7 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmNotification_Load(object sender, EventArgs e)
         {
-            NotificationDL.loadRecordFromFile(FilePath.Notification);
+            NotificationDL.loadRecordFromFile(PathFile.Notification);
             try
             {
                 if (NotificationDL.isListEmpty())
@@ -35,9 +35,8 @@ namespace UniversityStudentDiaryManagementSystem
                 else
                 {
                     lblHostel.Visible = true;
-                    List<Notification> notification = NotificationDL.getNotificationlist();
-                    lblAcademic.Text = notification[0].AcademicFeeNotification;
-                    lblHostel.Text = notification[0].HostelFeeNotification;
+                    lblAcademic.Text = NotificationDL.getNotificationByID(1);
+                    lblHostel.Text = NotificationDL.getNotificationByID(2);
                 }
             }
             catch (Exception ex)

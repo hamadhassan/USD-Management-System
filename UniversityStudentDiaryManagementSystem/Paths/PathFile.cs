@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UniversityStudentDiaryManagementSystem.BL;
+using UniversityStudentDiaryManagementSystem.DL;
 
-namespace UniversityStudentDiaryManagementSystem.Path
+
+namespace UniversityStudentDiaryManagementSystem.Paths
 {
-    public class FilePath
+    public class PathFile
     {
         private static string achivement = "achivement.txt";
         private static string activities = "activities.txt";
@@ -24,7 +27,7 @@ namespace UniversityStudentDiaryManagementSystem.Path
         private static string wallet = "wallet.txt";
         private static string notification = "notification.txt";
 
-        public  static string Achivement { get => achivement; set => achivement = value; }
+        public static string Achivement { get => achivement; set => achivement = value; }
         public static string Activities { get => activities; set => activities = value; }
         public static string Books { get => books; set => books = value; }
         public static string Credential { get => credential; set => credential = value; }

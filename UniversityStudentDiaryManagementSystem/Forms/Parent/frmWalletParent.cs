@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.BL;
 using UniversityStudentDiaryManagementSystem.DL;
-using UniversityStudentDiaryManagementSystem.Path;
+using UniversityStudentDiaryManagementSystem.Paths;
+using System.IO;
 
 namespace UniversityStudentDiaryManagementSystem
 {
     public partial class frmWalletParent : Form
     {
+        private static string pathImage;
         public frmWalletParent()
         {
             InitializeComponent();
@@ -55,7 +57,7 @@ namespace UniversityStudentDiaryManagementSystem
                     double amount = double.Parse(txtbxBalance.Text);
                     string comment = rctxtbxComments.Text;
                     Wallet wallet = new Wallet(amount, comment);
-                    WalletDL.storeRecordIntoFile(wallet, FilePath.Wallet);
+                    WalletDL.storeRecordIntoFile(wallet, PathFile.Wallet);
                     MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clearFields();
                 }
@@ -81,7 +83,7 @@ namespace UniversityStudentDiaryManagementSystem
                 if (open.ShowDialog() == DialogResult.OK)
                 {
                     pictureBox1.Image = new Bitmap(open.FileName);
-                    // textBox1.Text = open.FileName;
+                    pathImage = open.FileName;
                 }
             }
             catch (Exception ex)
@@ -89,6 +91,16 @@ namespace UniversityStudentDiaryManagementSystem
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void frmWalletParent_Load(object sender, EventArgs e)
+        {
+            lblUserName.Text = frmSignIn.Name;
+        }
+
+        private void btnSaveImage_Click(object sender, EventArgs e)
+        {
+            File.Copy(pathImage, Path.Combine(@"D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\UserProviedImage\")+Path.GetFileName(pathImage),true);
         }
     }
 }

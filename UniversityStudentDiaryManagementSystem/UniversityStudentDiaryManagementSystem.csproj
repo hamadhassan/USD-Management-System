@@ -75,12 +75,7 @@
     <Compile Include="DL\SecretDL.cs" />
     <Compile Include="DL\TransportDL.cs" />
     <Compile Include="DL\WalletDL.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Paths\PathFile.cs" />
     <Compile Include="Forms\Student\frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,12 +156,6 @@
     <Compile Include="Forms\Student\frmPhone.Designer.cs">
       <DependentUpon>frmPhone.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Student\frmReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Student\frmReport.Designer.cs">
-      <DependentUpon>frmReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Student\frmSecret.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,12 +222,8 @@
     <Compile Include="Forms\Student\frmNotification.Designer.cs">
       <DependentUpon>frmNotification.cs</DependentUpon>
     </Compile>
-    <Compile Include="Path\FilePath.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Parent\frmFeeParent.resx">
       <DependentUpon>frmFeeParent.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,9 +272,6 @@
     <EmbeddedResource Include="Forms\Student\frmPhone.resx">
       <DependentUpon>frmPhone.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Student\frmReport.resx">
-      <DependentUpon>frmReport.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\frmSecret.resx">
       <DependentUpon>frmSecret.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,7 +318,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UserProviedImage\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\account.png" />
   </ItemGroup>

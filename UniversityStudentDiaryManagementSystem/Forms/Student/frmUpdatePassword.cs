@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UniversityStudentDiaryManagementSystem.DL;
-using UniversityStudentDiaryManagementSystem.Path;
+using UniversityStudentDiaryManagementSystem.Paths;
 
 namespace UniversityStudentDiaryManagementSystem
 {
@@ -67,7 +67,7 @@ namespace UniversityStudentDiaryManagementSystem
                             if (CredentialDL.updatePassword(txtbxOldPassword.Text, txtbxNewPassword.Text, txtbxUserName.Text, cmbxRole.SelectedItem.ToString()))
                             {
 
-                                CredentialDL.storeAllRecordIntoFile(FilePath.Credential);
+                                CredentialDL.storeAllRecordIntoFile(PathFile.Credential);
                                 MessageBox.Show("Password successfully changed", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 txtbxUserName.Clear();
                                 txtbxOldPassword.Clear();
@@ -109,7 +109,7 @@ namespace UniversityStudentDiaryManagementSystem
             {
                 cmbxRole.SelectedIndex = 0;
                 CredentialDL.clearList();
-                CredentialDL.loadRecordFromFile(FilePath.Credential);
+                CredentialDL.loadRecordFromFile(PathFile.Credential);
             }
             catch (Exception ex)
             {

@@ -1,1 +1,2 @@
-The academic fee was readed ,,1
+The academic fee was readed ,1
+The Hostel fee was paid,2

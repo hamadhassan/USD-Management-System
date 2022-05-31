@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UniversityStudentDiaryManagementSystem.BL;
 using System.IO;
-using UniversityStudentDiaryManagementSystem.Path;
+using UniversityStudentDiaryManagementSystem.Paths;
 
 namespace UniversityStudentDiaryManagementSystem.DL
 {
@@ -13,19 +13,19 @@ namespace UniversityStudentDiaryManagementSystem.DL
     {
         public static double updateBalance()
         {
-            FundDL.loadRecordFromFile(FilePath.Fund);
-            HelpingMaterialDL.loadRecordFromFile(FilePath.HelpingMaterial);
-            HostelExpenditureDL.loadRecordFromFile(FilePath.HostelExpenditure);
-            MealDL.loadRecordFromFile(FilePath.Meal);
-            PhoneDL.loadRecordFromFile(FilePath.Phone);
-            TransportDL.loadRecordFromFile(FilePath.Transport);
+            FundDL.loadRecordFromFile(PathFile.Fund);
+            HelpingMaterialDL.loadRecordFromFile(PathFile.HelpingMaterial);
+            HostelExpenditureDL.loadRecordFromFile(PathFile.HostelExpenditure);
+            MealDL.loadRecordFromFile(PathFile.Meal);
+            PhoneDL.loadRecordFromFile(PathFile.Phone);
+            TransportDL.loadRecordFromFile(PathFile.Transport);
             double fund=0;
             double helpingMaterial = 0;
             double hostelExpenditure = 0;
             double meal = 0;
             double phone = 0;
             double transport = 0;
-            Wallet wallet = loadRecordFromFile(FilePath.Wallet);
+            Wallet wallet = loadRecordFromFile(PathFile.Wallet);
             double openingBalance = wallet.Amount;
             foreach(Fund f in FundDL.getFundlist())
             {

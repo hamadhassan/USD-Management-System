@@ -46,25 +46,29 @@ namespace UniversityStudentDiaryManagementSystem.BL
             }
             return false;
         }
-        public string checkRole(string role, string username, string password, List<Credential> crediationalsList)
+        public Credential checkRole(string role, string username, string password, List<Credential> crediationalsList)
         {
             foreach (Credential c in crediationalsList)
             {
                 if (c.username == username && c.password == password && c.role == role)
                 {
-                    if(c.role == "Student")
-                    {
-                        return "Student";
-                    }
-                    else 
-                    {
-                        return "Parent";
-                    }
+                    return c;
+                    //if(c.role == "Student")
+                    //{
+                    //    return "Student";
+                    //}
+                    //else 
+                    //{
+                    //    return "Parent";
+                    //}
                 }
             }
             return null;
         }
-        
+        //public string loginName(string role, string username, string password, List<Credential> crediationalsList)
+        //{
+
+        //}
       
     }
 }

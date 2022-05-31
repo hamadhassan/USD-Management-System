@@ -32,20 +32,6 @@ namespace UniversityStudentDiaryManagementSystem
             }
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                frmReport report = new frmReport();
-                report.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-        }
-
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             try

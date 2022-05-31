@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UniversityStudentDiaryManagementSystem.BL;
 using System.IO;
-using UniversityStudentDiaryManagementSystem.Path;
+using UniversityStudentDiaryManagementSystem.Paths;
 
 namespace UniversityStudentDiaryManagementSystem.DL
 {
