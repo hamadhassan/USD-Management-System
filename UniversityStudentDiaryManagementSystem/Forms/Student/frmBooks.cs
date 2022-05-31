@@ -165,6 +165,10 @@ namespace UniversityStudentDiaryManagementSystem
                                 string bookFrom = txtbxBookFrom.Text;
                                 string remarks = rctxtbxRemaks.Text;
                                 double amount = double.Parse(txtbxAmount.Text);
+                                if (amount < 0)
+                                {
+                                    throw new Exception("Invalid try");
+                                }
                                 BookPublisher book = new BookPublisher(typeBook, title, authorName, bookFrom, remarks, amount);
                                 return book;
                             }

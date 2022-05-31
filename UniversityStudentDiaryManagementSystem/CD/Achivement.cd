@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="UniversityStudentDiaryManagementSystem.BL.Achivement">
+    <Position X="0.5" Y="0.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAEAAAAAQAAAAEAAAAMAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\Achivement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UniversityStudentDiaryManagementSystem.DL.AchivementDL">
+    <Position X="5.5" Y="0.5" Width="5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAJAAAAARBAARAAABAAAAAAAABAAAAABAAAAAAAA=</HashCode>
+      <FileName>DL\AchivementDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

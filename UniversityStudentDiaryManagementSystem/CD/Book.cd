@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="UniversityStudentDiaryManagementSystem.BL.Book">
+    <Position X="0.75" Y="0.75" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAgAAAQIAAAEAACAAAAAgAAAAAAQAAAAEAABAAAAA=</HashCode>
+      <FileName>BL\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UniversityStudentDiaryManagementSystem.DL.BookDL">
+    <Position X="6.5" Y="0.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAIAAQAQAQAAABAAAAAAQADAAAgAAAAAAAAAA=</HashCode>
+      <FileName>DL\BookDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

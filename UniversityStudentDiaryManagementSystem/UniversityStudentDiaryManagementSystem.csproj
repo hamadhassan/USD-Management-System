@@ -61,6 +61,8 @@
     <Compile Include="BL\Secret.cs" />
     <Compile Include="BL\Transport.cs" />
     <Compile Include="BL\Wallet.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Class2.cs" />
     <Compile Include="DL\AchivementDL.cs" />
     <Compile Include="DL\ActivitiesDL.cs" />
     <Compile Include="DL\BookDL.cs" />
@@ -305,6 +307,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="CD\Secret.cd" />
+    <None Include="CD\Transport.cd" />
+    <None Include="CD\Notification.cd" />
+    <None Include="CD\Phone.cd" />
+    <None Include="CD\Result.cd" />
+    <None Include="CD\Credential.cd" />
+    <None Include="CD\Fee.cd" />
+    <None Include="CD\Fund.cd" />
+    <None Include="CD\HelpingMaterial.cd" />
+    <None Include="CD\HostelExpenditure.cd" />
+    <None Include="CD\Meal.cd" />
+    <None Include="CD\Achivement.cd" />
+    <None Include="CD\Activities.cd" />
+    <None Include="CD\Wallet.cd" />
+    <None Include="CD\Book.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

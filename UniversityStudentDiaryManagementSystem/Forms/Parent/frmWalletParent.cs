@@ -55,6 +55,10 @@ namespace UniversityStudentDiaryManagementSystem
                 if (txtbxBalance.Text != String.Empty)
                 {
                     double amount = double.Parse(txtbxBalance.Text);
+                    if (amount < 0)
+                    {
+                        throw new Exception("Invalid try");
+                    }
                     string comment = rctxtbxComments.Text;
                     Wallet wallet = new Wallet(amount, comment);
                     WalletDL.storeRecordIntoFile(wallet, PathFile.Wallet);

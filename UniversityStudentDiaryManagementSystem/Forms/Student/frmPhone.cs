@@ -63,6 +63,10 @@ namespace UniversityStudentDiaryManagementSystem
             if (txtbxAmount.Text != String.Empty)
             {
                 double amount = double.Parse(txtbxAmount.Text);
+                if (amount < 0)
+                {
+                    throw new Exception("Invalid try");
+                }
                 string remarks = rctxtbxRemarks.Text;
                 Phone phone = new Phone(amount, remarks);
                 return phone;

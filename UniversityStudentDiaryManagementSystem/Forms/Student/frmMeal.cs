@@ -97,6 +97,10 @@ namespace UniversityStudentDiaryManagementSystem
                     string typeMeal = cmbxTime.SelectedItem.ToString();
                     string menu = txtbxMenu.Text;
                     double charges = double.Parse(txtbxCharges.Text);
+                    if (charges < 0)
+                    {
+                        throw new Exception("Invalid try");
+                    }
                     string remarks = rctxtbxRemaks.Text;
                     Meal meal = new Meal(typeMeal, menu, charges, remarks);
                     return meal;

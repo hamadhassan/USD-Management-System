@@ -94,6 +94,10 @@ namespace UniversityStudentDiaryManagementSystem
                         double amount = double.Parse(txtbxAmount.Text);
                         string typeFund = cmbxType.SelectedItem.ToString();
                         string remarks = rctxbxObjective.Text;
+                        if (amount < 0)
+                        {
+                            throw new Exception("Invalid try");
+                        }
                         Fund fund = new Fund(typeFund, amount, remarks);
                         return fund;
                     }

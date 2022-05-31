@@ -87,6 +87,10 @@ namespace UniversityStudentDiaryManagementSystem
                     string typeHelpingMaterial = cmbxType.SelectedItem.ToString();
                     double charges = double.Parse(txtbxCharges.Text);
                     string remarks = rhtextbxRemaks.Text;
+                    if (charges < 0)
+                    {
+                        throw new Exception("Invalid try");
+                    }
                     HelpingMaterial helpingMaterial = new HelpingMaterial(typeHelpingMaterial, charges, remarks);
                     return helpingMaterial;
                 }

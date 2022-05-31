@@ -92,6 +92,10 @@ namespace UniversityStudentDiaryManagementSystem
                         string pickupLocation=txtbxPickupLocation.Text;
                         string destination=txtbxDestination.Text;
                         double amount=double.Parse(txtbxAmount.Text);
+                        if (amount < 0)
+                        {
+                            throw new Exception("Invalid try");
+                        }
                         string remarks = rctxbxReamarks.Text;
                         Transport transport = new Transport(typeTransport, pickupLocation, destination, amount, remarks);
                         return transport;

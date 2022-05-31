@@ -104,6 +104,10 @@ namespace UniversityStudentDiaryManagementSystem
                         string month = cmbxMonth.SelectedItem.ToString();
                         double charges = double.Parse(txbxCharges.Text);
                         string remarks = rctxtbxRemaks.Text;
+                        if (charges < 0)
+                        {
+                            throw new Exception("Invalid try");
+                        }
                         HostelExpenditure hostelExpenditure = new HostelExpenditure(typeHostelExpenditure, month, charges, remarks);
                         return hostelExpenditure;
                     }

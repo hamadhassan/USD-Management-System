@@ -94,6 +94,10 @@ namespace UniversityStudentDiaryManagementSystem
                         string semester = cmbxSemester.SelectedItem.ToString();
                         string challanNo = txtbxChallanNo.Text;
                         double amount = double.Parse(txtbxAmount.Text);
+                        if (amount < 0)
+                        {
+                            throw new Exception("Invalid try");
+                        }
                         string date = dateTimePicker.Text;
                         string remarks = rchtxtbxRemarks.Text;
                         Fee fee = new Fee(feeType, semester, challanNo, amount, date, remarks);
