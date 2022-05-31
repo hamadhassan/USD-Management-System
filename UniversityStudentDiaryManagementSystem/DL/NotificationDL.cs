@@ -24,6 +24,28 @@ namespace UniversityStudentDiaryManagementSystem.DL
         {
             notificationList.RemoveAt(index);
         }
+        public static void clearListAtID(int id)
+        {
+            int index=0;
+            foreach(Notification notification in notificationList)
+            {
+                int _id =notification.Id;
+                if (_id == 1)
+                {
+                    notificationList.RemoveAt(index);
+
+                }
+                index++;
+            }
+        }
+        public static bool isListEmpty()
+        {
+            if(notificationList.Count == 0)
+            {
+                return true;
+            }
+            return false;
+        }
         public static  void updateMessageAcademicFee(string newMessage)
         {
             int index=0;
@@ -35,6 +57,13 @@ namespace UniversityStudentDiaryManagementSystem.DL
                     string academicFeeNotification=newMessage;
                     string hostelFeeNotification=n.HostelFeeNotification;
                     Notification notification = new Notification(academicFeeNotification, hostelFeeNotification);
+                    notificationList.Add(notification);
+                }
+                else if (n.Id == 1)
+                {
+                    notificationList.RemoveAt(index);
+                    string academicFeeNotification = newMessage;
+                    Notification notification = new Notification(academicFeeNotification, 1);
                     notificationList.Add(notification);
                 }
                 index++;
@@ -51,6 +80,13 @@ namespace UniversityStudentDiaryManagementSystem.DL
                     string academicFeeNotification = n.AcademicFeeNotification;
                     string hostelFeeNotification = newMessage;
                     Notification notification = new Notification(academicFeeNotification, hostelFeeNotification);
+                    notificationList.Add(notification);
+                }
+               else if (n.Id == 2)
+                {
+                    notificationList.RemoveAt(index);
+                    string hostelFeeNotification = newMessage;
+                    Notification notification = new Notification(hostelFeeNotification,2);
                     notificationList.Add(notification);
                 }
                 index++;
@@ -84,7 +120,8 @@ namespace UniversityStudentDiaryManagementSystem.DL
                 {
                     string academicFeeNotification = parseData(record, 1);
                     string hostelFeeNotification = parseData(record, 2);
-                    Notification notification=new Notification(academicFeeNotification, hostelFeeNotification);
+                    int id =int.Parse(parseData(record, 3));
+                    Notification notification=new Notification(academicFeeNotification, hostelFeeNotification,id);
                     notificationList.Add(notification);
                 }
                 fileVariable.Close();

@@ -24,12 +24,21 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmNotification_Load(object sender, EventArgs e)
         {
+            NotificationDL.loadRecordFromFile(FilePath.Notification);
             try
             {
-                NotificationDL.loadRecordFromFile(FilePath.Notification);
-                List<Notification> notification = NotificationDL.getNotificationlist();
-                lblAcademic.Text = notification[0].AcademicFeeNotification;
-                lblHostel.Text = notification[0].HostelFeeNotification;
+                if (NotificationDL.isListEmpty())
+                {
+                    lblAcademic.Text = "No Notification";
+                    lblHostel.Visible = false;
+                }
+                else
+                {
+                    lblHostel.Visible = true;
+                    List<Notification> notification = NotificationDL.getNotificationlist();
+                    lblAcademic.Text = notification[0].AcademicFeeNotification;
+                    lblHostel.Text = notification[0].HostelFeeNotification;
+                }
             }
             catch (Exception ex)
             {
@@ -41,7 +50,7 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                this.Close();
+                this.Hide();
             }
             catch (Exception ex)
             {

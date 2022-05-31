@@ -1,2 +1,1 @@
-Hostel Fee,Spring,1,1,5/28/2022,323
-Academic,Fall,11,56,5/25/2022,yhy
+Academic,Fall,1,1,5/25/2022,1

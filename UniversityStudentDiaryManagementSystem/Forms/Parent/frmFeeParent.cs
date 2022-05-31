@@ -25,15 +25,16 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                string messageAcademic = "The academic fee was readed ";
-                string messagHostel = "The Hostel fee was readed";
-                Notification notification = new Notification(messageAcademic, messagHostel);
-                NotificationDL.setIntoNotificationList(notification);
-                NotificationDL.storeRecordIntoFile(notification, FilePath.Notification);
+                //NotificationDL.loadRecordFromFile(FilePath.Notification);
                 FeeDL.loadRecordFromFile(FilePath.Fee);
                 Fee academicFee = FeeDL.getAcademicFee();
                 if (academicFee != null)
                 {
+                    string messageAcademic = "The academic fee was readed ";
+                    Notification notification = new Notification(messageAcademic, 1);
+                    NotificationDL.clearListAtID(1);
+                    NotificationDL.setIntoNotificationList(notification);
+                    NotificationDL.storeAllRecordIntoFile(FilePath.Notification);
                     lblNoAcademicFee.Visible = false;
                     lblSemester.Text = academicFee.Semester;
                     lblAmount.Text = academicFee.Amount.ToString();
@@ -59,6 +60,11 @@ namespace UniversityStudentDiaryManagementSystem
                 Fee hostelFee = FeeDL.getHostelFee();
                 if (hostelFee != null)
                 {
+                    string messagHostel = "The Hostel fee was readed";
+                    Notification notification = new Notification(messagHostel, 2);
+                    NotificationDL.clearListAtID(2);
+                    NotificationDL.setIntoNotificationList(notification);
+                    NotificationDL.storeAllRecordIntoFile(FilePath.Notification);
                     lblNoHostelFee.Visible = false;
                     lblSemesterHostel.Text = hostelFee.Semester;
                     lblAmountHostel.Text = hostelFee.Amount.ToString();
