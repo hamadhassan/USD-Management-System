@@ -51,7 +51,7 @@ namespace UniversityStudentDiaryManagementSystem
             try
             {
                 frmMessage message = new frmMessage();
-                message.ShowDialog();
+                message.Show();
             }
             catch (Exception ex)
             {

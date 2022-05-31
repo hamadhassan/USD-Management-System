@@ -35,11 +35,11 @@
             this.txbxCharges = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rctxtbxRemaks = new System.Windows.Forms.RichTextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.cmbxType = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.rctxtbxRemaks = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,6 +120,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Expenditure";
             // 
+            // rctxtbxRemaks
+            // 
+            this.rctxtbxRemaks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rctxtbxRemaks.Location = new System.Drawing.Point(96, 117);
+            this.rctxtbxRemaks.Name = "rctxtbxRemaks";
+            this.rctxtbxRemaks.Size = new System.Drawing.Size(176, 42);
+            this.rctxtbxRemaks.TabIndex = 3;
+            this.rctxtbxRemaks.Text = "";
+            // 
             // btnClose
             // 
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -174,15 +183,6 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Type :";
             // 
-            // rctxtbxRemaks
-            // 
-            this.rctxtbxRemaks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rctxtbxRemaks.Location = new System.Drawing.Point(96, 117);
-            this.rctxtbxRemaks.Name = "rctxtbxRemaks";
-            this.rctxtbxRemaks.Size = new System.Drawing.Size(176, 42);
-            this.rctxtbxRemaks.TabIndex = 3;
-            this.rctxtbxRemaks.Text = "";
-            // 
             // frmHostelExpenditure
             // 
             this.AcceptButton = this.btnSave;
@@ -191,7 +191,7 @@
             this.ClientSize = new System.Drawing.Size(302, 228);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmHostelExpenditure";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

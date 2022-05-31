@@ -18,7 +18,6 @@ D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\Un
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmAcivities.resources
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmBooks.resources
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmFunds.resources
-D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmGoals.resources
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmHelpingMaterial.resources
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmHostelExpenditure.resources
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmMeal.resources
@@ -34,3 +33,4 @@ D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\Un
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmWalletParent.resources
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmFeeParent.resources
 D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.frmNotification.resources
+D:\COMPUTER SCIENCE\PD\USDMS\UniversityStudentDiaryManagementSystem\obj\Debug\UniversityStudentDiaryManagementSystem.Form1.resources

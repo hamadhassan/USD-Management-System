@@ -60,6 +60,7 @@
             this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tolstplblCurrentTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -129,14 +130,14 @@
             // academicToolStripMenuItem
             // 
             this.academicToolStripMenuItem.Name = "academicToolStripMenuItem";
-            this.academicToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.academicToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.academicToolStripMenuItem.Text = "Academic";
             this.academicToolStripMenuItem.Click += new System.EventHandler(this.academicToolStripMenuItem_Click);
             // 
             // hostelToolStripMenuItem
             // 
             this.hostelToolStripMenuItem.Name = "hostelToolStripMenuItem";
-            this.hostelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hostelToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.hostelToolStripMenuItem.Text = "Hostel";
             this.hostelToolStripMenuItem.Click += new System.EventHandler(this.hostelToolStripMenuItem_Click);
             // 
@@ -312,11 +313,26 @@
             // 
             this.timer.Enabled = true;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.33758F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.66242F));
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 63);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(785, 304);
+            this.tableLayoutPanel1.TabIndex = 3;
+            // 
             // frmMainParent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 392);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.menuStrip);
@@ -372,5 +388,6 @@
         private System.Windows.Forms.ToolStripMenuItem feeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem academicToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hostelToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

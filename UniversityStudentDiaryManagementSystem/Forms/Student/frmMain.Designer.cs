@@ -67,10 +67,6 @@
             this.classToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.socitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.socialWorkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.goalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dailyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.quatilyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yearlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.packagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -115,8 +111,6 @@
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
@@ -127,6 +121,7 @@
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
             this.timerCurrentDateTime = new System.Windows.Forms.Timer(this.components);
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip.SuspendLayout();
@@ -143,7 +138,6 @@
             this.hostelToolStripMenuItem1,
             this.helpingMaterialToolStripMenuItem,
             this.fundToolStripMenuItem,
-            this.goalsToolStripMenuItem,
             this.phoneToolStripMenuItem,
             this.bookToolStripMenuItem,
             this.transportToolStripMenuItem,
@@ -438,37 +432,6 @@
             this.socialWorkToolStripMenuItem.Text = "Social Work";
             this.socialWorkToolStripMenuItem.Click += new System.EventHandler(this.socialWorkToolStripMenuItem_Click);
             // 
-            // goalsToolStripMenuItem
-            // 
-            this.goalsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dailyToolStripMenuItem1,
-            this.quatilyToolStripMenuItem,
-            this.yearlyToolStripMenuItem});
-            this.goalsToolStripMenuItem.Name = "goalsToolStripMenuItem";
-            this.goalsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.goalsToolStripMenuItem.Text = "Goals";
-            // 
-            // dailyToolStripMenuItem1
-            // 
-            this.dailyToolStripMenuItem1.Name = "dailyToolStripMenuItem1";
-            this.dailyToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
-            this.dailyToolStripMenuItem1.Text = "Today";
-            this.dailyToolStripMenuItem1.Click += new System.EventHandler(this.dailyToolStripMenuItem1_Click);
-            // 
-            // quatilyToolStripMenuItem
-            // 
-            this.quatilyToolStripMenuItem.Name = "quatilyToolStripMenuItem";
-            this.quatilyToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.quatilyToolStripMenuItem.Text = "Quarterly";
-            this.quatilyToolStripMenuItem.Click += new System.EventHandler(this.quatilyToolStripMenuItem_Click);
-            // 
-            // yearlyToolStripMenuItem
-            // 
-            this.yearlyToolStripMenuItem.Name = "yearlyToolStripMenuItem";
-            this.yearlyToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.yearlyToolStripMenuItem.Text = "Yearly";
-            this.yearlyToolStripMenuItem.Click += new System.EventHandler(this.yearlyToolStripMenuItem_Click);
-            // 
             // phoneToolStripMenuItem
             // 
             this.phoneToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -480,7 +443,7 @@
             // packagesToolStripMenuItem
             // 
             this.packagesToolStripMenuItem.Name = "packagesToolStripMenuItem";
-            this.packagesToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.packagesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.packagesToolStripMenuItem.Text = "Package";
             this.packagesToolStripMenuItem.Click += new System.EventHandler(this.packagesToolStripMenuItem_Click);
             // 
@@ -713,8 +676,6 @@
             this.toolStripSeparator6,
             this.toolStripButton7,
             this.toolStripSeparator5,
-            this.toolStripButton6,
-            this.toolStripSeparator4,
             this.toolStripButton5,
             this.toolStripSeparator13,
             this.toolStripButton10,
@@ -856,23 +817,6 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 54);
             // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(58, 51);
-            this.toolStripButton6.Text = "   Goals   ";
-            this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 54);
-            // 
             // toolStripButton5
             // 
             this.toolStripButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -958,11 +902,26 @@
             this.timerCurrentDateTime.Enabled = true;
             this.timerCurrentDateTime.Tick += new System.EventHandler(this.timerCurrentDateTime_Tick);
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 78);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(958, 333);
+            this.tableLayoutPanel1.TabIndex = 3;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 436);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip);
@@ -1013,10 +972,6 @@
         private System.Windows.Forms.ToolStripMenuItem classToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem socitiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem socialWorkToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem goalsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dailyToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem quatilyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem yearlyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phoneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem packagesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookToolStripMenuItem;
@@ -1056,8 +1011,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripButton toolStripButton7;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
         private System.Windows.Forms.ToolStripButton toolStripButton14;
@@ -1083,5 +1036,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton11;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
         private System.Windows.Forms.ToolStripButton toolStripButton12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

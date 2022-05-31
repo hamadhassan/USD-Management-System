@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UniversityStudentDiaryManagementSystem
 {
-    public partial class frmGoals : Form
+    public partial class Form1 : Form
     {
-        public frmGoals()
+        public Form1()
         {
             InitializeComponent();
         }

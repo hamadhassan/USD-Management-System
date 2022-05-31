@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UniversityStudentDiaryManagementSystem.Forms;
 
 namespace UniversityStudentDiaryManagementSystem
 {
@@ -363,23 +364,14 @@ namespace UniversityStudentDiaryManagementSystem
         #region Goals
         private void dailyToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                frmGoals frmGoals = new frmGoals();
-                frmGoals.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+           
         }
 
         private void quatilyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                frmGoals frmGoals = new frmGoals();
-                frmGoals.ShowDialog();
+              
             }
             catch (Exception ex)
             {
@@ -390,10 +382,8 @@ namespace UniversityStudentDiaryManagementSystem
         private void yearlyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
-            {
-                frmGoals frmGoals = new frmGoals();
-                frmGoals.ShowDialog();
-            }
+            { }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -612,8 +602,7 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                frmGoals goals = new frmGoals();
-                goals.ShowDialog();
+               
             }
             catch (Exception ex)
             {
@@ -715,8 +704,8 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                frmNotification notification = new frmNotification();
-                notification.Show();
+                frmMessage message = new frmMessage();
+                message.Show();
             }
             catch (Exception ex)
             {

@@ -49,7 +49,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(276, 169);
+            this.groupBox1.Size = new System.Drawing.Size(276, 156);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Package";
@@ -57,7 +57,7 @@
             // rctxtbxRemarks
             // 
             this.rctxtbxRemarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rctxtbxRemarks.Location = new System.Drawing.Point(94, 64);
+            this.rctxtbxRemarks.Location = new System.Drawing.Point(94, 60);
             this.rctxtbxRemarks.Name = "rctxtbxRemarks";
             this.rctxtbxRemarks.Size = new System.Drawing.Size(169, 48);
             this.rctxtbxRemarks.TabIndex = 12;
@@ -68,7 +68,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(181, 118);
+            this.btnClose.Location = new System.Drawing.Point(181, 112);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(82, 31);
             this.btnClose.TabIndex = 11;
@@ -82,7 +82,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(94, 118);
+            this.btnSave.Location = new System.Drawing.Point(94, 112);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(81, 31);
             this.btnSave.TabIndex = 10;
@@ -120,10 +120,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 194);
+            this.ClientSize = new System.Drawing.Size(303, 180);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmPhone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UniversityStudentDiaryManagementSystem.Forms;
 
 
 namespace UniversityStudentDiaryManagementSystem
@@ -17,7 +18,7 @@ namespace UniversityStudentDiaryManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAbout());
+            Application.Run(new frmFeeParent());
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdatePassword));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbxRole = new System.Windows.Forms.ComboBox();
             this.checkBxShowPassword = new System.Windows.Forms.CheckBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
@@ -38,11 +39,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtbxUserName = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbxNewPassword = new System.Windows.Forms.TextBox();
             this.txtbxConfirmPassword = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbxRole = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +68,20 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Change Password";
+            // 
+            // cmbxRole
+            // 
+            this.cmbxRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbxRole.FormattingEnabled = true;
+            this.cmbxRole.Items.AddRange(new object[] {
+            "Select a option ",
+            "Student",
+            "Parent"});
+            this.cmbxRole.Location = new System.Drawing.Point(159, 34);
+            this.cmbxRole.Name = "cmbxRole";
+            this.cmbxRole.Size = new System.Drawing.Size(185, 28);
+            this.cmbxRole.TabIndex = 18;
             // 
             // checkBxShowPassword
             // 
@@ -161,6 +175,17 @@
             this.txtbxUserName.Size = new System.Drawing.Size(185, 26);
             this.txtbxUserName.TabIndex = 0;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label5.Location = new System.Drawing.Point(9, 38);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 24);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Role :";
+            this.label5.UseCompatibleTextRendering = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -190,31 +215,6 @@
             this.txtbxConfirmPassword.TabIndex = 3;
             this.txtbxConfirmPassword.UseSystemPasswordChar = true;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(9, 38);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 24);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Role :";
-            this.label5.UseCompatibleTextRendering = true;
-            // 
-            // cmbxRole
-            // 
-            this.cmbxRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbxRole.FormattingEnabled = true;
-            this.cmbxRole.Items.AddRange(new object[] {
-            "Select a option ",
-            "Student",
-            "Parent"});
-            this.cmbxRole.Location = new System.Drawing.Point(159, 34);
-            this.cmbxRole.Name = "cmbxRole";
-            this.cmbxRole.Size = new System.Drawing.Size(185, 28);
-            this.cmbxRole.TabIndex = 18;
-            // 
             // frmUpdatePassword
             // 
             this.AcceptButton = this.btnChangePassword;
@@ -223,7 +223,7 @@
             this.ClientSize = new System.Drawing.Size(372, 286);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmUpdatePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

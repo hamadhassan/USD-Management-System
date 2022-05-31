@@ -75,6 +75,12 @@
     <Compile Include="DL\SecretDL.cs" />
     <Compile Include="DL\TransportDL.cs" />
     <Compile Include="DL\WalletDL.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Student\frmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,12 +124,6 @@
     </Compile>
     <Compile Include="Forms\Student\frmFunds.Designer.cs">
       <DependentUpon>frmFunds.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Student\frmGoals.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Student\frmGoals.Designer.cs">
-      <DependentUpon>frmGoals.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Student\frmHelpingMaterial.cs">
       <SubType>Form</SubType>
@@ -236,6 +236,9 @@
     <Compile Include="Path\FilePath.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Parent\frmFeeParent.resx">
       <DependentUpon>frmFeeParent.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,9 +268,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\frmFunds.resx">
       <DependentUpon>frmFunds.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Student\frmGoals.resx">
-      <DependentUpon>frmGoals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\frmHelpingMaterial.resx">
       <DependentUpon>frmHelpingMaterial.cs</DependentUpon>
