@@ -61,8 +61,6 @@
     <Compile Include="BL\Secret.cs" />
     <Compile Include="BL\Transport.cs" />
     <Compile Include="BL\Wallet.cs" />
-    <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
     <Compile Include="DL\AchivementDL.cs" />
     <Compile Include="DL\ActivitiesDL.cs" />
     <Compile Include="DL\BookDL.cs" />
@@ -77,6 +75,18 @@
     <Compile Include="DL\SecretDL.cs" />
     <Compile Include="DL\TransportDL.cs" />
     <Compile Include="DL\WalletDL.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Parent\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Parent\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Paths\PathFile.cs" />
     <Compile Include="Forms\Student\frmAbout.cs">
       <SubType>Form</SubType>
@@ -226,6 +236,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Parent\frmFeeParent.resx">
       <DependentUpon>frmFeeParent.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student\frmNotification.resx">
       <DependentUpon>frmNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Parent\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

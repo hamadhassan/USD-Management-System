@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="UniversityStudentDiaryManagementSystem.DL.HostelExpenditureDL">
-    <Position X="6.75" Y="0.5" Width="6" />
+    <Position X="7" Y="0.75" Width="6" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAAAQQAAQAAABQAAAAAAABAAAAIAAAAAAQIA=</HashCode>
       <FileName>DL\HostelExpenditureDL.cs</FileName>

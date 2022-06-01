@@ -52,6 +52,18 @@ namespace UniversityStudentDiaryManagementSystem.DL
             }
             return false;
         }
+        public static bool isUsernameAlreadyExist(string username,string role)
+        {
+            loadRecordFromFile(Paths.PathFile.Credential);
+            foreach(Credential c in crediantialsList)
+            {
+                if(c.Username == username && c.Role==role)
+                {
+                    return true;
+                }
+            }
+            return false; 
+        }
         public static void clearList()
         {
             crediantialsList.Clear();

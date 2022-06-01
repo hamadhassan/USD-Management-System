@@ -149,60 +149,69 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private BookPublisher takeBookPublisherRecord()
         {
-            if (cmbxType.SelectedIndex != 0)
+            try
             {
-                if (txtbxTitle.Text != String.Empty)
+                if (cmbxType.SelectedIndex != 0)
                 {
-                    if (txtbxAuthor.Text != String.Empty)
+                    if (txtbxTitle.Text != String.Empty)
                     {
-                        if (txtbxBookFrom.Text != String.Empty)
+                        if (txtbxAuthor.Text != String.Empty)
                         {
-                            if (txtbxAmount.Text != String.Empty)
+                            if (txtbxBookFrom.Text != String.Empty)
                             {
-                                string typeBook = cmbxType.SelectedItem.ToString();
-                                string title = txtbxTitle.Text;
-                                string authorName = txtbxAuthor.Text;
-                                string bookFrom = txtbxBookFrom.Text;
-                                string remarks = rctxtbxRemaks.Text;
-                                double amount = double.Parse(txtbxAmount.Text);
-                                if (amount < 0)
+                                if (txtbxAmount.Text != String.Empty)
                                 {
-                                    throw new Exception("Invalid try");
+                                    string typeBook = cmbxType.SelectedItem.ToString();
+                                    string title = txtbxTitle.Text;
+                                    string authorName = txtbxAuthor.Text;
+                                    string bookFrom = txtbxBookFrom.Text;
+                                    string remarks = rctxtbxRemaks.Text;
+                                    double amount = double.Parse(txtbxAmount.Text);
+                                    if (amount < 0)
+                                    {
+                                        throw new Exception("Invalid try");
+                                    }
+                                    BookPublisher book = new BookPublisher(typeBook, title, authorName, bookFrom, remarks, amount);
+                                    return book;
                                 }
-                                BookPublisher book = new BookPublisher(typeBook, title, authorName, bookFrom, remarks, amount);
-                                return book;
+                                else
+                                {
+                                    MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    txtbxAmount.Focus();
+                                }
                             }
                             else
                             {
                                 MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                txtbxAmount.Focus();
+                                txtbxBookFrom.Focus();
                             }
                         }
                         else
                         {
                             MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            txtbxBookFrom.Focus();
+                            txtbxAuthor.Focus();
                         }
                     }
                     else
                     {
                         MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtbxAuthor.Focus();
+                        txtbxTitle.Focus();
                     }
+
                 }
                 else
                 {
-                    MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtbxTitle.Focus();
+                    MessageBox.Show("Please select the type ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbxType.Focus();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            else
-            {
-                MessageBox.Show("Please select the type ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cmbxType.Focus();
-            }
             return null;
+           
         }
         private void btnSave_Click(object sender, EventArgs e)
         {

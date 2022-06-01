@@ -26,9 +26,7 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                frmMainParent mainParent = new frmMainParent();
-                mainParent.Show();
-                Hide();
+                this.Close();
             }
             catch (Exception ex)
             {

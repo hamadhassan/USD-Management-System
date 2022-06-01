@@ -97,9 +97,7 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                this.Hide();
-                frmMainParent mainParent = new frmMainParent();
-                mainParent.Show();
+                this.Close();
             }
             catch (Exception ex)
             {

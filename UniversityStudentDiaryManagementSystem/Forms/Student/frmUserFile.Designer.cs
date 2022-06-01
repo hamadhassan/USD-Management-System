@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserFile));
             this.cmbxOption = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -36,16 +35,18 @@
             this.datagvAll = new System.Windows.Forms.DataGridView();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagvAll)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbxOption
             // 
+            this.cmbxOption.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbxOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxOption.Items.AddRange(new object[] {
@@ -62,16 +63,16 @@
             "Secret",
             "Transport",
             "Result"});
-            this.cmbxOption.Location = new System.Drawing.Point(86, 30);
+            this.cmbxOption.Location = new System.Drawing.Point(88, 37);
             this.cmbxOption.Name = "cmbxOption";
-            this.cmbxOption.Size = new System.Drawing.Size(500, 28);
+            this.cmbxOption.Size = new System.Drawing.Size(694, 28);
             this.cmbxOption.TabIndex = 0;
             this.cmbxOption.SelectedIndexChanged += new System.EventHandler(this.cmbxOption_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 30);
+            this.label1.Location = new System.Drawing.Point(18, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 1;
@@ -79,21 +80,27 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.SeaGreen;
+            this.tableLayoutPanel1.SetColumnSpan(this.groupBox1, 2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cmbxOption);
-            this.groupBox1.Location = new System.Drawing.Point(13, 12);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(592, 72);
+            this.groupBox1.Size = new System.Drawing.Size(791, 85);
             this.groupBox1.TabIndex = 69;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Select any one ";
+            this.groupBox1.Text = "Select an Option";
             // 
             // groupBox3
             // 
+            this.tableLayoutPanel1.SetColumnSpan(this.groupBox3, 2);
             this.groupBox3.Controls.Add(this.datagvAll);
-            this.groupBox3.Location = new System.Drawing.Point(13, 90);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(3, 94);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(767, 366);
+            this.groupBox3.Size = new System.Drawing.Size(791, 371);
             this.groupBox3.TabIndex = 71;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Records";
@@ -101,6 +108,7 @@
             // datagvAll
             // 
             this.datagvAll.AllowUserToAddRows = false;
+            this.datagvAll.AllowUserToDeleteRows = false;
             this.datagvAll.BackgroundColor = System.Drawing.SystemColors.Control;
             this.datagvAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagvAll.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -109,7 +117,8 @@
             this.datagvAll.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datagvAll.Location = new System.Drawing.Point(3, 22);
             this.datagvAll.Name = "datagvAll";
-            this.datagvAll.Size = new System.Drawing.Size(761, 341);
+            this.datagvAll.ReadOnly = true;
+            this.datagvAll.Size = new System.Drawing.Size(785, 346);
             this.datagvAll.TabIndex = 0;
             this.datagvAll.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagvAll_CellContentClick);
             // 
@@ -131,40 +140,29 @@
             this.Edit.Text = "Edit";
             this.Edit.UseColumnTextForButtonValue = true;
             // 
-            // btnClose
+            // tableLayoutPanel1
             // 
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(37, 28);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(85, 31);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "Close";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btnClose);
-            this.groupBox4.Location = new System.Drawing.Point(611, 12);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(169, 72);
-            this.groupBox4.TabIndex = 69;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Close";
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.65872F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.34128F));
+            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox3, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.44444F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.55556F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(797, 468);
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // frmUserFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 468);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmUserFile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -174,7 +172,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagvAll)).EndInit();
-            this.groupBox4.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -186,9 +184,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView datagvAll;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

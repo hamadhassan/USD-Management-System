@@ -81,7 +81,7 @@
             this.cmbxRole.Location = new System.Drawing.Point(159, 34);
             this.cmbxRole.Name = "cmbxRole";
             this.cmbxRole.Size = new System.Drawing.Size(185, 28);
-            this.cmbxRole.TabIndex = 18;
+            this.cmbxRole.TabIndex = 0;
             // 
             // checkBxShowPassword
             // 
@@ -90,7 +90,7 @@
             this.checkBxShowPassword.Location = new System.Drawing.Point(199, 183);
             this.checkBxShowPassword.Name = "checkBxShowPassword";
             this.checkBxShowPassword.Size = new System.Drawing.Size(141, 24);
-            this.checkBxShowPassword.TabIndex = 4;
+            this.checkBxShowPassword.TabIndex = 5;
             this.checkBxShowPassword.Text = "Show Password";
             this.checkBxShowPassword.UseVisualStyleBackColor = true;
             this.checkBxShowPassword.CheckedChanged += new System.EventHandler(this.checkBxShowPassword_CheckedChanged);
@@ -104,7 +104,7 @@
             this.btnClose.Location = new System.Drawing.Point(260, 213);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(80, 30);
-            this.btnClose.TabIndex = 6;
+            this.btnClose.TabIndex = 7;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -119,7 +119,7 @@
             this.btnChangePassword.Location = new System.Drawing.Point(84, 213);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(170, 30);
-            this.btnChangePassword.TabIndex = 5;
+            this.btnChangePassword.TabIndex = 6;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnChangePassword.UseVisualStyleBackColor = true;
@@ -142,7 +142,7 @@
             this.txtbxOldPassword.Location = new System.Drawing.Point(159, 94);
             this.txtbxOldPassword.Name = "txtbxOldPassword";
             this.txtbxOldPassword.Size = new System.Drawing.Size(185, 26);
-            this.txtbxOldPassword.TabIndex = 1;
+            this.txtbxOldPassword.TabIndex = 2;
             this.txtbxOldPassword.UseSystemPasswordChar = true;
             // 
             // label3
@@ -173,7 +173,7 @@
             this.txtbxUserName.Location = new System.Drawing.Point(159, 65);
             this.txtbxUserName.Name = "txtbxUserName";
             this.txtbxUserName.Size = new System.Drawing.Size(185, 26);
-            this.txtbxUserName.TabIndex = 0;
+            this.txtbxUserName.TabIndex = 1;
             // 
             // label5
             // 
@@ -203,7 +203,7 @@
             this.txtbxNewPassword.Location = new System.Drawing.Point(159, 123);
             this.txtbxNewPassword.Name = "txtbxNewPassword";
             this.txtbxNewPassword.Size = new System.Drawing.Size(185, 26);
-            this.txtbxNewPassword.TabIndex = 2;
+            this.txtbxNewPassword.TabIndex = 3;
             this.txtbxNewPassword.UseSystemPasswordChar = true;
             // 
             // txtbxConfirmPassword
@@ -212,7 +212,7 @@
             this.txtbxConfirmPassword.Location = new System.Drawing.Point(159, 152);
             this.txtbxConfirmPassword.Name = "txtbxConfirmPassword";
             this.txtbxConfirmPassword.Size = new System.Drawing.Size(185, 26);
-            this.txtbxConfirmPassword.TabIndex = 3;
+            this.txtbxConfirmPassword.TabIndex = 4;
             this.txtbxConfirmPassword.UseSystemPasswordChar = true;
             // 
             // frmUpdatePassword

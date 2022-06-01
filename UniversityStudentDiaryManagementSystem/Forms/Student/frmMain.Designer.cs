@@ -96,7 +96,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripbtnHostelExpenditure = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
@@ -115,9 +115,13 @@
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
             this.timerCurrentDateTime = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLoadRecords = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -140,7 +144,7 @@
             this.toolStripMenuItem1});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(826, 24);
+            this.menuStrip.Size = new System.Drawing.Size(897, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -156,14 +160,14 @@
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateToolStripMenuItem.Text = "Edit";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -265,7 +269,7 @@
             this.dinnerToolStripMenuItem,
             this.hangOutToolStripMenuItem});
             this.mealToolStripMenuItem.Name = "mealToolStripMenuItem";
-            this.mealToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mealToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.mealToolStripMenuItem.Text = "Meal";
             // 
             // breakfastToolStripMenuItem
@@ -299,35 +303,35 @@
             // messMealToolStripMenuItem
             // 
             this.messMealToolStripMenuItem.Name = "messMealToolStripMenuItem";
-            this.messMealToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.messMealToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.messMealToolStripMenuItem.Text = "Mess Meal";
             this.messMealToolStripMenuItem.Click += new System.EventHandler(this.messMealToolStripMenuItem_Click);
             // 
             // serviceToolStripMenuItem
             // 
             this.serviceToolStripMenuItem.Name = "serviceToolStripMenuItem";
-            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.serviceToolStripMenuItem.Text = "Room Service ";
             this.serviceToolStripMenuItem.Click += new System.EventHandler(this.serviceToolStripMenuItem_Click);
             // 
             // roomRenovationToolStripMenuItem
             // 
             this.roomRenovationToolStripMenuItem.Name = "roomRenovationToolStripMenuItem";
-            this.roomRenovationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.roomRenovationToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.roomRenovationToolStripMenuItem.Text = "Room Renovation";
             this.roomRenovationToolStripMenuItem.Click += new System.EventHandler(this.roomRenovationToolStripMenuItem_Click);
             // 
             // laundaryToolStripMenuItem
             // 
             this.laundaryToolStripMenuItem.Name = "laundaryToolStripMenuItem";
-            this.laundaryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.laundaryToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.laundaryToolStripMenuItem.Text = "Laundry";
             this.laundaryToolStripMenuItem.Click += new System.EventHandler(this.laundaryToolStripMenuItem_Click);
             // 
             // solonToolStripMenuItem
             // 
             this.solonToolStripMenuItem.Name = "solonToolStripMenuItem";
-            this.solonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.solonToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.solonToolStripMenuItem.Text = "Solon";
             this.solonToolStripMenuItem.Click += new System.EventHandler(this.barberToolStripMenuItem_Click);
             // 
@@ -568,9 +572,9 @@
             this.tolstplblCurentDate,
             this.toolStripStatusLabel6,
             this.tolstplblCurrentTime});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 411);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 503);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(826, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(897, 25);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -619,7 +623,7 @@
             this.toolStripSeparator1,
             this.toolStripButton4,
             this.toolStripSeparator2,
-            this.toolStripButton1,
+            this.toolStripbtnHostelExpenditure,
             this.toolStripSeparator7,
             this.toolStripButton9,
             this.toolStripSeparator8,
@@ -638,8 +642,8 @@
             this.toolStripButton11});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(826, 54);
-            this.toolStrip.TabIndex = 2;
+            this.toolStrip.Size = new System.Drawing.Size(897, 54);
+            this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "toolStrip1";
             // 
             // toolStripButton2
@@ -677,17 +681,17 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 54);
             // 
-            // toolStripButton1
+            // toolStripbtnHostelExpenditure
             // 
-            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(80, 51);
-            this.toolStripButton1.Text = " Expenditure ";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripbtnHostelExpenditure.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripbtnHostelExpenditure.Image = ((System.Drawing.Image)(resources.GetObject("toolStripbtnHostelExpenditure.Image")));
+            this.toolStripbtnHostelExpenditure.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripbtnHostelExpenditure.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripbtnHostelExpenditure.Name = "toolStripbtnHostelExpenditure";
+            this.toolStripbtnHostelExpenditure.Size = new System.Drawing.Size(80, 51);
+            this.toolStripbtnHostelExpenditure.Text = " Expenditure ";
+            this.toolStripbtnHostelExpenditure.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripbtnHostelExpenditure.Click += new System.EventHandler(this.toolStripbtnHostelExpenditure_Click);
             // 
             // toolStripSeparator7
             // 
@@ -837,27 +841,53 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95.61587F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 78);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 97.5976F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.402402F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(826, 333);
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(897, 425);
             this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnLoadRecords);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(891, 419);
+            this.panel1.TabIndex = 0;
+            // 
+            // btnLoadRecords
+            // 
+            this.btnLoadRecords.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLoadRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadRecords.Image = ((System.Drawing.Image)(resources.GetObject("btnLoadRecords.Image")));
+            this.btnLoadRecords.Location = new System.Drawing.Point(348, 191);
+            this.btnLoadRecords.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoadRecords.Name = "btnLoadRecords";
+            this.btnLoadRecords.Size = new System.Drawing.Size(134, 26);
+            this.btnLoadRecords.TabIndex = 3;
+            this.btnLoadRecords.Text = "Load Records";
+            this.btnLoadRecords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLoadRecords.UseVisualStyleBackColor = false;
+            this.btnLoadRecords.Click += new System.EventHandler(this.btnLoadRecords_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 436);
+            this.ClientSize = new System.Drawing.Size(897, 528);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMain";
@@ -870,6 +900,8 @@
             this.statusStrip1.PerformLayout();
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -931,7 +963,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripbtnHostelExpenditure;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripButton toolStripButton8;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
@@ -962,5 +994,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
         private System.Windows.Forms.ToolStripButton toolStripButton12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnLoadRecords;
     }
 }

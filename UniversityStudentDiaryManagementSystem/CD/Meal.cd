@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="UniversityStudentDiaryManagementSystem.DL.MealDL">
-    <Position X="5.25" Y="0.75" Width="3.75" />
+    <Position X="5.5" Y="0.75" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAkBAAAAAQACAQAAABAAAAAQAAhAAAAAAAAAAAAAA=</HashCode>
       <FileName>DL\MealDL.cs</FileName>

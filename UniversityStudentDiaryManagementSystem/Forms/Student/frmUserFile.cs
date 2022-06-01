@@ -166,7 +166,6 @@ namespace UniversityStudentDiaryManagementSystem
                 {
                     if (cmbxOption.SelectedIndex == 1)
                     {
-                        AchivementDL.storeAllRecordIntoFile(PathFile.Achivement);
                         Achivement achivement = (Achivement)datagvAll.CurrentRow.DataBoundItem;
                         if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                         {
@@ -184,7 +183,6 @@ namespace UniversityStudentDiaryManagementSystem
                     }
                     else if (cmbxOption.SelectedIndex == 2)
                     {
-                        ActivitiesDL.storeAllRecordIntoFile(PathFile.Activities);
                         Activities activities = (Activities)datagvAll.CurrentRow.DataBoundItem;
                         if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                         {
@@ -202,7 +200,6 @@ namespace UniversityStudentDiaryManagementSystem
                     }
                     else if (cmbxOption.SelectedIndex == 3)
                     {
-                        BookDL.storeAllRecordIntoFile(PathFile.Books);
                         Book book = (Book)datagvAll.CurrentRow.DataBoundItem;
                         if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                         {
@@ -220,7 +217,6 @@ namespace UniversityStudentDiaryManagementSystem
                     }
                     else if (cmbxOption.SelectedIndex == 4)
                     {
-                        FeeDL.storeAllRecordIntoFile(PathFile.Fee);
                         Fee fee = (Fee)datagvAll.CurrentRow.DataBoundItem;
                         if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                         {
@@ -238,7 +234,6 @@ namespace UniversityStudentDiaryManagementSystem
                     }
                     else if (cmbxOption.SelectedIndex == 5)
                     {
-                        FundDL.storeAllRecordIntoFile(PathFile.Fund);
                         Fund fund = (Fund)datagvAll.CurrentRow.DataBoundItem;
                         if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                         {
@@ -256,7 +251,6 @@ namespace UniversityStudentDiaryManagementSystem
                     }
                     else if (cmbxOption.SelectedIndex == 6)
                     {
-                        HelpingMaterialDL.storeAllRecordIntoFile(PathFile.HelpingMaterial);
                         HelpingMaterial helpingMaterial = (HelpingMaterial)datagvAll.CurrentRow.DataBoundItem;
                         if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                         {
@@ -274,7 +268,6 @@ namespace UniversityStudentDiaryManagementSystem
                     }
                     else if (cmbxOption.SelectedIndex == 7)
                     {
-                        HostelExpenditureDL.storeAllRecordIntoFile(PathFile.HostelExpenditure);
                         HostelExpenditure hostelExpenditure = (HostelExpenditure)datagvAll.CurrentRow.DataBoundItem;
                         if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                         {
@@ -292,7 +285,6 @@ namespace UniversityStudentDiaryManagementSystem
                     }
                     else if (cmbxOption.SelectedIndex == 8)
                     {
-                        MealDL.storeAllRecordIntoFile(PathFile.Meal);
                         Meal meal = (Meal)datagvAll.CurrentRow.DataBoundItem;
                         if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                         {
@@ -310,7 +302,6 @@ namespace UniversityStudentDiaryManagementSystem
                     }
                     else if (cmbxOption.SelectedIndex == 9)
                     {
-                        PhoneDL.storeAllRecordIntoFile(PathFile.Phone);
                         Phone phone = (Phone)datagvAll.CurrentRow.DataBoundItem;
                         if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                         {
@@ -328,7 +319,6 @@ namespace UniversityStudentDiaryManagementSystem
                     }
                     else if (cmbxOption.SelectedIndex == 10)
                     {
-                        SecretDL.storeAllRecordIntoFile(PathFile.Secret);
                         Secret secret = (Secret)datagvAll.CurrentRow.DataBoundItem;
                         if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                         {
@@ -346,7 +336,6 @@ namespace UniversityStudentDiaryManagementSystem
                     }
                     else if (cmbxOption.SelectedIndex == 11)
                     {
-                        TransportDL.storeAllRecordIntoFile(PathFile.Transport);
                         Transport transport = (Transport)datagvAll.CurrentRow.DataBoundItem;
                         if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                         {
@@ -364,7 +353,6 @@ namespace UniversityStudentDiaryManagementSystem
                     }
                     else if (cmbxOption.SelectedIndex == 12)
                     {
-                        ResultDL.storeAllRecordIntoFile(PathFile.Result);
                         Result result = (Result)datagvAll.CurrentRow.DataBoundItem;
                         if (datagvAll.Columns["Delete"].Index == e.ColumnIndex)
                         {

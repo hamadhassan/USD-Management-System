@@ -570,7 +570,7 @@ namespace UniversityStudentDiaryManagementSystem
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void toolStripbtnHostelExpenditure_Click(object sender, EventArgs e)
         {
             try
             {
@@ -667,9 +667,13 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                frmUserFile file = new frmUserFile();
-                file.Show();
-                this.Hide();
+                frmUserFile userFile = new frmUserFile();
+                userFile.TopLevel = false;
+                panel1.Controls.Add(userFile);
+                userFile.FormBorderStyle = FormBorderStyle.None;
+                userFile.Dock = DockStyle.Fill;
+                userFile.Show();
+                btnLoadRecords.Visible = false;
             }
             catch (Exception ex)
             {
@@ -681,9 +685,30 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                frmUserFile file = new frmUserFile();
-                file.Show();
-                this.Hide();
+                frmUserFile userFile = new frmUserFile();
+                userFile.TopLevel = false;
+                panel1.Controls.Add(userFile);
+                userFile.FormBorderStyle = FormBorderStyle.None;
+                userFile.Dock = DockStyle.Fill;
+                userFile.Show();
+                btnLoadRecords.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnLoadRecords_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmUserFile userFile = new frmUserFile();
+                userFile.TopLevel = false;
+                panel1.Controls.Add(userFile);
+                userFile.FormBorderStyle = FormBorderStyle.None;
+                userFile.Dock = DockStyle.Fill;
+                userFile.Show();
+                btnLoadRecords.Visible = false;
             }
             catch (Exception ex)
             {
@@ -738,7 +763,9 @@ namespace UniversityStudentDiaryManagementSystem
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+          
         }
+
+      
     }
 }

@@ -40,15 +40,25 @@ namespace UniversityStudentDiaryManagementSystem
                                     string username = txtbxUsername.Text;
                                     string password = txtbxPassword.Text;
                                     string role = cmbxRole.SelectedItem.ToString();
-                                    Credential newUser = new Credential(firstName, lastName, username, password, role);
-                                    CredentialDL.setIntoListCrediantialList(newUser);
-                                    CredentialDL.storeRecordIntoFile(newUser, PathFile.Credential);
-                                    txtbxFirstName.Clear();
-                                    txtbxLastName.Clear();
-                                    txtbxPassword.Clear();
-                                    txtbxUsername.Clear();
-                                    MessageBox.Show("Account Created", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    this.Close();
+                                    if (CredentialDL.isUsernameAlreadyExist(username, role) == false)
+                                    {
+                                        Credential newUser = new Credential(firstName, lastName, username, password, role);
+                                        CredentialDL.setIntoListCrediantialList(newUser);
+                                        CredentialDL.storeRecordIntoFile(newUser, PathFile.Credential);
+                                        txtbxFirstName.Clear();
+                                        txtbxLastName.Clear();
+                                        txtbxPassword.Clear();
+                                        txtbxUsername.Clear();
+                                        MessageBox.Show("Account Created", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        this.Close();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Username must be unique ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        txtbxUsername.Clear();
+                                        txtbxUsername.Focus();
+                                    }
+
                                 }
                                 else
                                 {

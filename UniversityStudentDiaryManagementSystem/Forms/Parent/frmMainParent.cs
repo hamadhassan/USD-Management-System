@@ -120,6 +120,7 @@ namespace UniversityStudentDiaryManagementSystem
             {
                 frmAbout about = new frmAbout();
                 about.ShowDialog();
+
             }
             catch (Exception ex)
             {
@@ -157,6 +158,42 @@ namespace UniversityStudentDiaryManagementSystem
             }
         }
         #endregion
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmReport report= new frmReport();
+                report.TopLevel = false;
+                panel.Controls.Add(report);
+                report.FormBorderStyle = FormBorderStyle.None;
+                report.Dock = DockStyle.Fill;
+                report.Show();
+                btnLoadRecords.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLoadRecords_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmReport report = new frmReport();
+                report.TopLevel = false;
+                panel.Controls.Add(report);
+                report.FormBorderStyle = FormBorderStyle.None;
+                report.Dock = DockStyle.Fill;
+                report.Show();
+                btnLoadRecords.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 

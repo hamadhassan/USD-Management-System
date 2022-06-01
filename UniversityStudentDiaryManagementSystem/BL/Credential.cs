@@ -53,22 +53,10 @@ namespace UniversityStudentDiaryManagementSystem.BL
                 if (c.username == username && c.password == password && c.role == role)
                 {
                     return c;
-                    //if(c.role == "Student")
-                    //{
-                    //    return "Student";
-                    //}
-                    //else 
-                    //{
-                    //    return "Parent";
-                    //}
                 }
             }
             return null;
         }
-        //public string loginName(string role, string username, string password, List<Credential> crediationalsList)
-        //{
-
-        //}
-      
+        
     }
 }
