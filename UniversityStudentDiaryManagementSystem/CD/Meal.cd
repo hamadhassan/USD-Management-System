@@ -1,2 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="UniversityStudentDiaryManagementSystem.BL.Meal">
+    <Position X="0.75" Y="0.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAABgAAAAYAAAEAAAABIAAAAA=</HashCode>
+      <FileName>BL\Meal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UniversityStudentDiaryManagementSystem.DL.MealDL">
+    <Position X="5.25" Y="0.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAkBAAAAAQACAQAAABAAAAAQAAhAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DL\MealDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

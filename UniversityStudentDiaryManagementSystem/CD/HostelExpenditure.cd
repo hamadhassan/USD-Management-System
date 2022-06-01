@@ -1,2 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="UniversityStudentDiaryManagementSystem.BL.HostelExpenditure">
+    <Position X="0.75" Y="0.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>gAACgAAAAIAAAAAAAAAAAAAAAAQAAAAEAIAAAIAAAAA=</HashCode>
+      <FileName>BL\HostelExpenditure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UniversityStudentDiaryManagementSystem.DL.HostelExpenditureDL">
+    <Position X="6.75" Y="0.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAQQAAQAAABQAAAAAAABAAAAIAAAAAAQIA=</HashCode>
+      <FileName>DL\HostelExpenditureDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

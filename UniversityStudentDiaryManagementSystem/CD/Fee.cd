@@ -1,2 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="UniversityStudentDiaryManagementSystem.BL.Fee">
+    <Position X="0.5" Y="0.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAIAAAAAAIAACACCAAAAAgAABAAACAQAAAgA=</HashCode>
+      <FileName>BL\Fee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UniversityStudentDiaryManagementSystem.DL.FeeDL">
+    <Position X="6.75" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAARgAAAAQAAARCAADAAAAIAAABAAAAAAAAAAAQAA=</HashCode>
+      <FileName>DL\FeeDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
