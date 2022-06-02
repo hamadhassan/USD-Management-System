@@ -112,33 +112,36 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                if (previous != null)
+                if (takeHelpingMaterialRecord() != null)
                 {
-                    if (HelpingMaterialDL.EditFromhelpingMaterialList(previous, takeHelpingMaterialRecord()))
+                    if (previous != null)
                     {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
-                        Close();
+                        if (HelpingMaterialDL.EditFromhelpingMaterialList(previous, takeHelpingMaterialRecord()))
+                        {
+                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clearFields();
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearFields();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
-                    }
-                }
-                else
-                {
-                    if (HelpingMaterialDL.setIntoHelpingMaterialList(takeHelpingMaterialRecord()))
-                    {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        HelpingMaterialDL.storeRecordIntoFile(takeHelpingMaterialRecord(), PathFile.HelpingMaterial);
-                        HelpingMaterialDL.clearList();
-                        clearFields();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
+                        if (HelpingMaterialDL.setIntoHelpingMaterialList(takeHelpingMaterialRecord()))
+                        {
+                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            HelpingMaterialDL.storeRecordIntoFile(takeHelpingMaterialRecord(), PathFile.HelpingMaterial);
+                            HelpingMaterialDL.clearList();
+                            clearFields();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearFields();
+                        }
                     }
                 }
             }

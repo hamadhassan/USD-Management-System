@@ -93,33 +93,36 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                if (previous != null)
+                if (takeResultRecord() != null)
                 {
-                    if (ResultDL.EditFromResultlList(previous, takeResultRecord()))
+                    if (previous != null)
                     {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
-                        Close();
+                        if (ResultDL.EditFromResultlList(previous, takeResultRecord()))
+                        {
+                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clearFields();
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearFields();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
-                    }
-                }
-                else
-                {
-                    if (ResultDL.setIntoResultList(takeResultRecord()))
-                    {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ResultDL.storeRecordIntoFile(takeResultRecord(), PathFile.Result);
-                        ResultDL.clearList();
-                        clearFields();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
+                        if (ResultDL.setIntoResultList(takeResultRecord()))
+                        {
+                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ResultDL.storeRecordIntoFile(takeResultRecord(), PathFile.Result);
+                            ResultDL.clearList();
+                            clearFields();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearFields();
+                        }
                     }
                 }
             }

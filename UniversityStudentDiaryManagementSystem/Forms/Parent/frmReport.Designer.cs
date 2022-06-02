@@ -34,7 +34,6 @@
             this.cmbxOption = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.datagv = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -61,7 +60,6 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SeaGreen;
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox1, 2);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cmbxOption);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -134,16 +132,6 @@
             this.datagv.Size = new System.Drawing.Size(880, 359);
             this.datagv.TabIndex = 0;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(482, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // frmReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -173,6 +161,5 @@
         private System.Windows.Forms.ComboBox cmbxOption;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView datagv;
-        private System.Windows.Forms.Label label2;
     }
 }

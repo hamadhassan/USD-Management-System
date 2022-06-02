@@ -48,7 +48,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.95454F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.04546F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 9F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.cmbxTime, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
@@ -57,8 +57,8 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.rctxtbxRemaks, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnClose, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.btnSave, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnSave, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnClose, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -68,7 +68,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.61029F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.30189F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.16981F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(278, 212);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(273, 212);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -92,9 +92,9 @@
             "Lunch",
             "Dinner",
             "Hangout"});
-            this.cmbxTime.Location = new System.Drawing.Point(91, 3);
+            this.cmbxTime.Location = new System.Drawing.Point(89, 3);
             this.cmbxTime.Name = "cmbxTime";
-            this.cmbxTime.Size = new System.Drawing.Size(175, 28);
+            this.cmbxTime.Size = new System.Drawing.Size(171, 28);
             this.cmbxTime.TabIndex = 2;
             // 
             // label2
@@ -108,16 +108,16 @@
             // 
             // txtbxMenu
             // 
-            this.txtbxMenu.Location = new System.Drawing.Point(91, 41);
+            this.txtbxMenu.Location = new System.Drawing.Point(89, 41);
             this.txtbxMenu.Name = "txtbxMenu";
-            this.txtbxMenu.Size = new System.Drawing.Size(175, 26);
+            this.txtbxMenu.Size = new System.Drawing.Size(171, 26);
             this.txtbxMenu.TabIndex = 4;
             // 
             // txtbxCharges
             // 
-            this.txtbxCharges.Location = new System.Drawing.Point(91, 74);
+            this.txtbxCharges.Location = new System.Drawing.Point(89, 74);
             this.txtbxCharges.Name = "txtbxCharges";
-            this.txtbxCharges.Size = new System.Drawing.Size(175, 26);
+            this.txtbxCharges.Size = new System.Drawing.Size(171, 26);
             this.txtbxCharges.TabIndex = 5;
             // 
             // label3
@@ -141,45 +141,49 @@
             // rctxtbxRemaks
             // 
             this.rctxtbxRemaks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rctxtbxRemaks.Location = new System.Drawing.Point(91, 108);
+            this.rctxtbxRemaks.Location = new System.Drawing.Point(89, 108);
             this.rctxtbxRemaks.Name = "rctxtbxRemaks";
-            this.rctxtbxRemaks.Size = new System.Drawing.Size(175, 51);
+            this.rctxtbxRemaks.Size = new System.Drawing.Size(171, 51);
             this.rctxtbxRemaks.TabIndex = 8;
             this.rctxtbxRemaks.Text = "";
             // 
             // btnClose
             // 
+            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(3, 167);
+            this.btnClose.Location = new System.Drawing.Point(133, 172);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(82, 31);
             this.btnClose.TabIndex = 10;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(91, 167);
+            this.btnSave.Location = new System.Drawing.Point(3, 172);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(85, 31);
+            this.btnSave.Size = new System.Drawing.Size(80, 31);
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmMeal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 212);
+            this.ClientSize = new System.Drawing.Size(273, 212);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;

@@ -85,37 +85,44 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private Fund takeFund()
         {
-            if (cmbxType.SelectedIndex != 0)
+            try
             {
-                if (txtbxAmount.Text != String.Empty)
+                if (cmbxType.SelectedIndex != 0)
                 {
-                    if (!(double.Parse( txtbxAmount.Text)<0))
+                    if (txtbxAmount.Text != String.Empty)
                     {
-                        double amount = double.Parse(txtbxAmount.Text);
-                        string typeFund = cmbxType.SelectedItem.ToString();
-                        string remarks = rctxbxObjective.Text;
-                        if (amount < 0)
+                        if (!(double.Parse(txtbxAmount.Text) < 0))
                         {
-                            throw new Exception("Invalid try");
+                            double amount = double.Parse(txtbxAmount.Text);
+                            string typeFund = cmbxType.SelectedItem.ToString();
+                            string remarks = rctxbxObjective.Text;
+                            if (amount < 0)
+                            {
+                                throw new Exception("Invalid try");
+                            }
+                            Fund fund = new Fund(typeFund, amount, remarks);
+                            return fund;
                         }
-                        Fund fund = new Fund(typeFund, amount, remarks);
-                        return fund;
+                        else
+                        {
+                            MessageBox.Show("Provide the coorect data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                    else 
+                    else
                     {
-                        MessageBox.Show("Provide the coorect data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtbxAmount.Focus();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please provide the detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtbxAmount.Focus();
+                    MessageBox.Show("Please select the type ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbxType.Focus();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please select the type ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cmbxType.Focus();
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return null;
         }
@@ -123,33 +130,36 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                if (previous != null)
+                if (takeFund() != null)
                 {
-                    if (FundDL.EditFromFundList(previous, takeFund()))
+                    if (previous != null)
                     {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
-                        Close();
+                        if (FundDL.EditFromFundList(previous, takeFund()))
+                        {
+                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clearFields();
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearFields();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
-                    }
-                }
-                else
-                {
-                    if (FundDL.setIntoFundList(takeFund()))
-                    {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FundDL.storeRecordIntoFile(takeFund(), PathFile.Fund);
-                        FundDL.clearList();
-                        clearFields();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
+                        if (FundDL.setIntoFundList(takeFund()))
+                        {
+                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            FundDL.storeRecordIntoFile(takeFund(), PathFile.Fund);
+                            FundDL.clearList();
+                            clearFields();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearFields();
+                        }
                     }
                 }
             }

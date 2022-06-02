@@ -217,68 +217,76 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                if (previous != null)
+                if (takeBookPublisherRecord() != null || takeBookBorrowRecord()!=null)
                 {
-                    if (cmbxType.SelectedIndex == 1)
-                    {//borrow
-                        if (BookDL.EditFromBookList(previous, takeBookBorrowRecord()))
-                        {
-                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            clearFields();
-                            Close();
+                    if (previous != null)
+                    {
+                        if (cmbxType.SelectedIndex == 1)
+                        {//borrow
+                            if (BookDL.EditFromBookList(previous, takeBookBorrowRecord()))
+                            {
+                                MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                clearFields();
+                                Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                clearFields();
+                            }
                         }
-                        else
-                        {
-                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            clearFields();
+                        else if (cmbxType.SelectedIndex == 2)
+                        {//publisher
+                            if (BookDL.EditFromBookList(previous, takeBookPublisherRecord()))
+                            {
+                                MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                clearFields();
+                                Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                clearFields();
+                            }
                         }
                     }
-                    else if (cmbxType.SelectedIndex == 2)
-                    {//publisher
-                        if (BookDL.EditFromBookList(previous, takeBookPublisherRecord()))
-                        {
-                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            clearFields();
-                            Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            clearFields();
-                        }
-                    }
+               
                 }
                 else
                 {
-                    if (cmbxType.SelectedIndex == 1)
-                    {//borrow
+                    if (takeBookPublisherRecord() != null || takeBookBorrowRecord() != null)
+                    {
+                        if (cmbxType.SelectedIndex == 1)
+                        {//borrow
 
-                        if (BookDL.setIntoBookList(takeBookBorrowRecord()))
-                        {
-                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            BookDL.storeRecordIntoFile(takeBookBorrowRecord(), PathFile.Books);
-                            BookDL.clearList();
-                            clearFields();
+                            if (BookDL.setIntoBookList(takeBookBorrowRecord()))
+                            {
+                                MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                BookDL.storeRecordIntoFile(takeBookBorrowRecord(), PathFile.Books);
+                                BookDL.clearList();
+                                clearFields();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                clearFields();
+                            }
                         }
-                        else
-                        {
-                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            clearFields();
+                        else if (cmbxType.SelectedIndex == 2)
+                        {//publisher
+                            if (BookDL.setIntoBookList(takeBookPublisherRecord()))
+                            {
+                                MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                clearFields();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                clearFields();
+                            }
                         }
                     }
-                    else if (cmbxType.SelectedIndex == 2)
-                    {//publisher
-                        if (BookDL.setIntoBookList(takeBookPublisherRecord()))
-                        {
-                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            clearFields();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            clearFields();
-                        }
-                    }
+                      
                 }
             }
             catch (Exception ex)

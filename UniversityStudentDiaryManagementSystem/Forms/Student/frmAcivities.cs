@@ -103,33 +103,36 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                if (previous != null)
+                if (saveRecord() != null)
                 {
-                    if (ActivitiesDL.EditFromActivitiesList(previous, saveRecord()))
+                    if (previous != null)
                     {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
-                        Close();
+                        if (ActivitiesDL.EditFromActivitiesList(previous, saveRecord()))
+                        {
+                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clearFields();
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearFields();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
-                    }
-                }
-                else
-                {
-                    if (ActivitiesDL.setIntoActivitiesList(saveRecord()))
-                    {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ActivitiesDL.storeRecordIntoFile(saveRecord(), PathFile.Activities);
-                        ActivitiesDL.clearList();
-                        clearFields();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
+                        if (ActivitiesDL.setIntoActivitiesList(saveRecord()))
+                        {
+                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ActivitiesDL.storeRecordIntoFile(saveRecord(), PathFile.Activities);
+                            ActivitiesDL.clearList();
+                            clearFields();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearFields();
+                        }
                     }
                 }
             }

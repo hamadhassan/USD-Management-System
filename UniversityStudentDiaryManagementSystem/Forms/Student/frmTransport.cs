@@ -122,33 +122,36 @@ namespace UniversityStudentDiaryManagementSystem
         {
             try
             {
-                if (previous != null)
+                if (takeTransportRecord() != null)
                 {
-                    if (TransportDL.EditFromTransportList(previous, takeTransportRecord()))
+                    if (previous != null)
                     {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
-                        Close();
+                        if (TransportDL.EditFromTransportList(previous, takeTransportRecord()))
+                        {
+                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clearFields();
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearFields();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
-                    }
-                }
-                else
-                {
-                    if (TransportDL.setIntoTransportList(takeTransportRecord()))
-                    {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        TransportDL.storeRecordIntoFile(takeTransportRecord(), PathFile.Transport);
-                        TransportDL.clearList();
-                        clearFields();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
+                        if (TransportDL.setIntoTransportList(takeTransportRecord()))
+                        {
+                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            TransportDL.storeRecordIntoFile(takeTransportRecord(), PathFile.Transport);
+                            TransportDL.clearList();
+                            clearFields();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearFields();
+                        }
                     }
                 }
             }

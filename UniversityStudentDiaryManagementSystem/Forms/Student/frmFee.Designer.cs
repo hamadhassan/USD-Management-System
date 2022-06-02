@@ -80,7 +80,7 @@
             this.btnClose.Location = new System.Drawing.Point(206, 241);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(85, 31);
-            this.btnClose.TabIndex = 9;
+            this.btnClose.TabIndex = 7;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@
             this.btnSave.Location = new System.Drawing.Point(112, 241);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(88, 31);
-            this.btnSave.TabIndex = 8;
+            this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             this.rchtxtbxRemarks.Location = new System.Drawing.Point(112, 187);
             this.rchtxtbxRemarks.Name = "rchtxtbxRemarks";
             this.rchtxtbxRemarks.Size = new System.Drawing.Size(179, 50);
-            this.rchtxtbxRemarks.TabIndex = 3;
+            this.rchtxtbxRemarks.TabIndex = 5;
             this.rchtxtbxRemarks.Text = "";
             // 
             // dateTimePicker
@@ -118,7 +118,7 @@
             this.dateTimePicker.Location = new System.Drawing.Point(112, 154);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(179, 26);
-            this.dateTimePicker.TabIndex = 2;
+            this.dateTimePicker.TabIndex = 4;
             this.dateTimePicker.Value = new System.DateTime(2022, 5, 25, 0, 0, 0, 0);
             // 
             // label5
@@ -137,7 +137,7 @@
             this.txtbxAmount.Location = new System.Drawing.Point(112, 124);
             this.txtbxAmount.Name = "txtbxAmount";
             this.txtbxAmount.Size = new System.Drawing.Size(179, 26);
-            this.txtbxAmount.TabIndex = 1;
+            this.txtbxAmount.TabIndex = 3;
             // 
             // label4
             // 
@@ -155,7 +155,7 @@
             this.txtbxChallanNo.Location = new System.Drawing.Point(112, 95);
             this.txtbxChallanNo.Name = "txtbxChallanNo";
             this.txtbxChallanNo.Size = new System.Drawing.Size(179, 26);
-            this.txtbxChallanNo.TabIndex = 1;
+            this.txtbxChallanNo.TabIndex = 2;
             // 
             // label3
             // 
@@ -196,7 +196,7 @@
             this.cmbxSemester.Location = new System.Drawing.Point(112, 63);
             this.cmbxSemester.Name = "cmbxSemester";
             this.cmbxSemester.Size = new System.Drawing.Size(179, 28);
-            this.cmbxSemester.TabIndex = 0;
+            this.cmbxSemester.TabIndex = 1;
             // 
             // label6
             // 

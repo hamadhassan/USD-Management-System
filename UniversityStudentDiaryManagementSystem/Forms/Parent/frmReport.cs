@@ -103,12 +103,5 @@ namespace UniversityStudentDiaryManagementSystem
             }
            
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            frmSignIn signIn = new frmSignIn();
-            signIn.Show();
-            Hide();
-        }
     }
 }

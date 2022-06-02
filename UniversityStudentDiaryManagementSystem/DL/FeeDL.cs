@@ -11,11 +11,21 @@ namespace UniversityStudentDiaryManagementSystem.DL
 {
     internal class FeeDL
     {
+        public static int count;
         private static List<Fee> feeList = new List<Fee>();
         public static bool setIntoFeeList(Fee fee)
         {
+            listCounter();
             feeList.Add(fee);
+            if (count != feeList.Count)
+            {
+                return true;
+            }
             return true;
+        }
+        public static void listCounter()
+        {
+            count = feeList.Count();
         }
         public static List<Fee> getFeeList()
         {
@@ -56,6 +66,7 @@ namespace UniversityStudentDiaryManagementSystem.DL
         }
         public static bool EditFromFeeList(Fee previous, Fee updated)
         {
+
             foreach (Fee a in feeList)
             {
                 if (a.FeeType == previous.FeeType && a.Semester == previous.Semester && a.ChallanNo == previous.ChallanNo && a.Amount == previous.Amount && a.Date == previous.Date && a.Remarks == previous.Remarks)

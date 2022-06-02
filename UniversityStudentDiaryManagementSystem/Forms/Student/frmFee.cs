@@ -83,75 +83,86 @@ namespace UniversityStudentDiaryManagementSystem
         }
         private Fee takeFee()
         {
-
-            if (cmbxType.SelectedIndex != 0)
+            try
             {
-                if (cmbxSemester.SelectedIndex != 0)
+                if (cmbxType.SelectedIndex != 0)
                 {
-                    if (txtbxChallanNo.Text != String.Empty || txtbxAmount.Text != String.Empty)
+                    if (cmbxSemester.SelectedIndex != 0)
                     {
-                        string feeType = cmbxType.SelectedItem.ToString();
-                        string semester = cmbxSemester.SelectedItem.ToString();
-                        string challanNo = txtbxChallanNo.Text;
-                        double amount = double.Parse(txtbxAmount.Text);
-                        if (amount < 0)
+                        if (txtbxChallanNo.Text != String.Empty || txtbxAmount.Text != String.Empty)
                         {
-                            throw new Exception("Invalid try");
+                            string feeType = cmbxType.SelectedItem.ToString();
+                            string semester = cmbxSemester.SelectedItem.ToString();
+                            string challanNo = txtbxChallanNo.Text;
+                            double amount = double.Parse(txtbxAmount.Text);
+                            string date = dateTimePicker.Text;
+                            string remarks = rchtxtbxRemarks.Text;
+                            if (amount < 0)
+                            {
+                                throw new Exception("Invalid try");
+                            }
+                            Fee fee = new Fee(feeType, semester, challanNo, amount, date, remarks);
+                            return fee;
+
                         }
-                        string date = dateTimePicker.Text;
-                        string remarks = rchtxtbxRemarks.Text;
-                        Fee fee = new Fee(feeType, semester, challanNo, amount, date, remarks);
-                        return fee;
+                        else
+                        {
+                            MessageBox.Show("Please provide the all detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Please provide the all detail ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Please select the semester ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        cmbxSemester.Focus();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please select the semester ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    cmbxSemester.Focus();
+                    MessageBox.Show("Please select the type ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbxType.Focus();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please select the type ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cmbxType.Focus();
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
-            return null;
+                return null;
         }
         private void btnSaveAcademic_Click(object sender, EventArgs e)
         {
             try
             {
-                if (previous != null)
+                if (takeFee() != null)
                 {
-                    if (FeeDL.EditFromFeeList(previous, takeFee()))
+                    if (previous != null)
                     {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
-                        Close();
+                        if (FeeDL.EditFromFeeList(previous, takeFee()))
+                        {
+                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clearFields();
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearFields();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
-                    }
-                }
-                else
-                {
-                    if (FeeDL.setIntoFeeList(takeFee()))
-                    {
-                        MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FeeDL.storeRecordIntoFile(takeFee(), PathFile.Fee);
-                        FeeDL.clearList();
-                        clearFields();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clearFields();
+                        if (FeeDL.setIntoFeeList(takeFee()))
+                        {
+                            MessageBox.Show("Data Successfully Saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            FeeDL.storeRecordIntoFile(takeFee(), PathFile.Fee);
+                            FeeDL.clearList();
+                            clearFields();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error while storing data ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearFields();
+                        }
                     }
                 }
             }
