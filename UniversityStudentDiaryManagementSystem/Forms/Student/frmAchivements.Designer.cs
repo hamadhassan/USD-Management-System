@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAchivements));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -38,11 +39,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblMessage = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblMessage);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.rctxtbxRemarks);
@@ -101,6 +106,7 @@
             this.txtbxPresentedBy.Name = "txtbxPresentedBy";
             this.txtbxPresentedBy.Size = new System.Drawing.Size(181, 26);
             this.txtbxPresentedBy.TabIndex = 1;
+            this.txtbxPresentedBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbxPresentedBy_KeyPress);
             // 
             // cmbxType
             // 
@@ -143,6 +149,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Type :";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(6, 169);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(13, 20);
+            this.lblMessage.TabIndex = 5;
+            this.lblMessage.Text = ".";
+            this.lblMessage.Visible = false;
+            // 
             // frmAchivements
             // 
             this.AcceptButton = this.btnSave;
@@ -159,6 +179,7 @@
             this.Load += new System.EventHandler(this.frmAchivements_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -174,5 +195,7 @@
         private System.Windows.Forms.ComboBox cmbxType;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lblMessage;
     }
 }

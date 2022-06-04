@@ -1,2 +1,6 @@
 Mess Meal,January,200,nil
 Mess Meal,January,12,
+Mess Meal,January,10,nil
+Room Service,February,10,nil
+Room Renovation,March,100,nil
+Hair solon,May,1000,nil

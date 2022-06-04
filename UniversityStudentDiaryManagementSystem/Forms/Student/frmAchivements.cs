@@ -142,5 +142,23 @@ namespace UniversityStudentDiaryManagementSystem
 
             }
         }
+
+        private void txtbxPresentedBy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar)&& !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                
+                e.Handled = true;
+                lblMessage.Visible = true;
+                errorProvider1.SetError(lblMessage, "Invalid");
+                lblMessage.Text = "Invalid Input";
+            }
+            else
+            {
+                lblMessage.Visible = false;
+                errorProvider1.SetError(lblMessage, "");
+                lblMessage.Text = "";
+            }
+        }
     }
 }
