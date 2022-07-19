@@ -1,12 +1,12 @@
 
-# University Student Diary Management System
-
+# Project Name 
+University Student Diary Management System
+# Description
 USDMS will help reconnect with parents, manage day-to-day routine, and digitally save memory.
-
 # Users of Application
 There are two types of login first parents and second admin student.
 # Wireframe
-## Student
+## Login as Student
 ### Sigin In
 ![sigin in](https://user-images.githubusercontent.com/96945594/172011388-24420289-3043-412e-9162-1ab062a8ef79.JPG)
 ### Create Account
@@ -49,7 +49,7 @@ There are two types of login first parents and second admin student.
 ![file](https://user-images.githubusercontent.com/96945594/172012182-9a008e02-3676-4230-a5d8-24debd6bb43d.JPG)
 ### Wallet
 ![wallet](https://user-images.githubusercontent.com/96945594/172012242-c50d3c11-1d8a-4b8f-8995-4992941d5aaa.JPG)
-## Parent
+## Login as Parent
 ### Main
 ![main](https://user-images.githubusercontent.com/96945594/172012343-f59ced66-0ecb-4ebd-9f1f-9ee3d7350836.JPG)
 ### Fee
@@ -91,7 +91,8 @@ There are two types of login first parents and second admin student.
 ![transport](https://user-images.githubusercontent.com/96945594/179719240-05af5230-d6cb-4f86-a1f9-b607a775f171.JPG)
 ### Wallet
 ![wallet](https://user-images.githubusercontent.com/96945594/179719243-7e745b52-75a2-4bd4-a276-cb830d5e0dbd.JPG)
-
-
-
-
+## Sequence Diagram
+### Create Account
+![login](https://user-images.githubusercontent.com/96945594/179720901-c4659aa6-a9b9-43ef-9180-be3302e09fed.png)
+### Hostel Expenditure
+![crud](https://user-images.githubusercontent.com/96945594/179720885-84e853c4-93f9-4861-a157-66cd430a49a3.png)
