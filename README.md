@@ -59,6 +59,38 @@ There are two types of login first parents and second admin student.
 ### Wallet
 ![waller](https://user-images.githubusercontent.com/96945594/172012490-99b3f48e-2f26-459b-9d02-577b97be13f2.JPG)
 
+## Class Diagram
+
+### Credential
+![credential](https://user-images.githubusercontent.com/96945594/179719209-0cb99985-7ede-4694-8679-b98dcf3ea2c1.JPG)
+### Achivements
+![achivementt](https://user-images.githubusercontent.com/96945594/179719191-3aabfe7c-21d1-408e-811b-4cc565aa74a8.JPG)
+### Activities
+![activities](https://user-images.githubusercontent.com/96945594/179719199-ab4d2632-e90c-4878-bb9f-47e9220c6e39.JPG)
+### Books
+![book](https://user-images.githubusercontent.com/96945594/179719203-58fcfd5d-e2f5-4af3-a37e-d75fb7f0be3e.JPG)
+### Fee
+![fee](https://user-images.githubusercontent.com/96945594/179719211-cdf21fac-d69a-4f11-9174-780d122350ae.JPG)
+### Fund
+![fund](https://user-images.githubusercontent.com/96945594/179719213-7fbf0b41-88fa-4b07-b06b-c5cb566644c8.JPG)
+### Helping Material
+![helping material](https://user-images.githubusercontent.com/96945594/179719215-5957114a-4611-4ff4-9944-3f10ff8e4da5.JPG)
+### Hostel Expenditure
+![hostel expenditure](https://user-images.githubusercontent.com/96945594/179719219-241be0ff-f242-44d7-95af-d346fa298b83.JPG)
+### Meal
+![meal](https://user-images.githubusercontent.com/96945594/179719223-def017b4-ba1a-4946-b760-44a405ccd1d4.JPG)
+### Notification
+![notification](https://user-images.githubusercontent.com/96945594/179719226-764ba027-ddd6-48cc-86bc-7bbe1a7629a7.JPG)
+### Phone
+![phone](https://user-images.githubusercontent.com/96945594/179719231-90d3e294-cd9f-46ac-9d8d-c37082de5d4c.JPG)
+### Result
+![result](https://user-images.githubusercontent.com/96945594/179719234-70eecf4b-6365-4e3d-9e17-6b1e61aa4790.JPG)
+### Secret
+![secret](https://user-images.githubusercontent.com/96945594/179719236-05961a4c-003b-488e-b4b9-fda7f8a36246.JPG)
+### Transport
+![transport](https://user-images.githubusercontent.com/96945594/179719240-05af5230-d6cb-4f86-a1f9-b607a775f171.JPG)
+### Wallet
+![wallet](https://user-images.githubusercontent.com/96945594/179719243-7e745b52-75a2-4bd4-a276-cb830d5e0dbd.JPG)
 
 
 
